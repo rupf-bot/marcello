@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Mono:wght@0,400;0,700&display=swap" rel="stylesheet">
+  <title>Impressum & Datenschutz – Marcel Rupf</title>
+  <style>
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--accent:#B78AFF;--accent-dark:#9b6ef5;--bg:#F3F3F3;--dark:#131217;--mid:#5B5B5B;--light:#969696;--footer-bg:#131217;--ease-out:cubic-bezier(0.16,1,0.3,1);}
+
+    html{font-size:18px;scroll-behavior:smooth;}
+        .site-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.6rem;display:flex;align-items:center;justify-content:space-between;transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s;}
+    .site-nav.scrolled{background:rgba(243,243,243,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,0.06);}
+    .site-nav.hidden{transform:translateY(-100%);}
+
+    .nav-logo{font-weight:600;font-size:1.22rem;color:var(--dark);letter-spacing:-.01em;transition:color .25s;}
+    .nav-logo:hover{color:var(--accent);}
+    .nav-sub{font-size:.72rem;font-weight:500;color:rgba(19,18,23,0.45);letter-spacing:.01em;}
+    .nav-left{display:flex;align-items:baseline;gap:.6rem;}
+
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-weight:600;font-size:.88rem;color:var(--dark);transition:color .25s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--accent);}
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: .5rem;
+      background: none;
+      border: none;
+      z-index: 350;
+      color: var(--dark);
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 2px;
+      transition: transform .3s, opacity .3s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── iPad Hochformat + kleine Tablets (768px) ── */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        height: 100dvh;
+        background: rgba(19,18,23,0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        align-items: center;
+        justify-content: center;
+        gap: 2.2rem;
+        z-index: 400;
+        padding: 0 2rem;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { list-style: none; }
+      .nav-links a {
+        font-size: 1.5rem !important;
+        font-weight: 600 !important;
+        color: rgba(255,255,255,0.65) !important;
+        transition: color .25s !important;
+        display: block;
+        padding: .4rem 0;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .nav-links a:hover,
+      .nav-links a:active,
+      .nav-links a.touched { color: #fff !important; }
+      .nav-links a.active { color: var(--accent) !important; }
+
+      .nav-right { margin-left: auto; }
+      .nav-hamburger {
+        display: flex;
+        position: relative;
+        z-index: 500;
+        color: var(--dark);
+        padding: .5rem 0;
+      }
+      .nav-hamburger.open { color: #fff; }
+      .site-nav.menu-open .nav-hamburger { color: #fff; }
+      .site-nav.menu-open .nav-logo { color: #fff; }
+      .site-nav.menu-open .nav-sub { color: rgba(255,255,255,0.45); }
+    }
+    /* ── iPhone (max 430px) ── */
+    @media (max-width: 430px) {
+      .site-nav { padding: .9rem 1.2rem; }
+      .nav-logo { font-size: 1.05rem; }
+      .nav-hamburger { padding: .3rem 0; }
+      .nav-right { margin-left: auto; }
+    }
+
+    body{background:var(--bg);color:var(--dark);font-family:'Instrument Sans',sans-serif;font-weight:500;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    a{color:inherit;text-decoration:none;}
+    .progress-bar{position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:300;width:0%;transition:width .1s linear;}
+
+    footer{background:var(--footer-bg);padding:5rem 2.6rem 2.5rem;position:relative;overflow:hidden;;position:relative;overflow:visible;}
+    .footer-wordmark { font-family:var(--anthropic-serif),Georgia,serif; font-size:clamp(3rem,9vw,10rem); font-weight:400; letter-spacing:-.02em; color:#fff; line-height:.9; margin-bottom:4rem; white-space:nowrap; overflow:hidden; }
+    .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08);}
+    .footer-col-label{font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(255,255,255,0.32);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.8rem;}
+    .footer-col a,.footer-col span{display:block;color:#fff;font-size:.85rem;font-weight:500;line-height:2;transition:color .25s;}
+    .footer-col a:hover{color:var(--accent);}
+    .footer-bottom{padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;}
+    .footer-copy{font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(255,255,255,0.22);letter-spacing:.05em;}
+    .footer-tag{font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(183,138,255,0.45);}
+    .back-top{position:fixed;bottom:2rem;right:2rem;width:42px;height:42px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s,background .2s;z-index:100;}
+    .back-top.visible{opacity:1;transform:translateY(0);}
+    .back-top:hover{background:var(--accent-dark);}
+    .back-top svg{width:16px;height:16px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-scale{opacity:0;transform:translateY(36px) scale(0.97);transition:opacity 1s var(--ease-out),transform 1s var(--ease-out);}
+    .reveal-scale.visible{opacity:1;transform:translateY(0) scale(1);}
+    .reveal-left{opacity:0;transform:translateX(-36px);transition:opacity 1s var(--ease-out),transform 1s var(--ease-out);}
+    .reveal-left.visible{opacity:1;transform:translateX(0);}
+    .delay-1{transition-delay:.1s!important;}.delay-2{transition-delay:.2s!important;}.delay-3{transition-delay:.3s!important;}.delay-4{transition-delay:.45s!important;}
+    .page-hero{padding:clamp(8rem,14vw,14rem) 2.6rem 4rem;max-width:1504px;margin:0 auto;}
+    .page-eyebrow{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+    .page-title{font-size:clamp(2rem,5vw,5rem);font-weight:550;letter-spacing:-.04em;line-height:1;color:var(--dark);margin-bottom:1.5rem;}
+    .page-sub{font-size:clamp(.9rem,1.1vw,1.1rem);line-height:1.65;color:var(--mid);max-width:560px;}
+    .divider{height:1px;background:rgba(19,18,23,0.1);margin:0 2.6rem;}
+    @media(max-width:900px){footer{padding:3rem 1.5rem 2rem;}.footer-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:540px){.footer-wordmark{font-size:clamp(2rem,10vw,4rem);white-space:normal;}.footer-grid{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;gap:.5rem;align-items:flex-start;}.page-hero{padding-left:1.2rem;padding-right:1.2rem;}.divider{margin:0 1.2rem;}.legal-wrap{padding:2rem 1.2rem 4rem;}footer{padding:3rem 1.2rem 2rem;}}
+
+    /* Principles grid */
+    /* Skills section */
+    .skill-row.visible /* Experience timeline */
+    /* Values */
+    @media(max-width:900px){footer{padding:3rem 1.5rem 2rem;}.footer-grid{grid-template-columns:repeat(2,1fr);}.page-hero{padding-left:1.5rem;padding-right:1.5rem;}.divider{margin:0 1.5rem;}}
+    @media(max-width:540px){}
+
+    /* ── Custom cursor ── */
+    #cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: #B78AFF;
+      pointer-events: none;
+      z-index: 99999;
+      transform: translate(-50%, -50%);
+      transition: width .18s ease, height .18s ease, background .18s ease, border .18s ease;
+      will-change: left, top;
+    }
+    #cursor.hover {
+      width: 44px; height: 44px;
+      background: transparent;
+      border: 1.5px solid #B78AFF;
+    }
+
+    .legal-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: clamp(8rem,12vw,12rem) 2.6rem 8rem;
+    }
+
+    /* Tabs */
+    .legal-tabs {
+      display: flex; gap: .5rem; margin-bottom: 4rem;
+    }
+    .legal-tab {
+      font-family: 'Space Mono', monospace;
+      font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
+      padding: .45rem 1.1rem;
+      border-radius: 100px;
+      border: 1px solid rgba(19,18,23,0.15);
+      color: var(--mid);
+      transition: all .25s;
+    }
+    .legal-tab.active, .legal-tab:hover {
+      background: var(--dark); color: #fff; border-color: var(--dark);
+    }
+    .legal-panel { display: none; }
+    .legal-panel.active { display: block; }
+
+    /* Section */
+    .legal-section { margin-bottom: 3.5rem; }
+
+    .legal-section h2 {
+      font-family: var(--anthropic-serif), Georgia, serif;
+      font-size: clamp(1.3rem, 2vw, 1.7rem);
+      font-weight: 400;
+      letter-spacing: -.02em;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 1.2rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid rgba(19,18,23,0.1);
+    }
+
+    .legal-section h3 {
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: .95rem;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      color: var(--dark);
+      margin: 1.8rem 0 .5rem;
+    }
+
+    .legal-section p {
+      font-size: .88rem;
+      line-height: 1.8;
+      color: var(--mid);
+      margin-bottom: 1rem;
+      max-width: 560px;
+    }
+
+    .legal-section a {
+      color: var(--accent);
+      transition: opacity .2s;
+    }
+    .legal-section a:hover { opacity: .75; }
+
+    .legal-section hr {
+      border: none;
+      border-top: 1px solid rgba(19,18,23,0.08);
+      margin: 2.5rem 0;
+    }
+
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin: .5rem 0 1rem;
+      max-width: 560px;
+    }
+    .legal-section ul li {
+      font-size: .88rem;
+      line-height: 1.75;
+      color: var(--mid);
+      padding-left: 1.1rem;
+      position: relative;
+      margin-bottom: .5rem;
+    }
+    .legal-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: .6em;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* Firework: Marcello */
+    #fw-marcello{position:relative;display:inline-block;cursor:default;}
+    #fw-marcello canvas{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:20;}
+    /* Cursor */
+
+
+    /* ── Hamburger Button ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: .5rem;
+      background: none;
+      border: none;
+      z-index: 350;
+      color: var(--dark);
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 2px;
+      transition: transform .3s, opacity .3s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── iPad Querformat (1024px) ── */
+    @media (max-width: 1024px) {
+      
+    }
+
+    /* ── iPad Hochformat + kleine Tablets (768px) ── */
+    @media (max-width: 768px) {
+      /* Overlay */
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        height: 100dvh;
+        background: rgba(19,18,23,0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        align-items: center;
+        justify-content: center;
+        gap: 2.2rem;
+        z-index: 400;
+        padding: 0 2rem;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { list-style: none; }
+      /* Normale Nav-Links */
+      .nav-links a {
+        font-size: 1.5rem !important;
+        font-weight: 600 !important;
+        color: rgba(255,255,255,0.65) !important;
+        transition: color .25s !important;
+        display: block;
+        padding: .4rem 0;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .nav-links a:hover,
+      .nav-links a:active,
+      .nav-links a.touched { color: #fff !important; }
+      .nav-links a.active { color: var(--accent) !important; }
+
+      /* Hamburger: position:fixed, eigener Stacking Context über Overlay */
+      .nav-right { margin-left: auto; }
+      .nav-hamburger {
+        display: flex;
+        position: relative;
+        z-index: 500;
+        color: var(--dark);
+        padding: .5rem 0;
+      }
+      /* Wenn Overlay offen: X immer weiss (dunkles Overlay) */
+      .nav-hamburger.open { color: #fff; }
+      /* Logo bleibt bei offenem Menü sichtbar oben links */
+      
+      /* Logo wird weiss sobald Overlay offen – via JS-Klasse auf nav */
+      .site-nav.menu-open .nav-logo { color: #fff; }
+    }
+    /* ── iPhone (max 430px) ── */
+    @media (max-width: 430px) {
+      .site-nav { padding: .9rem 1.2rem; }
+      .nav-logo { font-size: 1.05rem; }
+      .nav-hamburger { padding: .3rem 0; }
+      .nav-right { margin-left: auto; }
+      .page-hero { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .divider { margin: 0 1.2rem; }
+      .legal-wrap { padding: 2rem 1.2rem 4rem; }
+      .footer-wordmark { font-size: clamp(2rem,10vw,4rem); white-space: normal; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: .5rem; align-items: flex-start; }
+      footer { padding: 3rem 1.2rem 2rem; }
+    }
+      
+
+  </style>
+</head>
+<body>
+  <div id="cursor"></div>
+  <div class="progress-bar" id="progress"></div>
+    <nav class="site-nav" id="navbar">
+    <div class="nav-left"><a href="index.html" class="nav-logo">Marcello</a><span class="nav-sub">Transformation &amp; Produktentwicklung</span></div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links"><li><a href="projekte.html">Projekte</a></li><li><a href="ansatz.html">Über mich</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+  </nav>
+
+  <div class="legal-wrap">
+
+    <div class="reveal">
+      <p class="page-eyebrow">Rechtliches</p>
+      <h1 class="page-title">Impressum &amp; Datenschutz</h1>
+    </div>
+
+    <div class="legal-tabs reveal">
+      <a href="#impressum" class="legal-tab active" id="tab-impressum" onclick="showTab('impressum'); return false;">Impressum</a>
+      <a href="#datenschutz" class="legal-tab" id="tab-datenschutz" onclick="showTab('datenschutz'); return false;">Datenschutz</a>
+    </div>
+
+    <div class="legal-panel active" id="panel-impressum">
+
+      <div class="legal-section reveal">
+        <h2>Kontaktperson</h2>
+        <h3>Verantwortliche Person</h3>
+        <p>Marcel Rupf<br>Zürich, Schweiz</p>
+        <h3>Kontakt</h3>
+        <p>
+          E-Mail: <a href="/cdn-cgi/l/email-protection#18707d7474775875796a7b7d746a6d687e367b7775"><span class="__cf_email__" data-cfemail="6f070a0303002f020e1d0c0a031d1a1f09410c0002">[email&#160;protected]</span></a><br>
+          Web: <a href="https://marcelrupf.com">marcelrupf.com</a>
+        </p>
+      </div>
+
+      <div class="legal-section reveal">
+        <h2>Haftungsausschluss</h2>
+        <p>Der Autor übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen. Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen entstanden sind, werden grundsätzlich ausgeschlossen.</p>
+        <p>Alle Angebote sind unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne besondere Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.</p>
+        <h3>Haftungsausschluss für Links</h3>
+        <p>Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Jegliche Verantwortung für solche Webseiten wird abgelehnt. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr des Nutzers.</p>
+      </div>
+
+      <div class="legal-section reveal">
+        <h2>Urheberrecht</h2>
+        <p>Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website gehören ausschliesslich Marcel Rupf. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung des Urheberrechtsträgers im Voraus einzuholen.</p>
+      </div>
+
+    </div>
+
+    <div class="legal-panel" id="panel-datenschutz">
+
+      <div class="legal-section reveal">
+        <h2>Datenschutzerklärung</h2>
+        <p>Gestützt auf Artikel 13 der Schweizerischen Bundesverfassung und die datenschutzrechtlichen Bestimmungen des Bundes (Datenschutzgesetz, DSG) hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Diese Bestimmungen werden eingehalten.</p>
+      </div>
+
+      <div class="legal-section reveal">
+        <h2>Erhebung von Daten</h2>
+        <p>Beim Besuch dieser Website werden folgende Daten in Logfiles gespeichert: IP-Adresse, Datum, Uhrzeit, Browser-Anfrage und allgemein übertragene Informationen zum Betriebssystem bzw. Browser. Diese Nutzungsdaten bilden die Basis für statistische, anonyme Auswertungen, aus denen keine Rückschlüsse auf einzelne Personen gezogen werden.</p>
+      </div>
+
+      <div class="legal-section reveal">
+        <h2>Externe Dienste</h2>
+        <p>Diese Website nutzt folgende externe Dienste:</p>
+        <ul>
+          <li><strong>Google Fonts</strong> – Schriftarten werden von Google-Servern geladen. <a href="https://policies.google.com/privacy" target="_blank">Datenschutzerklärung von Google</a></li>
+        </ul>
+        <p>Es werden keine weiteren Tracking- oder Analyse-Tools eingesetzt. Es werden keine Cookies gesetzt.</p>
+      </div>
+
+      <div class="legal-section reveal">
+        <h2>Kontaktaufnahme</h2>
+        <p>Wenn Sie per E-Mail Kontakt aufnehmen, werden Ihre Angaben zur Bearbeitung der Anfrage verarbeitet. Die Daten werden nicht an Dritte weitergegeben und nach Bearbeitung der Anfrage gelöscht.</p>
+      </div>
+
+      <div class="legal-section reveal">
+        <h2>Ihre Rechte</h2>
+        <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung zu verlangen. Ausserdem haben Sie ein Recht auf Berichtigung oder Löschung dieser Daten.</p>
+        <p>Kontaktieren Sie uns unter: <a href="/cdn-cgi/l/email-protection#bfd7dad3d3d0ffd2decddcdad3cdcacfd991dcd0d2"><span class="__cf_email__" data-cfemail="89e1ece5e5e6c9e4e8fbeaece5fbfcf9efa7eae6e4">[email&#160;protected]</span></a></p>
+        <p style="margin-top:2rem;font-size:.78rem;color:var(--light)">Stand: März 2026</p>
+      </div>
+
+    </div>
+
+  </div>
+
+<footer>
+    <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcello</span></div></div>
+    <div class="footer-grid">
+      <div class="footer-col"><div class="footer-col-label">Rechtliches</div><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+      <div class="footer-col"><div class="footer-col-label">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank">LinkedIn</a></div>
+      <div class="footer-col"><div class="footer-col-label">Kontakt</div><a href="/cdn-cgi/l/email-protection#6c04090000032c010d1e0f09001e191c0a420f0301"><span class="__cf_email__" data-cfemail="0169646d6d6e416c607362646d737471672f626e6c">[email&#160;protected]</span></a></div>
+      <div class="footer-col"><span style="color:rgba(255,255,255,0.35)">©2026 Marcel Rupf</span></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">Transformations Manager & Produktentwickler · Zürich</span>
+      <span class="footer-tag">Verfügbar für neue Projekte</span>
+    </div>
+  </footer>
+  <a class="back-top" id="backTop" href="#" aria-label="Nach oben">
+    <svg viewBox="0 0 16 16"><line x1="8" y1="13" x2="8" y2="3"/><polyline points="4,7 8,3 12,7"/></svg>
+  </a>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    function showTab(name) {
+      document.querySelectorAll('.legal-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.legal-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById('panel-' + name).classList.add('active');
+      document.getElementById('tab-' + name).classList.add('active');
+    }
+    // Check URL hash on load
+    if (window.location.hash === '#datenschutz') showTab('datenschutz');
+  </script>
+  <script>
+    // Progress bar + back-to-top
+    window.addEventListener('scroll', () => {
+      const cur = window.scrollY;
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      document.getElementById('progress').style.width = (cur / h * 100) + '%';
+      document.getElementById('backTop').classList.toggle('visible', cur > 400);
+    }, {passive: true});
+    const obs = new IntersectionObserver((e) => { e.forEach(x => { if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);} }); }, {threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    document.getElementById('backTop').addEventListener('click', e => { e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); });
+
+    // Firework — Marcello
+    (function(){
+      function init(){
+        var host=document.getElementById('fw-marcello');
+        if(!host)return;
+        var cvs=document.createElement('canvas');
+        host.appendChild(cvs);
+        var ctx=cvs.getContext('2d'),pts=[],raf=null;
+        function size(){
+          var r=host.getBoundingClientRect();
+          cvs.width=Math.max(r.width*4,200);cvs.height=Math.max(r.height*4,200);
+          cvs.style.width=cvs.width+'px';cvs.style.height=cvs.height+'px';
+        }
+        function Pt(cx,cy){
+          var a=Math.random()*Math.PI*2,s=1+Math.random()*3;
+          this.x=cx;this.y=cy;this.vx=Math.cos(a)*s;this.vy=Math.sin(a)*s;
+          this.life=1;this.decay=.007+Math.random()*.009;this.r=2+Math.random()*3;
+          var h=Math.random()<.5?270:210;
+          this.col='hsl('+(h+~~(Math.random()*40-20))+',85%,'+~~(60+Math.random()*20)+'%)';
+        }
+        function tick(){
+          ctx.clearRect(0,0,cvs.width,cvs.height);
+          for(var i=pts.length-1;i>=0;i--){
+            var p=pts[i];p.x+=p.vx;p.y+=p.vy;p.vy+=.06;p.vx*=.98;p.life-=p.decay;
+            if(p.life<=0){pts.splice(i,1);continue;}
+            ctx.globalAlpha=p.life;ctx.fillStyle=p.col;
+            ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.28);ctx.fill();
+          }
+          ctx.globalAlpha=1;
+          if(pts.length)raf=requestAnimationFrame(tick);else raf=null;
+        }
+        function burst(ex,ey){
+          size();var r=cvs.getBoundingClientRect();
+          var cx=ex-r.left,cy=ey-r.top;
+          for(var i=0;i<40;i++)pts.push(new Pt(cx,cy));
+          if(!raf)raf=requestAnimationFrame(tick);
+        }
+        host.addEventListener('mousemove',function(e){if(Math.random()>.45)return;burst(e.clientX,e.clientY);});
+        host.addEventListener('click',function(e){for(var i=0;i<5;i++)burst(e.clientX,e.clientY);});
+      }
+      if(document.readyState==='complete')init();
+      else window.addEventListener('load',init);
+    })();
+    // Cursor
+    (function(){
+      var c=document.getElementById('cursor');if(!c)return;
+      document.addEventListener('mousemove',function(e){c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';});
+      function h(sel){document.querySelectorAll(sel).forEach(function(el){
+        el.addEventListener('mouseenter',function(){c.classList.add('hover');});
+        el.addEventListener('mouseleave',function(){c.classList.remove('hover');});
+      });}
+      h('a');h('button');h('.dot');h('.teaser-card');h('.proj-item');h('.skill-row');h('.value-chip');h('.topic-chip');
+    })();
+  </script>
+    <script>
+  (function(){
+    var btn = document.getElementById('navHamburger');
+    var links = document.querySelector('.nav-links');
+    var navbar = document.getElementById('navbar');
+    if(!btn || !links) return;
+
+    function closeMenu(){
+      links.classList.remove('open');
+      btn.classList.remove('open');
+      if(navbar) navbar.classList.remove('menu-open');
+      document.body.style.overflow = '';
+    }
+
+    btn.addEventListener('click', function(){
+      var isOpen = links.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      if(navbar) navbar.classList.toggle('menu-open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', closeMenu);
+      a.addEventListener('touchstart', function(){
+        a.classList.add('touched');
+      }, {passive: true});
+      a.addEventListener('touchend', function(){
+        setTimeout(function(){ a.classList.remove('touched'); }, 300);
+      }, {passive: true});
+    });
+
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeMenu();
+    });
+  })();
+  </script>
+</body>
+</html>
