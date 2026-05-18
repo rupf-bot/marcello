@@ -215,6 +215,92 @@
       .kontakt-photos { grid-template-columns: 1fr; }
     }
 
+    .workshop-section {
+      max-width: 1504px;
+      margin: 0 auto;
+      padding: 4rem 2.6rem;
+    }
+    .workshop-intro {
+      font-size: 1.05rem;
+      color: var(--mid, #666);
+      max-width: 680px;
+      margin-bottom: 2.4rem;
+      line-height: 1.7;
+    }
+    .workshop-modules {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 1.4rem;
+    }
+    .workshop-module {
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 10px;
+      padding: 1.4rem 1.5rem;
+    }
+    .workshop-module-header {
+      display: flex;
+      align-items: flex-start;
+      gap: .9rem;
+      margin-bottom: 1rem;
+    }
+    .workshop-module-nr {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: rgba(115,127,223,.12);
+      color: #737fdf;
+      font-family: 'Space Mono', monospace;
+      font-size: .7rem;
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+    .workshop-module-title {
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--dark, #111);
+      margin-bottom: .2rem;
+    }
+    .workshop-module-meta {
+      font-size: .75rem;
+      color: #737fdf;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: .03em;
+    }
+    .workshop-module-topics {
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+    .workshop-module-topics li {
+      font-size: .82rem;
+      color: var(--mid, #555);
+      line-height: 1.5;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .workshop-module-topics li::before {
+      content: "";
+      position: absolute;
+      left: 0; top: .6em;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: rgba(115,127,223,.5);
+    }
+    .workshop-combo {
+      font-size: .8rem;
+      color: var(--mid, #888);
+      font-family: 'Space Mono', monospace;
+      letter-spacing: .04em;
+    }
+    @media(max-width:900px){ .workshop-modules { grid-template-columns: 1fr; } .workshop-section { padding: 3rem 1.5rem; } }
+    @media(max-width:540px){ .workshop-section { padding: 2.5rem 1.2rem; } }
+
     .contact-section-bg {
       background: #B78AFF;
       padding-bottom: 0;
@@ -365,6 +451,63 @@
   </div>
 
   <div class="divider"></div>
+
+  <section class="workshop-section reveal">
+    <p class="page-eyebrow" style="margin-bottom:.6rem;">Workshop &amp; Keynote</p>
+    <h2 class="section-title" style="margin-bottom:.8rem;">AI for Product Teams</h2>
+    <p class="workshop-intro">Drei Module, modular buchbar, direkt einsetzbar. Kein Berater, sondern ein Praktiker, der selbst transformiert — bei AXA und Swisscom.</p>
+    <div class="workshop-modules">
+      <div class="workshop-module">
+        <div class="workshop-module-header">
+          <span class="workshop-module-nr">I</span>
+          <div>
+            <div class="workshop-module-title">AI for Designers</div>
+            <div class="workshop-module-meta">UX &amp; Design Teams &middot; Half-Day Workshop</div>
+          </div>
+        </div>
+        <ul class="workshop-module-topics">
+          <li>AI-Tool-Landscape: Was ist heute relevant?</li>
+          <li>GenAI im Workflow: Research, Ideation, Prototyping, Handoff</li>
+          <li>AI &amp; Design Strategy: Wo liegt noch echter Mehrwert?</li>
+        </ul>
+      </div>
+      <div class="workshop-module">
+        <div class="workshop-module-header">
+          <span class="workshop-module-nr">II</span>
+          <div>
+            <div class="workshop-module-title">AI &amp; Product Operating Model</div>
+            <div class="workshop-module-meta">PO, BO, Stakeholder &middot; Half-Day Workshop</div>
+          </div>
+        </div>
+        <ul class="workshop-module-topics">
+          <li>Rollenveränderung von PO und BO durch AI</li>
+          <li>Welche Prozesse werden obsolet, welche neu?</li>
+          <li>Entscheidungsgeschwindigkeit vs. Governance</li>
+          <li>Von Feature-Delivery zu Outcome-Ownership</li>
+        </ul>
+      </div>
+      <div class="workshop-module">
+        <div class="workshop-module-header">
+          <span class="workshop-module-nr">III</span>
+          <div>
+            <div class="workshop-module-title">AI &amp; Leadership</div>
+            <div class="workshop-module-meta">Entscheider, C-Level &middot; 90 Min. Keynote + 30 Min. Q&amp;A</div>
+          </div>
+        </div>
+        <ul class="workshop-module-topics">
+          <li>Was AI-Transformation wirklich bedeutet</li>
+          <li>Fuehren durch AI-bedingte Rollenveraenderungen</li>
+          <li>Vom Hype zum messbaren Business Impact</li>
+          <li>Welche Fragen muss Leadership heute stellen?</li>
+        </ul>
+      </div>
+    </div>
+    <p class="workshop-combo">Kombinierbar: I + II als Full-Day &middot; III standalone oder als Abschluss</p>
+    <a class="contact-btn btn-primary" href="mailto:hallo@marcelrupf.com" style="display:inline-flex;margin-top:1.6rem;">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="16" height="12" rx="1.5"/><polyline points="2,5 10,12 18,5"/></svg>
+      Workshop anfragen
+    </a>
+  </section>
 
   <div class="contact-section-bg"><div class="contact-wrap">
     <div class="contact-layout">
