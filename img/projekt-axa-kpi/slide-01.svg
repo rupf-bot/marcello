@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="'Inter',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0F4FF"/>
+      <stop offset="100%" stop-color="#EBF0FA"/>
+    </linearGradient>
+    <linearGradient id="funnelBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B5BDB"/>
+      <stop offset="100%" stop-color="#748FFC"/>
+    </linearGradient>
+    <linearGradient id="funnelRed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E53E3E"/>
+      <stop offset="100%" stop-color="#FC8181"/>
+    </linearGradient>
+    <linearGradient id="funnelGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#12A96E"/>
+      <stop offset="100%" stop-color="#38D9A9"/>
+    </linearGradient>
+    <filter id="card-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="#1A203520"/>
+    </filter>
+    <filter id="soft-shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#1A203512"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bg)"/>
+
+  <!-- Main card with padding -->
+  <rect x="48" y="48" width="1104" height="579" rx="20" fill="#fff" filter="url(#card-shadow)"/>
+
+  <!-- Header bar -->
+  <rect x="48" y="48" width="1104" height="72" rx="20" fill="#fff"/>
+  <rect x="48" y="88" width="1104" height="32" fill="#fff"/>
+  <line x1="68" y1="120" x2="1132" y2="120" stroke="#E8EBF0" stroke-width="1"/>
+
+  <!-- AXA Logo mark -->
+  <rect x="72" y="66" width="36" height="36" rx="8" fill="#003781"/>
+  <text x="90" y="90" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">AXA</text>
+
+  <!-- Title -->
+  <text x="120" y="82" font-size="14" font-weight="700" fill="#1A2035">UX-KPI Tracking — Intertours Schadenmeldung</text>
+  <text x="120" y="100" font-size="11" fill="#8A93A5">Pilotjourney · Quantitative Analyse · Jan – Mrz 2026</text>
+
+  <!-- Badge -->
+  <rect x="980" y="70" width="88" height="24" rx="12" fill="#E8F9F1" stroke="#B2EDD8" stroke-width="1"/>
+  <circle cx="996" cy="82" r="4" fill="#12A96E"/>
+  <text x="1004" y="86" font-size="10" font-weight="600" fill="#12A96E">Pilot Aktiv</text>
+
+  <!-- ── KPI CARDS ROW ── -->
+  <!-- Card 1 -->
+  <rect x="72" y="136" width="232" height="108" rx="12" fill="#F8FAFF" stroke="#E2E8FF" stroke-width="1"/>
+  <text x="92" y="160" font-size="9.5" font-weight="600" fill="#8A93A5" letter-spacing="0.6">TOTAL SESSIONS</text>
+  <text x="92" y="200" font-size="36" font-weight="700" fill="#3B5BDB" letter-spacing="-1.5">18'640</text>
+  <text x="92" y="222" font-size="10" fill="#12A96E">↑ 12% </text>
+  <text x="112" y="222" font-size="10" fill="#8A93A5">vs. Vorperiode</text>
+  <rect x="92" y="232" width="192" height="3" rx="2" fill="#E2E8FF"/>
+  <rect x="92" y="232" width="138" height="3" rx="2" fill="#3B5BDB"/>
+
+  <!-- Card 2 -->
+  <rect x="320" y="136" width="232" height="108" rx="12" fill="#F0FBF6" stroke="#B2EDD8" stroke-width="1"/>
+  <text x="340" y="160" font-size="9.5" font-weight="600" fill="#8A93A5" letter-spacing="0.6">CONVERSION RATE</text>
+  <text x="340" y="200" font-size="36" font-weight="700" fill="#12A96E" letter-spacing="-1.5">41.2%</text>
+  <text x="340" y="222" font-size="10" fill="#12A96E">↑ 3.1pp </text>
+  <text x="362" y="222" font-size="10" fill="#8A93A5">Zielwert: 45%</text>
+  <rect x="340" y="232" width="192" height="3" rx="2" fill="#B2EDD8"/>
+  <rect x="340" y="232" width="74" height="3" rx="2" fill="#12A96E"/>
+
+  <!-- Card 3 -->
+  <rect x="568" y="136" width="232" height="108" rx="12" fill="#FFF5F5" stroke="#FEB2B2" stroke-width="1"/>
+  <text x="588" y="160" font-size="9.5" font-weight="600" fill="#8A93A5" letter-spacing="0.6">KRITISCHER ABSPRUNG</text>
+  <text x="588" y="200" font-size="36" font-weight="700" fill="#E53E3E" letter-spacing="-1.5">37.8%</text>
+  <text x="588" y="222" font-size="10" fill="#8A93A5">Screen «Auswahl Grund»</text>
+  <rect x="588" y="232" width="192" height="3" rx="2" fill="#FEB2B2"/>
+  <rect x="588" y="232" width="84" height="3" rx="2" fill="#E53E3E"/>
+
+  <!-- Card 4 -->
+  <rect x="816" y="136" width="316" height="108" rx="12" fill="#F8FAFC" stroke="#E8EBF0" stroke-width="1"/>
+  <text x="836" y="160" font-size="9.5" font-weight="600" fill="#8A93A5" letter-spacing="0.6">METHODE</text>
+  <text x="836" y="192" font-size="13" font-weight="700" fill="#1A2035">Mixed Methods</text>
+  <text x="836" y="212" font-size="11" fill="#5A6478">Quantitativ + Qualitativ</text>
+  <!-- Method pills -->
+  <rect x="836" y="220" width="76" height="18" rx="9" fill="#EEF2FF"/>
+  <text x="874" y="232" text-anchor="middle" font-size="9" font-weight="600" fill="#3B5BDB">Looker Studio</text>
+  <rect x="920" y="220" width="62" height="18" rx="9" fill="#EEF2FF"/>
+  <text x="951" y="232" text-anchor="middle" font-size="9" font-weight="600" fill="#3B5BDB">Interviews</text>
+  <rect x="990" y="220" width="72" height="18" rx="9" fill="#EEF2FF"/>
+  <text x="1026" y="232" text-anchor="middle" font-size="9" font-weight="600" fill="#3B5BDB">UT · Heatmap</text>
+
+  <!-- ── FUNNEL ── -->
+  <!-- Section label -->
+  <text x="72" y="278" font-size="12" font-weight="700" fill="#1A2035">Journey Funnel</text>
+  <text x="200" y="278" font-size="10" fill="#8A93A5">Schrittweise Analyse der Nutzerreise</text>
+
+  <!-- Step 1: Start -->
+  <text x="72" y="308" font-size="10.5" fill="#5A6478">Start Journey</text>
+  <text x="1132" y="308" text-anchor="end" font-size="10.5" font-weight="700" fill="#1A2035">18'640  ·  100%</text>
+  <rect x="72" y="314" width="1060" height="26" rx="5" fill="#EEF2FF"/>
+  <rect x="72" y="314" width="1060" height="26" rx="5" fill="url(#funnelBlue)"/>
+  <text x="90" y="331" font-size="10" fill="#fff" font-weight="600">100%</text>
+
+  <!-- Step 2 -->
+  <text x="72" y="364" font-size="10.5" fill="#5A6478">Schaden-Art wählen</text>
+  <text x="1132" y="364" text-anchor="end" font-size="10.5" font-weight="700" fill="#1A2035">16'030  ·  86%</text>
+  <rect x="72" y="370" width="1060" height="26" rx="5" fill="#EEF2FF"/>
+  <rect x="72" y="370" width="911" height="26" rx="5" fill="url(#funnelBlue)" opacity="0.8"/>
+  <text x="90" y="387" font-size="10" fill="#fff" font-weight="600">86%</text>
+  <text x="1132" y="408" text-anchor="end" font-size="9.5" fill="#E53E3E" font-weight="500">▼ 14% Absprung</text>
+
+  <!-- Step 3: Critical -->
+  <rect x="60" y="416" width="1080" height="50" rx="8" fill="#FFF5F5" stroke="#FEB2B2" stroke-width="1"/>
+  <text x="82" y="436" font-size="10.5" fill="#E53E3E" font-weight="700">⚠  Auswahl Grund  —  kritischer Absprung</text>
+  <text x="1120" y="436" text-anchor="end" font-size="10.5" font-weight="700" fill="#E53E3E">11'594  ·  62.2%</text>
+  <rect x="82" y="442" width="996" height="16" rx="4" fill="#FFE5E5"/>
+  <rect x="82" y="442" width="561" height="16" rx="4" fill="url(#funnelRed)"/>
+  <text x="98" y="454" font-size="9.5" fill="#fff" font-weight="700">62.2%  ·  37.8% verlassen hier die Journey</text>
+
+  <!-- Step 4 -->
+  <text x="72" y="494" font-size="10.5" fill="#5A6478">Angaben erfassen</text>
+  <text x="1132" y="494" text-anchor="end" font-size="10.5" font-weight="700" fill="#1A2035">8'388  ·  45%</text>
+  <rect x="72" y="500" width="1060" height="26" rx="5" fill="#EEF2FF"/>
+  <rect x="72" y="500" width="477" height="26" rx="5" fill="url(#funnelBlue)" opacity="0.7"/>
+  <text x="90" y="517" font-size="10" fill="#fff" font-weight="600">45%</text>
+  <text x="1132" y="538" text-anchor="end" font-size="9.5" fill="#E53E3E" font-weight="500">▼ 9.7% Absprung</text>
+
+  <!-- Step 5: Completion -->
+  <text x="72" y="556" font-size="10.5" fill="#5A6478">Abschluss · Submit</text>
+  <text x="1132" y="556" text-anchor="end" font-size="10.5" font-weight="700" fill="#12A96E">7'680  ·  41.2%</text>
+  <rect x="72" y="562" width="1060" height="26" rx="5" fill="#E8F9F1"/>
+  <rect x="72" y="562" width="406" height="26" rx="5" fill="url(#funnelGreen)"/>
+  <text x="90" y="579" font-size="10" fill="#fff" font-weight="600">41.2% Conversion</text>
+
+  <!-- Footer note -->
+  <text x="72" y="613" font-size="9.5" fill="#A8B0BF">Quelle: Google Looker Studio · Erhebungsperiode: Jan – Mrz 2026 · Nächster Schritt: User Interviews zur qualitativen Analyse der Absprünge</text>
+
+</svg>

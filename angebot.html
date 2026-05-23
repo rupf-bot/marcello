@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cloud.umami.is; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self' https://cloud.umami.is https://api-gateway.umami.dev">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23737FDF'/></svg>">
+  <meta name="theme-color" content="#737FDF">
+  <meta name="geo.region" content="CH-ZH">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Angebot – Marcel Rupf</title>
+  <meta name="description" content="AI Workshops und Keynotes von Marcel Rupf für Führungsteams, Product Teams und UX Designer. AI verstehen, gestalten und führen.">
+  <link rel="canonical" href="https://marcelrupf.com/angebot.html">
+  <meta property="og:title" content="Angebot – Marcel Rupf">
+  <meta property="og:description" content="AI Workshops für Teams, die AI nicht nur einsetzen, sondern wirklich nutzen.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:url" content="https://marcelrupf.com/angebot.html">
+  <meta name="author" content="Marcel Rupf">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .page-wrap{width:100%;overflow-x:hidden;box-sizing:border-box;flex:1 0 auto;}
+    .page-hero{padding:clamp(8rem,14vw,14rem) 2.6rem 4rem;max-width:1504px;margin:0 auto;}
+    .page-eyebrow{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+    .page-title{font-size:clamp(2rem,3.75vw,5rem);font-weight:550;letter-spacing:-.04em;line-height:1.10;color:var(--dark);margin-bottom:.5rem;}
+    .page-sub{font-size:clamp(2rem,3.75vw,5rem);font-weight:550;letter-spacing:-.04em;line-height:1.10;color:var(--accent);max-width:none;}
+    .divider{height:1px;background:rgba(19,18,23,0.1);margin:0 2.6rem;}
+    .section-title{font-size:clamp(1.4rem,2.2vw,2.2rem);font-weight:550;letter-spacing:-.025em;color:var(--dark);margin-bottom:2.5rem;}
+    .section-label{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem;}
+    .workshop-section{max-width:1504px;margin:0 auto;padding:3.5rem 2.6rem 3.5rem;scroll-margin-top:80px;}
+    .workshop-intro-lead{font-size:1.2rem;font-weight:550;color:var(--dark);max-width:680px;margin-bottom:.6rem;line-height:1.5;letter-spacing:-.01em;}
+    .workshop-intro{font-size:.95rem;color:var(--mid);max-width:680px;margin-bottom:2.4rem;line-height:1.7;}
+    .workshop-modules{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.2rem;}
+    .workshop-module{background:#fff;border-radius:.8rem;padding:2rem 1.8rem;border:1px solid rgba(19,18,23,0.07);transition:background .2s,border-color .2s,box-shadow .3s,transform .3s var(--ease-out);}
+    .workshop-module:hover{background:#f7f7f7;border-color:rgba(19,18,23,0.15);}
+    .workshop-module-nr{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:rgba(115,127,223,.1);color:var(--accent);font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.05em;margin-bottom:.8rem;}
+    .workshop-module-title{font-size:1.65rem;font-weight:550;color:var(--dark);margin-bottom:.6rem;letter-spacing:-.02em;}
+    .workshop-module-meta{font-family:'Instrument Sans',sans-serif;font-size:.85rem;font-weight:550;letter-spacing:-.02em;color:var(--accent);margin-bottom:.75rem;}
+    .workshop-module-topics{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.65rem;}
+    .workshop-module-topics li{font-size:.92rem;color:var(--mid);line-height:1.45;padding-left:1rem;position:relative;}
+    .workshop-module-topics li::before{content:'';position:absolute;left:0;top:.58em;width:4px;height:4px;border-radius:50%;background:rgba(115,127,223,.45);}
+    .workshop-cta{display:flex;align-items:center;gap:.6rem;padding:.7rem 1.3rem;border-radius:.5rem;background:var(--accent);color:#fff;font-size:.88rem;font-weight:550;text-decoration:none;transition:background .2s;border:none;max-width:320px;margin-left:auto;margin-right:auto;justify-content:center;}
+    .workshop-cta i{font-size:16px;line-height:1;}
+    .workshop-cta:hover{background:#5d6bc4;}
+    .angebot-photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:0 2.6rem 3.5rem;max-width:1504px;margin:0 auto;}
+    .angebot-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:.75rem;display:block;}
+    @media(max-width:900px){.workshop-section{padding:3rem 1.5rem 3rem;}.page-hero{padding-left:1.5rem;padding-right:1.5rem;}.divider{margin:0 1.5rem;}.angebot-photos{padding:2rem 1.5rem 4rem;}}
+    .workshop-slider{position:relative;overflow:hidden;border-radius:.8rem;}
+    .workshop-track{display:flex;transition:transform .45s cubic-bezier(.16,1,.3,1);}
+    .workshop-slider-nav{display:none;align-items:center;justify-content:center;gap:1rem;margin-top:1.2rem;margin-bottom:1.5rem;}
+    .workshop-slider-btn{width:32px;height:32px;border-radius:50%;border:1px solid rgba(115,127,223,0.35);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s,color .2s,background .2s;color:var(--accent);flex-shrink:0;}
+    .workshop-slider-btn:hover{border-color:var(--accent);background:var(--accent);color:#fff;}
+    .workshop-slider-dots{display:flex;gap:.5rem;}
+    .workshop-slider-dot{width:6px;height:6px;border-radius:50%;background:rgba(115,127,223,0.3);transition:background .2s;border:none;padding:0;cursor:pointer;}
+    .workshop-slider-dot.active{background:var(--accent);}
+    @media(max-width:1024px){
+      .workshop-modules{display:none;}
+      .workshop-slider{display:block;}
+      .workshop-module{min-width:100%;box-sizing:border-box;}
+      .workshop-slider-nav{display:flex;}
+    }
+    @media(min-width:1025px){
+      .workshop-slider{display:none;}
+      .workshop-modules{display:grid;}
+    }
+    @media(max-width:600px){.angebot-photos{grid-template-columns:1fr;}}
+    @media(max-width:1024px){.workshop-cta{width:100%;}}
+    @media(max-width:540px){.page-sub{font-size:clamp(2rem,10vw,3.5rem);}.page-hero{padding-left:1.2rem;padding-right:1.2rem;}.divider{margin:0 1.2rem;}.workshop-section{padding:2.5rem 1.2rem 2.5rem;}.angebot-photos{padding:2rem 1.2rem 4rem;grid-template-columns:1fr;}}
+    @media(max-width:430px){.page-hero{padding-left:1.2rem;padding-right:1.2rem;}.divider{margin:0 1.2rem;}.workshop-section{padding:2rem 1.2rem 2.5rem;}.angebot-photos{padding:1.5rem 1.2rem 4rem;}}
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+  <script src="shared.js" defer></script>
+</head>
+<body>
+  <div id="cursor"></div>
+  <div class="progress-bar" id="progress"></div>
+  <nav class="site-nav" role="navigation" aria-label="Hauptnavigation" id="navbar">
+    <div class="nav-left"><a href="index.html" class="nav-logo">Marcel<span class="logo-dot" style="display:inline-block;width:4.5px;height:4.5px;border-radius:50%;margin-left:.1em;position:relative;top:0.5px;vertical-align:0;flex-shrink:0;"></span></a><span class="nav-sub" data-en="AI Transformation Leader">AI Transformation Leader</span></div>
+    <div class="nav-right">
+      <ul class="nav-links"><li><a href="projekte.html"><span data-en="Projects">Projekte</span></a></li><li><a href="angebot.html" class="active"><span data-en="Offering">Angebot</span></a></li><li><a href="ansatz.html"><span data-en="About me">Über mich</span></a></li><li><a href="kontakt.html"><span data-en="Contact">Kontakt</span></a></li></ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln / Switch language"><span class="lang-de-lbl">DE</span><span class="lang-sep-lbl"> · </span><span class="lang-en-lbl">EN</span></button>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main class="page-wrap" role="main">
+  <div class="page-hero">
+    <p class="page-eyebrow reveal" data-en="Offering">Angebot</p>
+    <h1 class="page-title reveal delay-1" data-en="Understand, design and lead AI.">AI verstehen, gestalten und führen.</h1>
+    <h2 class="page-sub reveal delay-2" data-en="Workshops &amp; Keynotes for leadership and product teams.">Workshops &amp; Keynotes für Führungs- und Produktteams.</h2>
+  </div>
+
+  <div class="divider"></div>
+
+  <section id="workshops" class="workshop-section reveal">
+    <p class="section-label" data-en="Workshop &amp; Keynote">Workshop &amp; Keynote</p>
+    <p class="workshop-intro-lead" data-en="What I teach, I practise in parallel. As Head of UX at AXA Switzerland, I integrate AI daily into real products and teams.">Was ich vermittle, setze ich parallel um. Als Head of UX bei AXA Schweiz integriere ich AI täglich in echte Produkte und Teams.</p>
+    <p class="workshop-intro" data-en="Modular, combinable, tailored to your context.">Modular, kombinierbar, auf euren Kontext zugeschnitten.</p>
+    <div class="workshop-modules" id="workshopGrid">
+      <div class="workshop-module">
+        <span class="workshop-module-nr">01</span>
+        <div class="workshop-module-title" data-en="Strategic AI Leadership">Strategische AI Führung</div>
+        <div class="workshop-module-meta" data-en="Executives, C-Level<br>Inspirational Talk · 60 min. + 15 min. Q&amp;A">Entscheider, C-Level<br>Inspirational Talk · 60 Min. + 15 Min. Q&amp;A</div>
+        <ul class="workshop-module-topics">
+          <li data-en="Which decisions are we still making without AI today, and why?">Welche Entscheidungen treffen wir heute noch ohne AI, und warum?</li>
+          <li data-en="What must my teams be able to do that a machine cannot?">Was müssen meine Teams können, was eine Maschine nicht kann?</li>
+          <li data-en="Who in my organisation is afraid, and why?">Wer in meiner Organisation hat Angst, und warum?</li>
+          <li data-en="How do I recognise which AI investments are worthwhile, and which are not?">Wie erkenne ich, welche AI-Investitionen sich lohnen, und welche nicht?</li>
+          <li data-en="How do I lead my team through AI transformation without losing focus on real customer value?">Wie führe ich mein Team durch AI-Transformation, ohne den Fokus auf echten Kundennutzen zu verlieren?</li>
+          <li data-en="Understanding people, creating meaning, navigating uncertainty: what leadership means in the age of AI.">Menschen verstehen, Sinn stiften, Unsicherheit navigieren: Was Führung in der AI-Ära ausmacht.</li>
+        </ul>
+      </div>
+      <div class="workshop-module">
+        <span class="workshop-module-nr">02</span>
+        <div class="workshop-module-title" data-en="The AI Driven Product Model">Das AI getriebene Produktmodell</div>
+        <div class="workshop-module-meta" data-en="Stakeholders, BO, PO<br>Half-Day Workshop">Stakeholder, BO, PO<br>Halbtages-Workshop</div>
+        <ul class="workshop-module-topics">
+          <li data-en="My role in an AI-driven organisation: what stays, what goes?">Meine Rolle in einer AI-getriebenen Organisation: Was bleibt, was fällt weg?</li>
+          <li data-en="Decisions in hours, not weeks: how AI changes the product process">Entscheidungen in Stunden statt Wochen: Wie AI den Produktprozess verändert</li>
+          <li data-en="Rethinking ownership: who is responsible for what in AI driven teams?">Ownership neu denken: Wer verantwortet was in AI getriebenen Teams?</li>
+          <li data-en="From requirements to impact: How my WIN Framework helps validate AI features before scaling.">Von Anforderungen zu Wirkung: Wie mein WIN Framework hilft, AI Features vor der Skalierung zu validieren.</li>
+          <li data-en="Where does my organisation stand? The AI Operating Model as an orientation framework for strategic positioning.">Wo steht meine Organisation? Das AI Operating Model als Orientierungsrahmen für die strategische Standortbestimmung.</li>
+        </ul>
+      </div>
+      <div class="workshop-module">
+        <span class="workshop-module-nr">03</span>
+        <div class="workshop-module-title" data-en="UX in the Age of AI">UX im Zeitalter der AI</div>
+        <div class="workshop-module-meta" data-en="Product Teams<br>Half-Day Workshop">Produktteams<br>Halbtages-Workshop</div>
+        <ul class="workshop-module-topics">
+          <li data-en="Which 3 tools change my daily work immediately?">Welche 3 Tools verändern meinen Arbeitsalltag sofort?</li>
+          <li data-en="Research in 20 minutes: how to use AI without losing quality">Research in 20 Minuten: AI sinnvoll nutzen ohne Qualitätsverlust</li>
+          <li data-en="UX for AI products: what users really need when the conversation partner is a machine">UX für AI-Produkte: Was Nutzer wirklich brauchen, wenn der Gesprächspartner eine Maschine ist</li>
+          <li data-en="What AI cannot do: why empathy and judgement matter more, not less.">Was AI nicht kann: Warum Empathie und Urteilsvermögen wichtiger werden, nicht weniger.</li>
+          <li data-en="The AI Feature Scorecard. A practical framework for evaluating AI opportunities before they land on the roadmap.">Das AI-Feature Scorecard. Ein praktisches Framework um AI-Chancen zu bewerten, bevor sie auf der Roadmap landen.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="workshop-slider" id="workshopSlider">
+      <div class="workshop-track" id="workshopTrack">
+        <div class="workshop-module">
+          <span class="workshop-module-nr">01</span>
+          <div class="workshop-module-title" data-en="Strategic AI Leadership">Strategische AI Führung</div>
+          <div class="workshop-module-meta" data-en="Executives, C-Level<br>Inspirational Talk · 60 min. + 15 min. Q&amp;A">Entscheider, C-Level<br>Inspirational Talk · 60 Min. + 15 Min. Q&amp;A</div>
+          <ul class="workshop-module-topics">
+            <li data-en="Which decisions are we still making without AI today, and why?">Welche Entscheidungen treffen wir heute noch ohne AI, und warum?</li>
+            <li data-en="What must my teams be able to do that a machine cannot?">Was müssen meine Teams können, was eine Maschine nicht kann?</li>
+            <li data-en="Who in my organisation is afraid, and why?">Wer in meiner Organisation hat Angst, und warum?</li>
+            <li data-en="How do I recognise which AI investments are worthwhile, and which are not?">Wie erkenne ich, welche AI-Investitionen sich lohnen, und welche nicht?</li>
+            <li data-en="How do I lead my team through AI transformation without losing focus on real customer value?">Wie führe ich mein Team durch AI-Transformation, ohne den Fokus auf echten Kundennutzen zu verlieren?</li>
+          </ul>
+        </div>
+        <div class="workshop-module">
+          <span class="workshop-module-nr">02</span>
+          <div class="workshop-module-title" data-en="The AI Driven Product Model">Das AI getriebene Produktmodell</div>
+          <div class="workshop-module-meta" data-en="Stakeholders, BO, PO<br>Half-Day Workshop">Stakeholder, BO, PO<br>Halbtages-Workshop</div>
+          <ul class="workshop-module-topics">
+            <li data-en="My role in an AI-driven organisation: what stays, what goes?">Meine Rolle in einer AI-getriebenen Organisation: Was bleibt, was fällt weg?</li>
+            <li data-en="Decisions in hours, not weeks: how AI changes the product process">Entscheidungen in Stunden statt Wochen: Wie AI den Produktprozess verändert</li>
+            <li data-en="Rethinking ownership: who is responsible for what in AI driven teams?">Ownership neu denken: Wer verantwortet was in AI getriebenen Teams?</li>
+            <li data-en="From requirements to impact: How my WIN Framework helps validate AI features before scaling.">Von Anforderungen zu Wirkung: Wie mein WIN Framework hilft, AI Features vor der Skalierung zu validieren.</li>
+          </ul>
+        </div>
+        <div class="workshop-module">
+          <span class="workshop-module-nr">03</span>
+          <div class="workshop-module-title" data-en="UX in the Age of AI">UX im Zeitalter der AI</div>
+          <div class="workshop-module-meta" data-en="Product Teams<br>Half-Day Workshop">Produktteams<br>Halbtages-Workshop</div>
+          <ul class="workshop-module-topics">
+            <li data-en="Which 3 tools change my daily work immediately?">Welche 3 Tools verändern meinen Arbeitsalltag sofort?</li>
+            <li data-en="Research in 20 minutes: how to use AI without losing quality">Research in 20 Minuten: AI sinnvoll nutzen ohne Qualitätsverlust</li>
+            <li data-en="UX for AI products: what users really need when the conversation partner is a machine">UX für AI-Produkte: Was Nutzer wirklich brauchen, wenn der Gesprächspartner eine Maschine ist</li>
+            <li data-en="What AI cannot do: why empathy and judgement matter more, not less.">Was AI nicht kann: Warum Empathie und Urteilsvermögen wichtiger werden, nicht weniger.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="workshop-slider-nav" id="workshopNav">
+      <button class="workshop-slider-btn" id="workshopPrev" aria-label="Vorheriges"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><polyline points="8,2 4,6 8,10"/></svg></button>
+      <div class="workshop-slider-dots" id="workshopDots"></div>
+      <button class="workshop-slider-btn" id="workshopNext" aria-label="Nächstes"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><polyline points="4,2 8,6 4,10"/></svg></button>
+    </div>
+    <a class="workshop-cta" href="mailto:hallo@marcelrupf.com?subject=Workshop-Anfrage%3A%20AI%20f%C3%BCr%20Produkt-%20und%20F%C3%BChrungsteams" data-en="Enquire about workshop">
+      <i class="ph ph-envelope"></i>
+      Workshop anfragen
+    </a>
+  </section>
+
+  <div class="angebot-photos">
+    <img loading="lazy" src="img/kontakt/image-01.webp" alt="AI in Design Workshop AXA Schweiz" class="angebot-photo" />
+    <img loading="lazy" src="img/kontakt/image-02.webp" alt="AI in Design Workshop AXA Schweiz – Gruppe" class="angebot-photo" />
+  </div>
+
+  </main>
+
+  <footer role="contentinfo">
+    <a href="kontakt.html#contact" class="hero-badge" aria-label="Kontakt aufnehmen">
+      <svg class="hero-badge-ring" viewBox="0 0 130 130" aria-hidden="true">
+        <defs>
+          <path id="heroBadgePath" d="M 65,20 a 45,45 0 1,1 0,90 a 45,45 0 1,1 0,-90"/>
+        </defs>
+        <text font-family="'Space Mono',monospace" font-size="10.5" font-weight="700" fill="rgba(255,255,255,0.8)">
+          <textPath href="#heroBadgePath" startOffset="0">Let's get a coffee together·</textPath>
+        </text>
+      </svg>
+      <div class="hero-badge-inner">
+        <img src="img/coffee-cup.gif" alt="" style="width:44px;height:44px;object-fit:contain;border-radius:50%;display:block;margin-bottom:2px;">
+      </div>
+    </a>
+    <div class="footer-gb" aria-hidden="true"><svg class="footer-gn" xmlns="http://www.w3.org/2000/svg"><filter id="fgNoiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="6" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#fgNoiseFilter)"/></svg><div class="footer-gc"><div class="fg1"></div><div class="fg2"></div><div class="fg3"></div><div class="fg4"></div><div class="fg5"></div><div class="fg-i"></div></div></div>
+    <div class="footer-wordmark"><div id="fw-marcello"><span class="fw-text">Marcel Rupf</span></div></div>
+    <div class="footer-grid">
+      <div class="footer-col"><div class="footer-col-label" data-en="Legal">Rechtliches</div><a href="impressum.html" style="white-space:nowrap">Impressum&nbsp;&amp;&nbsp;Datenschutz</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Network">Netzwerk</div><a href="https://www.linkedin.com/in/marcel-r-862a11a9/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Email">E-Mail</div><a href="mailto:hallo@marcelrupf.com">hallo@marcelrupf.com</a></div>
+      <div class="footer-col"><div class="footer-col-label" data-en="Phone">Telefon</div><a href="tel:+41792457871">+41 79 245 78 71</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">AI Transformation Leader</span>
+      <span class="footer-copy">Zürich · <span id="footer-time" style="font-variant-numeric:tabular-nums;">--:--</span></span>
+    </div>
+  </footer>
+  <a class="back-top" id="backTop" href="#"><i class="ph ph-arrow-up"></i></a>
+  <script>
+  (function(){
+    var slider = document.getElementById('workshopSlider');
+    var track = document.getElementById('workshopTrack');
+    var prev = document.getElementById('workshopPrev');
+    var next = document.getElementById('workshopNext');
+    var dotsEl = document.getElementById('workshopDots');
+    if(!slider||!track||!prev||!next||!dotsEl) return;
+    var cards = track.querySelectorAll('.workshop-module');
+    var total = cards.length;
+    var idx = 0;
+    for(var i=0;i<total;i++){
+      var d=document.createElement('button');
+      d.className='workshop-slider-dot'+(i===0?' active':'');
+      d.setAttribute('aria-label','Modul '+(i+1));
+      d.dataset.i=i;
+      dotsEl.appendChild(d);
+    }
+    function goTo(n){
+      idx=(n+total)%total;
+      track.style.transform='translateX(-'+(idx*slider.offsetWidth)+'px)';
+      dotsEl.querySelectorAll('.workshop-slider-dot').forEach(function(d,i){d.classList.toggle('active',i===idx);});
+    }
+    prev.addEventListener('click',function(){goTo(idx-1);});
+    next.addEventListener('click',function(){goTo(idx+1);});
+    dotsEl.addEventListener('click',function(e){var btn=e.target.closest('.workshop-slider-dot');if(btn)goTo(+btn.dataset.i);});
+    window.addEventListener('resize',function(){goTo(idx);});
+    var touchStartX=0,touchStartY=0;
+    slider.addEventListener('touchstart',function(e){touchStartX=e.touches[0].clientX;touchStartY=e.touches[0].clientY;},{passive:true});
+    slider.addEventListener('touchmove',function(e){var dx=e.touches[0].clientX-touchStartX,dy=e.touches[0].clientY-touchStartY;if(Math.abs(dx)>Math.abs(dy)){e.preventDefault();}},{passive:false});
+    slider.addEventListener('touchend',function(e){
+      var dx=e.changedTouches[0].clientX-touchStartX;
+      if(Math.abs(dx)>40){dx<0?goTo(idx+1):goTo(idx-1);}
+    },{passive:true});
+  })();
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="a78910eb-a700-4e31-9393-810cc685b298"></script>
+</body>
+</html>

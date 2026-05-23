@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="300 15 900 506" width="1500" height="844">
+  <defs>
+    <style>
+      text { font-family: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="-162" width="1500" height="844" fill="#1f1635"/>
+
+  <!-- Ellipses — outer two (Brand Voice, Governance) intentionally cropped -->
+  <ellipse cx="190"  cy="268" rx="165" ry="145" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <ellipse cx="470"  cy="268" rx="165" ry="145" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <ellipse cx="750"  cy="268" rx="165" ry="145" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <ellipse cx="1030" cy="268" rx="165" ry="145" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <ellipse cx="1310" cy="268" rx="165" ry="145" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+
+  <!-- Layer 1: Brand Voice (partially cropped) -->
+  <text x="190" y="238" text-anchor="middle" font-size="17" font-weight="500" fill="#ffffff">Brand Voice</text>
+  <text x="190" y="268" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">Tone, language and</text>
+  <text x="190" y="289" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">communication style of</text>
+  <text x="190" y="310" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">the brand</text>
+
+  <!-- Layer 2: Conversational UX -->
+  <text x="470" y="238" text-anchor="middle" font-size="17" font-weight="500" fill="#ffffff">Conversational UX</text>
+  <text x="470" y="268" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">Dialogue structure,</text>
+  <text x="470" y="289" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">prompts and interaction</text>
+  <text x="470" y="310" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">patterns</text>
+
+  <!-- Layer 3: Personality -->
+  <text x="750" y="238" text-anchor="middle" font-size="17" font-weight="500" fill="#ffffff">Personality</text>
+  <text x="750" y="268" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">Character and behavior</text>
+  <text x="750" y="289" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">of the assistant</text>
+
+  <!-- Layer 4: Interaction Principles -->
+  <text x="1030" y="238" text-anchor="middle" font-size="17" font-weight="500" fill="#ffffff">Interaction Principles</text>
+  <text x="1030" y="268" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">How the assistant explains,</text>
+  <text x="1030" y="289" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">guides and recommends</text>
+
+  <!-- Layer 5: Governance (partially cropped) -->
+  <text x="1310" y="238" text-anchor="middle" font-size="17" font-weight="500" fill="#ffffff">Governance</text>
+  <text x="1310" y="268" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">Rules, content sources</text>
+  <text x="1310" y="289" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.6)">and quality control</text>
+
+</svg>
