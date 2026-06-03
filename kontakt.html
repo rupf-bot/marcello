@@ -322,7 +322,7 @@
       <button id="chat-close" aria-label="Schliessen">×</button>
     </div>
     <div id="chat-messages">
-      <div class="chat-msg bot" id="chat-intro">Hoi! Schön bist du da. Frag mich gerne etwas über Marcel – seine Arbeit, seine Leidenschaften oder was ihn auszeichnet.</div>
+      <div class="chat-msg bot" id="chat-intro">Ich bin Marcels digitaler Assistent. Stell mir gerne eine Frage zu seiner Arbeit, seinen Projekten oder seiner Expertise.</div>
     </div>
     <div id="chat-input-row">
       <input id="chat-input" type="text" placeholder="Deine Frage..." maxlength="300" autocomplete="off">
@@ -398,8 +398,8 @@
     const intro = document.getElementById('chat-intro');
 
     const i18n = {
-      de: { intro: 'Hoi! Schön bist du da. Frag mich gerne etwas über Marcel – seine Arbeit, seine Leidenschaften oder was ihn auszeichnet.', placeholder: 'Deine Frage...', error: 'Verbindungsfehler. Bitte versuch es nochmal.' },
-      en: { intro: "Hey! Great to have you here. Feel free to ask me anything about Marcel – his work, his passions, or what makes him stand out.", placeholder: 'Your question...', error: 'Connection error. Please try again.' }
+      de: { intro: 'Ich bin Marcels digitaler Assistent. Stell mir gerne eine Frage zu seiner Arbeit, seinen Projekten oder seiner Expertise.', placeholder: 'Deine Frage...', error: 'Verbindungsfehler. Bitte versuch es nochmal.' },
+      en: { intro: "I am Marcel's digital assistant. Feel free to ask me anything about his work, his projects or his expertise.", placeholder: 'Your question...', error: 'Connection error. Please try again.' }
     };
     function getLang() { return localStorage.getItem('mr-lang') || 'de'; }
     function applyLang(l) {
