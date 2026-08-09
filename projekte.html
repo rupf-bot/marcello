@@ -171,6 +171,7 @@
               <img loading="lazy" src="img/projekt-miraculix/slide-01.jpg" class="proj-slide" alt="Miraculix App – Bild 1" />
               <img loading="lazy" src="img/projekt-miraculix/slide-02.jpg" class="proj-slide" alt="Miraculix App – Bild 2" />
               <img loading="lazy" src="img/projekt-miraculix/slide-03.jpg" class="proj-slide" alt="Miraculix App – Bild 3" />
+              <img loading="lazy" src="img/projekt-miraculix/slide-04.jpg" class="proj-slide" alt="Miraculix App – Bild 4" />
             </div>
             <button class="proj-slider-btn prev" onclick="miraculixSlide(-1)" aria-label="Zurück">&#8592;</button>
             <button class="proj-slider-btn next" onclick="miraculixSlide(1)" aria-label="Weiter">&#8594;</button>
@@ -178,6 +179,7 @@
               <span id="miraculixDot0" class="proj-dot active" onclick="miraculixSlideTo(0)"></span>
               <span id="miraculixDot1" class="proj-dot" onclick="miraculixSlideTo(1)"></span>
               <span id="miraculixDot2" class="proj-dot" onclick="miraculixSlideTo(2)"></span>
+              <span id="miraculixDot3" class="proj-dot" onclick="miraculixSlideTo(3)"></span>
             </div>
           </div>
           <div class="proj-detail-text">
@@ -1291,7 +1293,7 @@ window.addEventListener('orientationchange', function() {
     });
   });
 })();
-  (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('miraculixTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('miraculixDot'+j);if(d)d.classList.toggle('active',j===cur);}}window.miraculixSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.miraculixSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=4;function upd(){var t=document.getElementById('miraculixTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('miraculixDot'+j);if(d)d.classList.toggle('active',j===cur);}}window.miraculixSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.miraculixSlideTo=function(i){cur=i;upd();};})();
 </script>
 </body>
 </html>
