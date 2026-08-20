@@ -1161,6 +1161,47 @@
         </div>
       </div>
 
+      <div class="proj-item reveal delay-2" data-filter="produktentwicklung testing" style="grid-column:span 6;">
+        <div class="proj-detail-card">
+          <div class="proj-slider">
+            <div id="girlsappTrack" class="proj-slider-track">
+              <img loading="lazy" src="img/projekt-girls-app/slide-01.webp" class="proj-slide" alt="Team-App SV Höngg – Bild 1" />
+              <img loading="lazy" src="img/projekt-girls-app/slide-02.webp" class="proj-slide" alt="Team-App SV Höngg – Bild 2" />
+            </div>
+            <button class="proj-slider-btn prev" onclick="girlsappSlide(-1)" aria-label="Zurück">&#8592;</button>
+            <button class="proj-slider-btn next" onclick="girlsappSlide(1)" aria-label="Weiter">&#8594;</button>
+            <div class="proj-slider-dots">
+              <span id="girlsappDot0" class="proj-dot active" onclick="girlsappSlideTo(0)"></span>
+              <span id="girlsappDot1" class="proj-dot" onclick="girlsappSlideTo(1)"></span>
+            </div>
+          </div>
+          <div class="proj-detail-text">
+            <div class="proj-detail-eyebrow">Projekt 25</div>
+            <h2 class="proj-detail-title"><span data-en="Custom Team App Instead of a Paywall">Eigene Team-App statt Paywall</span> – <span style="white-space:nowrap">SV Höngg.</span></h2>
+            <p class="proj-detail-lead" data-en="Why I built a custom app for my girls&#8217; team after a year with SpielerPlus, tailored exactly to coaches, players and parents.">Warum ich nach einem Jahr SpielerPlus eine eigene App für mein Mädchenteam gebaut habe, exakt zugeschnitten auf Trainer, Spielerinnen und Eltern.</p>
+            <div class="proj-detail-body is-collapsible" id="projgirlsapp-body">
+              <p data-en="As a youth coach at SV Höngg, I know the requirements for a team app from daily practice: squad lists, attendance, communication with parents, everything needs to work simply and quickly. We tested SpielerPlus for a year, one of the best-known solutions on the market. The app was solid, but like many commercial tools with a paywall, it tried to serve too many clubs and requirements at once. The result: too many features, too much complexity for the actual needs of a youth team. Exactly the simplicity that matters in everyday training got lost.">Als Jugendtrainer beim SV Höngg kenne ich die Anforderungen an eine Team-App aus der Praxis: Aufgebote, Anwesenheit, Kommunikation mit Eltern, alles muss einfach und schnell funktionieren. Ein Jahr lang haben wir SpielerPlus getestet, eine der bekanntesten Lösungen im Markt. Die App war solide, doch wie viele kommerzielle Tools mit Paywall versuchte sie, möglichst vielen Vereinen und Anforderungen gerecht zu werden. Das Resultat: zu viele Features, zu viel Komplexität für die eigentlichen Bedürfnisse eines Nachwuchsteams. Genau die Einfachheit, die im Trainingsalltag zählt, ging dabei verloren.</p>
+              <p data-en="Together with Claude, I therefore built a custom app tailored exactly to the three user groups: coaches, players and parents. Attendance, squad lists and statistics live directly in the app, complemented by the channels actually used in everyday club life: WhatsApp, phone and email. Coaches manage the team and players themselves, without any code changes, and export season statistics at the push of a button.">Gemeinsam mit Claude habe ich deshalb eine massgeschneiderte App entwickelt, exakt zugeschnitten auf die drei Nutzergruppen Trainer, Spielerinnen und Eltern. Anwesenheit, Aufgebote und Statistiken direkt in der App, ergänzt durch die Kanäle, die im Vereinsalltag tatsächlich genutzt werden: WhatsApp, Telefon und E-Mail. Coaches verwalten Team und Spielerinnen selbst, ohne Code-Anpassungen, und exportieren Saison-Statistiken auf Knopfdruck.</p>
+              <p style="font-style:italic" data-en="Key insight: Knowing your target group from real practice lets you build, in just a few weeks, a solution closer to actual needs than a year with a mature but overloaded SaaS product.">Zentrale Erkenntnis: Wer die Zielgruppe aus der Praxis kennt, baut in wenigen Wochen eine Lösung, die näher an den echten Bedürfnissen ist als ein Jahr mit einem ausgereiften, aber überladenen SaaS-Produkt.</p>
+            </div>
+            <div style="margin-top:1.5rem;">
+              <button class="proj-expand-btn" id="projgirlsapp-toggle" aria-expanded="false" aria-controls="projgirlsapp-body">
+                <span id="projgirlsapp-label" data-en="Show more" data-de="Mehr anzeigen">Mehr anzeigen</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,4 6,8 10,4"/></svg>
+              </button>
+              <div class="proj-detail-tags" id="projgirlsapp-tags" style="display:none;">
+                <span class="proj-tag">SV Höngg</span>
+                <span class="proj-tag" data-en="Youth Football">Nachwuchsfussball</span>
+                <span class="proj-tag">Claude Code</span>
+                <span class="proj-tag" data-en="Product Development">Produktentwicklung</span>
+                <span class="proj-tag">Prototyping</span>
+                <span class="proj-tag">Cloudflare</span>
+                <span class="proj-tag">2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
   </div>
   </main><!-- /.page-wrap -->
@@ -1293,6 +1334,7 @@ window.addEventListener('orientationchange', function() {
   });
 })();
   (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('miraculixTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('miraculixDot'+j);if(d)d.classList.toggle('active',j===cur);}}window.miraculixSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.miraculixSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('girlsappTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('girlsappDot'+j);if(d)d.classList.toggle('active',j===cur);}}window.girlsappSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.girlsappSlideTo=function(i){cur=i;upd();};})();
 </script>
 </body>
 </html>
