@@ -1163,18 +1163,7 @@
 
       <div class="proj-item reveal delay-2" data-filter="produktentwicklung testing" style="grid-column:span 6;">
         <div class="proj-detail-card">
-          <div class="proj-slider">
-            <div id="girlsappTrack" class="proj-slider-track">
-              <img loading="lazy" src="img/projekt-girls-app/slide-01.webp" class="proj-slide" alt="Team-App SV Höngg – Bild 1" />
-              <img loading="lazy" src="img/projekt-girls-app/slide-02.webp" class="proj-slide" alt="Team-App SV Höngg – Bild 2" />
-            </div>
-            <button class="proj-slider-btn prev" onclick="girlsappSlide(-1)" aria-label="Zurück">&#8592;</button>
-            <button class="proj-slider-btn next" onclick="girlsappSlide(1)" aria-label="Weiter">&#8594;</button>
-            <div class="proj-slider-dots">
-              <span id="girlsappDot0" class="proj-dot active" onclick="girlsappSlideTo(0)"></span>
-              <span id="girlsappDot1" class="proj-dot" onclick="girlsappSlideTo(1)"></span>
-            </div>
-          </div>
+          <img loading="lazy" src="img/projekt-girls-app/slide-01.webp" class="proj-detail-img" alt="Team-App SV Höngg – Eltern-/Spielerinnen-Ansicht und Coach-Umgebung" />
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 25</div>
             <h2 class="proj-detail-title"><span data-en="Custom Team App Instead of a Paywall">Eigene Team-App statt Paywall</span> – <span style="white-space:nowrap">SV Höngg.</span></h2>
@@ -1334,7 +1323,6 @@ window.addEventListener('orientationchange', function() {
   });
 })();
   (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('miraculixTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('miraculixDot'+j);if(d)d.classList.toggle('active',j===cur);}}window.miraculixSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.miraculixSlideTo=function(i){cur=i;upd();};})();
-  (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('girlsappTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('girlsappDot'+j);if(d)d.classList.toggle('active',j===cur);}}window.girlsappSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.girlsappSlideTo=function(i){cur=i;upd();};})();
 </script>
 </body>
 </html>
