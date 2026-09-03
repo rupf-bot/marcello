@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="'Instrument Sans',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17161c"/>
+      <stop offset="1" stop-color="#0f0e12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- level captions -->
+  <text x="70" y="110" fill="rgba(255,255,255,.4)" font-family="'Space Mono',monospace" font-size="15" letter-spacing="3" text-transform="uppercase">OUTCOME</text>
+  <text x="70" y="330" fill="rgba(255,255,255,.4)" font-family="'Space Mono',monospace" font-size="15" letter-spacing="3">OPPORTUNITIES</text>
+  <text x="70" y="560" fill="rgba(255,255,255,.4)" font-family="'Space Mono',monospace" font-size="15" letter-spacing="3">SOLUTIONS</text>
+  <text x="70" y="790" fill="rgba(255,255,255,.4)" font-family="'Space Mono',monospace" font-size="15" letter-spacing="3">EXPERIMENTS</text>
+
+  <!-- connecting lines: root -> opportunities -->
+  <g stroke="rgba(115,127,223,.45)" stroke-width="2" fill="none">
+    <path d="M800,130 C800,190 460,190 460,255"/>
+    <path d="M800,130 C800,190 800,190 800,255"/>
+    <path d="M800,130 C800,190 1140,190 1140,255"/>
+  </g>
+
+  <!-- opportunities -> solutions (from middle opportunity) -->
+  <g stroke="rgba(115,127,223,.45)" stroke-width="2" fill="none">
+    <path d="M800,300 C800,360 660,400 660,485"/>
+    <path d="M800,300 C800,360 940,400 940,485"/>
+  </g>
+
+  <!-- solutions -> experiments -->
+  <g stroke="rgba(255,255,255,.28)" stroke-width="2" fill="none">
+    <path d="M660,530 C660,600 590,650 590,705"/>
+    <path d="M660,530 C660,600 730,650 730,705"/>
+    <path d="M940,530 C940,600 870,650 870,705"/>
+    <path d="M940,530 C940,600 1010,650 1010,705"/>
+  </g>
+
+  <!-- root node: OUTCOME -->
+  <rect x="660" y="60" width="280" height="70" rx="35" fill="#737FDF"/>
+  <text x="800" y="103" fill="#fff" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="1">Outcome</text>
+
+  <!-- opportunity nodes -->
+  <g>
+    <rect x="330" y="255" width="260" height="60" rx="30" fill="rgba(115,127,223,.16)" stroke="rgba(115,127,223,.6)" stroke-width="1.5"/>
+    <text x="460" y="292" fill="#fff" font-size="18" text-anchor="middle">Opportunity A</text>
+
+    <rect x="670" y="255" width="260" height="60" rx="30" fill="rgba(115,127,223,.28)" stroke="#737FDF" stroke-width="1.5"/>
+    <text x="800" y="292" fill="#fff" font-size="18" font-weight="600" text-anchor="middle">Opportunity B</text>
+
+    <rect x="1010" y="255" width="260" height="60" rx="30" fill="rgba(115,127,223,.16)" stroke="rgba(115,127,223,.6)" stroke-width="1.5"/>
+    <text x="1140" y="292" fill="#fff" font-size="18" text-anchor="middle">Opportunity C</text>
+  </g>
+
+  <!-- solution nodes -->
+  <g>
+    <rect x="540" y="485" width="240" height="52" rx="26" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/>
+    <text x="660" y="518" fill="#fff" font-size="16" text-anchor="middle">Solution 1</text>
+
+    <rect x="820" y="485" width="240" height="52" rx="26" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/>
+    <text x="940" y="518" fill="#fff" font-size="16" text-anchor="middle">Solution 2</text>
+  </g>
+
+  <!-- experiment leaf nodes -->
+  <g fill="#0f0e12" stroke="#737FDF" stroke-width="2">
+    <circle cx="590" cy="722" r="17"/>
+    <circle cx="730" cy="722" r="17"/>
+    <circle cx="870" cy="722" r="17"/>
+    <circle cx="1010" cy="722" r="17"/>
+  </g>
+  <g fill="rgba(255,255,255,.75)" font-family="'Space Mono',monospace" font-size="12" text-anchor="middle">
+    <text x="590" y="760">TEST</text>
+    <text x="730" y="760">TEST</text>
+    <text x="870" y="760">TEST</text>
+    <text x="1010" y="760">TEST</text>
+  </g>
+</svg>
