@@ -8,72 +8,72 @@
   <rect width="1600" height="900" fill="url(#bg)"/>
 
   <!-- title -->
-  <text x="60" y="62" fill="#fff" font-size="36" font-weight="700" letter-spacing=".3">Opportunity Solution Tree</text>
-  <text x="60" y="94" fill="rgba(255,255,255,.55)" font-size="19">Vom Ziel zur richtigen Lösung.</text>
+  <text x="60" y="127" fill="#fff" font-size="40" font-weight="700" letter-spacing=".3">Opportunity Solution Tree.</text>
+  <text x="60" y="161" fill="rgba(255,255,255,.55)" font-size="21">Vom Ziel zur richtigen Lösung.</text>
 
   <!-- level captions -->
-  <text x="60" y="223" fill="rgba(255,255,255,.45)" font-family="'Space Mono',monospace" font-size="17" letter-spacing="3">OUTCOME</text>
-  <text x="60" y="393" fill="rgba(255,255,255,.45)" font-family="'Space Mono',monospace" font-size="17" letter-spacing="3">OPPORTUNITIES</text>
-  <text x="60" y="563" fill="rgba(255,255,255,.45)" font-family="'Space Mono',monospace" font-size="17" letter-spacing="3">SOLUTIONS</text>
-  <text x="60" y="713" fill="rgba(255,255,255,.45)" font-family="'Space Mono',monospace" font-size="17" letter-spacing="3">EXPERIMENTS</text>
+  <text x="60" y="312" fill="#fff" font-family="'Space Mono',monospace" font-size="36" letter-spacing="2">OUTCOME</text>
+  <text x="60" y="484" fill="#fff" font-family="'Space Mono',monospace" font-size="36" letter-spacing="2">OPPORTUNITIES</text>
+  <text x="60" y="635" fill="#fff" font-family="'Space Mono',monospace" font-size="36" letter-spacing="2">SOLUTIONS</text>
+  <text x="60" y="764" fill="#fff" font-family="'Space Mono',monospace" font-size="36" letter-spacing="2">EXPERIMENTS</text>
 
   <!-- connecting lines: root -> opportunities -->
   <g stroke="rgba(115,127,223,.5)" stroke-width="3" fill="none">
-    <path d="M800,267 C800,305 560,305 560,345"/>
-    <path d="M800,267 C800,305 800,305 800,345"/>
-    <path d="M800,267 C800,305 1040,305 1040,345"/>
+    <path d="M1005,364 C1005,392 645,392 645,419"/>
+    <path d="M1005,364 C1005,392 1005,392 1005,419"/>
+    <path d="M1005,364 C1005,392 1365,392 1365,419"/>
   </g>
 
   <!-- opportunities -> solutions (from middle opportunity) -->
   <g stroke="rgba(115,127,223,.5)" stroke-width="2.5" fill="none">
-    <path d="M800,429 C800,470 740,480 740,522"/>
-    <path d="M800,429 C800,470 860,480 860,522"/>
+    <path d="M1005,523 C1005,552 845,552 845,578"/>
+    <path d="M1005,523 C1005,552 1165,552 1165,578"/>
   </g>
 
   <!-- solutions -> experiments -->
   <g stroke="rgba(255,255,255,.32)" stroke-width="2.5" fill="none">
-    <path d="M740,592 C740,630 700,650 700,681"/>
-    <path d="M740,592 C740,630 780,650 780,681"/>
-    <path d="M860,592 C860,630 820,650 820,681"/>
-    <path d="M860,592 C860,630 900,650 900,681"/>
+    <path d="M845,666 C845,694 810,694 810,721"/>
+    <path d="M845,666 C845,694 880,694 880,721"/>
+    <path d="M1165,666 C1165,694 1130,694 1130,721"/>
+    <path d="M1165,666 C1165,694 1200,694 1200,721"/>
   </g>
 
   <!-- root node: OUTCOME -->
-  <rect x="620" y="167" width="360" height="100" rx="50" fill="#737FDF"/>
-  <text x="800" y="229" fill="#fff" font-size="32" font-weight="700" text-anchor="middle" letter-spacing="1">Outcome</text>
+  <rect x="815" y="234" width="380" height="130" rx="65" fill="#737FDF"/>
+  <text x="1005" y="313" fill="#fff" font-size="38" font-weight="700" text-anchor="middle" letter-spacing="1">Outcome</text>
 
   <!-- opportunity nodes -->
   <g>
-    <rect x="400" y="345" width="320" height="84" rx="42" fill="rgba(115,127,223,.18)" stroke="rgba(115,127,223,.65)" stroke-width="2"/>
-    <text x="560" y="396" fill="#fff" font-size="22" text-anchor="middle">Opportunity A</text>
+    <rect x="495" y="419" width="300" height="104" rx="52" fill="rgba(115,127,223,.18)" stroke="rgba(115,127,223,.65)" stroke-width="2"/>
+    <text x="645" y="480" fill="#fff" font-size="24" text-anchor="middle">Opportunity A</text>
 
-    <rect x="640" y="345" width="320" height="84" rx="42" fill="rgba(115,127,223,.3)" stroke="#737FDF" stroke-width="2"/>
-    <text x="800" y="396" fill="#fff" font-size="22" font-weight="600" text-anchor="middle">Opportunity B</text>
+    <rect x="855" y="419" width="300" height="104" rx="52" fill="rgba(115,127,223,.3)" stroke="#737FDF" stroke-width="2"/>
+    <text x="1005" y="480" fill="#fff" font-size="24" font-weight="600" text-anchor="middle">Opportunity B</text>
 
-    <rect x="880" y="345" width="320" height="84" rx="42" fill="rgba(115,127,223,.18)" stroke="rgba(115,127,223,.65)" stroke-width="2"/>
-    <text x="1040" y="396" fill="#fff" font-size="22" text-anchor="middle">Opportunity C</text>
+    <rect x="1215" y="419" width="300" height="104" rx="52" fill="rgba(115,127,223,.18)" stroke="rgba(115,127,223,.65)" stroke-width="2"/>
+    <text x="1365" y="480" fill="#fff" font-size="24" text-anchor="middle">Opportunity C</text>
   </g>
 
   <!-- solution nodes -->
   <g>
-    <rect x="590" y="522" width="300" height="70" rx="35" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.45)" stroke-width="1.8"/>
-    <text x="740" y="565" fill="#fff" font-size="20" text-anchor="middle">Solution 1</text>
+    <rect x="725" y="578" width="240" height="88" rx="44" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.45)" stroke-width="1.8"/>
+    <text x="845" y="630" fill="#fff" font-size="21" text-anchor="middle">Solution 1</text>
 
-    <rect x="710" y="522" width="300" height="70" rx="35" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.45)" stroke-width="1.8"/>
-    <text x="860" y="565" fill="#fff" font-size="20" text-anchor="middle">Solution 2</text>
+    <rect x="1045" y="578" width="240" height="88" rx="44" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.45)" stroke-width="1.8"/>
+    <text x="1165" y="630" fill="#fff" font-size="21" text-anchor="middle">Solution 2</text>
   </g>
 
   <!-- experiment leaf nodes -->
   <g fill="#0f0e12" stroke="#737FDF" stroke-width="2.5">
-    <circle cx="700" cy="707" r="26"/>
-    <circle cx="780" cy="707" r="26"/>
-    <circle cx="820" cy="707" r="26"/>
-    <circle cx="900" cy="707" r="26"/>
+    <circle cx="810" cy="751" r="30"/>
+    <circle cx="880" cy="751" r="30"/>
+    <circle cx="1130" cy="751" r="30"/>
+    <circle cx="1200" cy="751" r="30"/>
   </g>
-  <g fill="rgba(255,255,255,.8)" font-family="'Space Mono',monospace" font-size="13" text-anchor="middle">
-    <text x="700" y="755">TEST</text>
-    <text x="780" y="755">TEST</text>
-    <text x="820" y="755">TEST</text>
-    <text x="900" y="755">TEST</text>
+  <g fill="rgba(255,255,255,.8)" font-family="'Space Mono',monospace" font-size="15" text-anchor="middle">
+    <text x="810" y="805">TEST</text>
+    <text x="880" y="805">TEST</text>
+    <text x="1130" y="805">TEST</text>
+    <text x="1200" y="805">TEST</text>
   </g>
 </svg>
