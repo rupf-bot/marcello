@@ -925,11 +925,54 @@
         </div>
       </div>
 
+      <div class="proj-item reveal delay-1" data-filter="insights ai-transformation" style="grid-column:span 6;">
+        <div class="proj-detail-card">
+          <div class="proj-slider">
+            <div id="agxTrack" class="proj-slider-track">
+              <img loading="lazy" src="img/projekt-agent-experience/agent-experience-01.webp" class="proj-slide" alt="Skizze: Ein KI-Agent verbindet Mensch und Unternehmen, als Berater für den Menschen und als Kunde für das Unternehmen (AX), daneben die direkte Beziehung Mensch-Unternehmen (HX)." />
+              <img loading="lazy" src="img/projekt-agent-experience/agent-experience-02.webp" class="proj-slide" alt="Skizze zur Formel CX = HX + AX: Human Experience für Menschen, die entscheiden, Agent Experience für Agenten, die handeln." />
+            </div>
+            <button onclick="agxSlide(-1)" aria-label="Zurück" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
+            <button onclick="agxSlide(1)" aria-label="Weiter" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
+            <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
+              <span id="agxDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="agxSlideTo(0)"></span>
+              <span id="agxDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="agxSlideTo(1)"></span>
+            </div>
+          </div>
+          <div class="proj-detail-text">
+            <div class="proj-detail-eyebrow">Projekt 19</div>
+            <h2 class="proj-detail-title">CX = HX + AX.</h2>
+            <p class="proj-detail-lead" data-en="AI agents like Meta Muse compare, sign and cancel contracts on their own. What this means for tomorrow&#8217;s customer experience.">KI-Agenten wie Meta Muse vergleichen, schliessen ab und kündigen selbst. Was das für die Customer Experience von morgen bedeutet.</p>
+            <div class="proj-detail-body is-collapsible" id="projagx-body">
+              <p data-en="In early September 2026, Meta launched &#171;Muse&#187;, a personal AI agent that acts proactively, remembers goals and can pay directly. According to Axios, one user had Muse review his car insurance: it found equivalent coverage for several thousand dollars less, signed the new policy and cancelled the old one, no phone call, no form. This gives the agent a double role: for the human it acts as advisor, for the company it appears as the customer. The relationship between human and agent is no longer in the company&#8217;s hands, it sits with the agent&#8217;s provider.">Anfang September 2026 lancierte Meta mit «Muse» einen persönlichen KI-Agenten, der proaktiv handelt, sich Ziele merkt und direkt bezahlen kann. Ein Nutzer liess laut Axios seine Autoversicherung prüfen: Muse fand eine gleichwertige Deckung für mehrere tausend Dollar weniger, schloss die neue Police ab und kündigte die alte, ohne Telefonat, ohne Formular. Damit bekommt der Agent eine Doppelrolle: Für den Menschen ist er Berater, für das Unternehmen tritt er als Kunde auf. Die Beziehung zwischen Mensch und Agent liegt dabei nicht mehr in der Hand des Unternehmens, sondern beim Anbieter des Agenten.</p>
+              <p data-en="Customer experience becomes the sum of human experience and agent experience. For companies this means: products must be machine-readable and human-understandable, clarity becomes a competitive advantage. Complicated cancellation processes no longer retain customers, an agent has patience and no inertia. What remains is whoever offers real value. At the same time, human moments such as a claim or an honest advisory conversation matter more than ever, that&#8217;s where trust is built, and no agent can replace it.">Customer Experience wird damit zur Summe aus Human Experience und Agent Experience. Für Unternehmen heisst das: Produkte müssen für Maschinen lesbar und für Menschen verständlich sein, Klarheit wird zum Wettbewerbsvorteil. Komplizierte Kündigungen halten keine Kunden mehr, ein Agent hat Geduld und kennt keine Trägheit. Bleiben wird, wer echten Mehrwert bietet. Gleichzeitig zählen menschliche Momente wie der Schadenfall oder das ehrliche Beratungsgespräch mehr denn je, dort entsteht Vertrauen, das ein Agent nicht ersetzen kann.</p>
+              <p style="font-style:italic" data-en="Key insight: Muse is only available in the US today, but the thinking behind it won&#8217;t stop at the border. The real question is: how are companies preparing for their customers to send agents on their behalf?">Zentrale Erkenntnis: Muse gibt es heute nur in den USA, die Denkweise dahinter macht an der Grenze nicht halt. Die eigentliche Frage lautet: Wie bereiten sich Unternehmen darauf vor, dass ihre Kunden künftig ihre Agenten beauftragen?</p>
+            </div>
+            <div style="margin-top:1.5rem;">
+              <button class="proj-expand-btn" id="projagx-toggle" aria-expanded="false" aria-controls="projagx-body">
+                <span id="projagx-label" data-en="Show more" data-de="Mehr anzeigen">Mehr anzeigen</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,4 6,8 10,4"/></svg>
+              </button>
+              <div class="proj-detail-tags" id="projagx-tags" style="display:none;">
+                <span class="proj-tag">Agent Experience</span>
+                <span class="proj-tag" data-en="Customer Experience">Customer Experience</span>
+                <span class="proj-tag">Agentic AI</span>
+                <span class="proj-tag" data-en="AI Transformation">AI Transformation</span>
+                <span class="proj-tag" data-en="CX Strategy">CX-Strategie</span>
+                <span class="proj-tag" data-en="Insurance">Versicherung</span>
+                <span class="proj-tag">Insights</span>
+                <span class="proj-tag">2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="proj-item reveal delay-2" data-filter="produktentwicklung testing" style="grid-column:span 6;">
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-girls-app/slide-01.webp" class="proj-detail-img" alt="Team-App SV Höngg – Eltern-/Spielerinnen-Ansicht und Coach-Umgebung" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 19</div>
+            <div class="proj-detail-eyebrow">Projekt 20</div>
             <h2 class="proj-detail-title"><span data-en="Custom Team App Instead of a Paywall">Eigene Team-App statt Paywall</span> – <span style="white-space:nowrap">SV Höngg.</span></h2>
             <p class="proj-detail-lead" data-en="Why I built a custom app for my girls&#8217; team after a year with SpielerPlus, tailored exactly to coaches, players and parents.">Warum ich nach einem Jahr SpielerPlus eine eigene App für mein Mädchenteam gebaut habe, exakt zugeschnitten auf Trainer, Spielerinnen und Eltern.</p>
             <div class="proj-detail-body is-collapsible" id="projgirlsapp-body">
@@ -973,7 +1016,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 20</div>
+            <div class="proj-detail-eyebrow">Projekt 21</div>
             <h2 class="proj-detail-title" data-de="Redesign B2B Website – Swisscom." data-en="B2B Website Redesign – Swisscom.">Redesign B2B<br>Website – Swisscom.</h2>
             <p class="proj-detail-lead" data-en="As a key CX/UX driver in Swisscom's B2B area, conception and implementation of a comprehensive redesign, introduction of agile SAFe methods, and active involvement in merging two project teams.">Als massgeblicher CX/UX-Treiber im B2B-Bereich der Swisscom, Konzeption und Umsetzung eines umfassenden Redesigns, Einführung agiler SAFe-Methoden sowie aktive Mitgestaltung der Zusammenführung zweier Projektteams.</p>
             <div class="proj-detail-body is-collapsible" id="projswisscom-body">
@@ -1015,7 +1058,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 21</div>
+            <div class="proj-detail-eyebrow">Projekt 22</div>
             <h2 class="proj-detail-title"><span data-en="Corporate Journey">Konzernjourney</span> &amp;<br>Mystery Shopping – Post CH.</h2>
             <p class="proj-detail-lead" data-en="Visualisation of design thinking results and prototyping in the corporate journey workshop, plus planning and conducting mystery shopping for the digital shipping assistant.">Visualisierung von Design-Thinking-Ergebnissen und Prototyping im Konzernjourney-Workshop, sowie Planung und Durchführung von Mystery Shopping für den digitalen Versandassistenten.</p>
             <div class="proj-detail-body is-collapsible" id="projpost-body">
@@ -1061,7 +1104,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 22</div>
+            <div class="proj-detail-eyebrow">Projekt 23</div>
             <h2 class="proj-detail-title" data-en="Digital Advisory Platform for Sales – STIEBEL ELTRON.">Digitale Beratungsplattform im Vertrieb <span style="white-space:nowrap;">– STIEBEL ELTRON.</span></h2>
             <p class="proj-detail-lead" data-en="For the international heat pump manufacturer Stiebel Eltron, I designed a digital platform that makes sales processes more efficient and customer-oriented.">Für den internationalen Wärmepumpenhersteller Stiebel Eltron habe ich eine digitale Plattform konzipiert, die Vertriebsprozesse effizienter und kundenorientierter gestaltet.</p>
             <div class="proj-detail-body is-collapsible" id="projstiebel-body">
@@ -1103,7 +1146,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 23</div>
+            <div class="proj-detail-eyebrow">Projekt 24</div>
             <h2 class="proj-detail-title"><span data-en="Digital Advisory Tool">Digitales Beratungstool</span><br><span style="white-space:nowrap;">– St. Galler Kantonalbank.</span></h2>
             <p class="proj-detail-lead" data-en="Vision development and regular usability testing for an interactive advisory tool, from individual use to cooperative use in client consultations.">Visionsentwicklung und regelmässiges Usability Testing für ein interaktives Beratungstool, von der Einzelnutzung zur kooperativen Nutzung im Kundengespräch.</p>
             <div class="proj-detail-body is-collapsible" id="projsgkb-body">
@@ -1130,7 +1173,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-03/slide-01.webp" class="proj-detail-img" alt="myclimate – Usability Testing" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 24</div>
+            <div class="proj-detail-eyebrow">Projekt 25</div>
             <h2 class="proj-detail-title">Usability Testing – <span data-en="myclimate Foundation.">Stiftung myclimate.</span></h2>
             <p class="proj-detail-lead" data-en="Overall professional responsibility for usability testing of the website, from conception to recommended actions.">Fachliche Gesamtverantwortung für das Usability-Testing der Website, von der Konzeption bis zur Massnahmenempfehlung.</p>
             <div class="proj-detail-body is-collapsible" id="projmyclimate-body">
@@ -1168,7 +1211,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 25</div>
+            <div class="proj-detail-eyebrow">Projekt 26</div>
             <h2 class="proj-detail-title"><span data-en="Digital Realignment">Digitale Neuausrichtung</span> – SVGW.</h2>
             <p class="proj-detail-lead" data-en="Complete rebuild of the digital world of the Swiss Gas and Water Industry Association.">Vollständiger Neuaufbau der digitalen Welt des Schweizerischen Verbands der Gas- und Wasserwirtschaft.</p>
             <div class="proj-detail-body is-collapsible" id="projsvgw-body">
@@ -1195,7 +1238,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-04/slide-01.webp" class="proj-detail-img" alt="DKSH – Globaler Header & Newsportal" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 26</div>
+            <div class="proj-detail-eyebrow">Projekt 27</div>
             <h2 class="proj-detail-title"><span data-en="Global Header &amp; News Portal">Globaler Header &amp; <br>Newsportal</span> – <span data-en="DKSH Switzerland.">DKSH Schweiz.</span></h2>
             <p class="proj-detail-lead" data-en="User-centred consulting for the global website renewal, navigating fundamentally different user interests.">Nutzerzentrierte Beratung für die globale Website-Erneuerung, im Spannungsfeld fundamental unterschiedlicher Nutzerinteressen.</p>
             <div class="proj-detail-body is-collapsible" id="projdksh-body">
@@ -1269,6 +1312,7 @@
   (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('summitTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('summitDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.summitSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.summitSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('mentoringTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('mentoringDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.mentoringSlide=function(d){cur=(cur+d+tot)%tot;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('aiTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('aiDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.aiSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.aiSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('agxTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('agxDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.agxSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.agxSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('postTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('postDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.postSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.postSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('sgkbTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('sgkbDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.sgkbSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.sgkbSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=5;function upd(){var t=document.getElementById('stTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('stDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.stSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.stSlideTo=function(i){cur=i;upd();};})();
