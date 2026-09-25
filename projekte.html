@@ -211,16 +211,16 @@
 
       <div class="proj-item reveal delay-1" data-filter="insights ai-transformation" style="grid-column:span 6;">
         <div class="proj-detail-card">
-          <div class="proj-slider" style="background:#F7F5EF;">
+          <div class="proj-slider" style="background:#1f1635;">
             <div id="agxTrack" class="proj-slider-track">
-              <img loading="lazy" src="img/projekt-agent-experience/agent-experience-01.webp" class="proj-slide" alt="Skizze: Ein KI-Agent verbindet Mensch und Unternehmen, als Berater für den Menschen und als Kunde für das Unternehmen (AX), daneben die direkte Beziehung Mensch-Unternehmen (HX)." style="object-fit:contain;padding:1.2rem 2.2rem;box-sizing:border-box;background:#F7F5EF;" />
-              <img loading="lazy" src="img/projekt-agent-experience/agent-experience-02.webp" class="proj-slide" alt="Skizze zur Formel CX = HX + AX: Human Experience für Menschen, die entscheiden, Agent Experience für Agenten, die handeln." style="object-fit:contain;padding:1.2rem 2.2rem;box-sizing:border-box;background:#F7F5EF;" />
+              <img loading="lazy" src="img/projekt-agent-experience/agent-experience-01.webp" class="proj-slide" alt="Skizze: Ein KI-Agent verbindet Mensch und Unternehmen, als Berater für den Menschen und als Kunde für das Unternehmen (AX), daneben die direkte Beziehung Mensch-Unternehmen (HX)." style="object-fit:contain;padding:1.4rem 2.4rem;box-sizing:border-box;background:#1f1635;filter:drop-shadow(0 10px 24px rgba(0,0,0,.45));" />
+              <img loading="lazy" src="img/projekt-agent-experience/agent-experience-02.webp" class="proj-slide" alt="Skizze zur Formel CX = HX + AX: Human Experience für Menschen, die entscheiden, Agent Experience für Agenten, die handeln." style="object-fit:contain;padding:1.4rem 2.4rem;box-sizing:border-box;background:#1f1635;filter:drop-shadow(0 10px 24px rgba(0,0,0,.45));" />
             </div>
-            <button onclick="agxSlide(-1)" aria-label="Zurück" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
-            <button onclick="agxSlide(1)" aria-label="Weiter" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
-            <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
-              <span id="agxDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="agxSlideTo(0)"></span>
-              <span id="agxDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="agxSlideTo(1)"></span>
+            <button class="proj-slider-btn prev" onclick="agxSlide(-1)" aria-label="Zurück">&#8592;</button>
+            <button class="proj-slider-btn next" onclick="agxSlide(1)" aria-label="Weiter">&#8594;</button>
+            <div class="proj-slider-dots">
+              <span id="agxDot0" class="proj-dot active" onclick="agxSlideTo(0)"></span>
+              <span id="agxDot1" class="proj-dot" onclick="agxSlideTo(1)"></span>
             </div>
           </div>
           <div class="proj-detail-text">
@@ -1312,7 +1312,7 @@
   (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('summitTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('summitDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.summitSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.summitSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('mentoringTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('mentoringDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.mentoringSlide=function(d){cur=(cur+d+tot)%tot;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('aiTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('aiDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.aiSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.aiSlideTo=function(i){cur=i;upd();};})();
-  (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('agxTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('agxDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.agxSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.agxSlideTo=function(i){cur=i;upd();};})();
+  (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('agxTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('agxDot'+j);if(d)d.classList.toggle('active',j===cur);}}window.agxSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.agxSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('postTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('postDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.postSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.postSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=3;function upd(){var t=document.getElementById('sgkbTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('sgkbDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.sgkbSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.sgkbSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=5;function upd(){var t=document.getElementById('stTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('stDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.stSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.stSlideTo=function(i){cur=i;upd();};})();
