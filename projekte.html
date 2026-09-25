@@ -211,6 +211,49 @@
 
       <div class="proj-item reveal delay-1" data-filter="insights ai-transformation" style="grid-column:span 6;">
         <div class="proj-detail-card">
+          <div class="proj-slider" style="background:#F7F5EF;">
+            <div id="agxTrack" class="proj-slider-track">
+              <img loading="lazy" src="img/projekt-agent-experience/agent-experience-01.webp" class="proj-slide" alt="Skizze: Ein KI-Agent verbindet Mensch und Unternehmen, als Berater für den Menschen und als Kunde für das Unternehmen (AX), daneben die direkte Beziehung Mensch-Unternehmen (HX)." style="object-fit:contain;padding:1.2rem 2.2rem;box-sizing:border-box;background:#F7F5EF;" />
+              <img loading="lazy" src="img/projekt-agent-experience/agent-experience-02.webp" class="proj-slide" alt="Skizze zur Formel CX = HX + AX: Human Experience für Menschen, die entscheiden, Agent Experience für Agenten, die handeln." style="object-fit:contain;padding:1.2rem 2.2rem;box-sizing:border-box;background:#F7F5EF;" />
+            </div>
+            <button onclick="agxSlide(-1)" aria-label="Zurück" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
+            <button onclick="agxSlide(1)" aria-label="Weiter" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
+            <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
+              <span id="agxDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="agxSlideTo(0)"></span>
+              <span id="agxDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="agxSlideTo(1)"></span>
+            </div>
+          </div>
+          <div class="proj-detail-text">
+            <div class="proj-detail-eyebrow">Projekt 02</div>
+            <h2 class="proj-detail-title">CX = HX + AX.</h2>
+            <p class="proj-detail-lead" data-en="AI agents like Meta Muse compare, sign and cancel contracts on their own. What this means for tomorrow&#8217;s customer experience.">KI-Agenten wie Meta Muse vergleichen, schliessen ab und kündigen selbst. Was das für die Customer Experience von morgen bedeutet.</p>
+            <div class="proj-detail-body is-collapsible" id="projagx-body">
+              <p data-en="In early September 2026, Meta launched &#171;Muse&#187;, a personal AI agent that acts proactively, remembers goals and can pay directly. According to Axios, one user had Muse review his car insurance: it found equivalent coverage for several thousand dollars less, signed the new policy and cancelled the old one, no phone call, no form. This gives the agent a double role: for the human it acts as advisor, for the company it appears as the customer. The relationship between human and agent is no longer in the company&#8217;s hands, it sits with the agent&#8217;s provider.">Anfang September 2026 lancierte Meta mit «Muse» einen persönlichen KI-Agenten, der proaktiv handelt, sich Ziele merkt und direkt bezahlen kann. Ein Nutzer liess laut Axios seine Autoversicherung prüfen: Muse fand eine gleichwertige Deckung für mehrere tausend Dollar weniger, schloss die neue Police ab und kündigte die alte, ohne Telefonat, ohne Formular. Damit bekommt der Agent eine Doppelrolle: Für den Menschen ist er Berater, für das Unternehmen tritt er als Kunde auf. Die Beziehung zwischen Mensch und Agent liegt dabei nicht mehr in der Hand des Unternehmens, sondern beim Anbieter des Agenten.</p>
+              <p data-en="Customer experience becomes the sum of human experience and agent experience. For companies this means: products must be machine-readable and human-understandable, clarity becomes a competitive advantage. Complicated cancellation processes no longer retain customers, an agent has patience and no inertia. What remains is whoever offers real value. At the same time, human moments such as a claim or an honest advisory conversation matter more than ever, that&#8217;s where trust is built, and no agent can replace it.">Customer Experience wird damit zur Summe aus Human Experience und Agent Experience. Für Unternehmen heisst das: Produkte müssen für Maschinen lesbar und für Menschen verständlich sein, Klarheit wird zum Wettbewerbsvorteil. Komplizierte Kündigungen halten keine Kunden mehr, ein Agent hat Geduld und kennt keine Trägheit. Bleiben wird, wer echten Mehrwert bietet. Gleichzeitig zählen menschliche Momente wie der Schadenfall oder das ehrliche Beratungsgespräch mehr denn je, dort entsteht Vertrauen, das ein Agent nicht ersetzen kann.</p>
+              <p style="font-style:italic" data-en="Key insight: Muse is only available in the US today, but the thinking behind it won&#8217;t stop at the border. The real question is: how are companies preparing for their customers to send agents on their behalf?">Zentrale Erkenntnis: Muse gibt es heute nur in den USA, die Denkweise dahinter macht an der Grenze nicht halt. Die eigentliche Frage lautet: Wie bereiten sich Unternehmen darauf vor, dass ihre Kunden künftig ihre Agenten beauftragen?</p>
+            </div>
+            <div style="margin-top:1.5rem;">
+              <button class="proj-expand-btn" id="projagx-toggle" aria-expanded="false" aria-controls="projagx-body">
+                <span id="projagx-label" data-en="Show more" data-de="Mehr anzeigen">Mehr anzeigen</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,4 6,8 10,4"/></svg>
+              </button>
+              <div class="proj-detail-tags" id="projagx-tags" style="display:none;">
+                <span class="proj-tag">Agent Experience</span>
+                <span class="proj-tag" data-en="Customer Experience">Customer Experience</span>
+                <span class="proj-tag">Agentic AI</span>
+                <span class="proj-tag" data-en="AI Transformation">AI Transformation</span>
+                <span class="proj-tag" data-en="CX Strategy">CX-Strategie</span>
+                <span class="proj-tag" data-en="Insurance">Versicherung</span>
+                <span class="proj-tag">Insights</span>
+                <span class="proj-tag">2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-item reveal delay-1" data-filter="insights ai-transformation" style="grid-column:span 6;">
+        <div class="proj-detail-card">
           <div style="position:relative;overflow:hidden;width:100%;aspect-ratio:16/9;background:#0d1117;display:flex;align-items:center;justify-content:center;">
             <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(115,127,223,.12) 0%,transparent 70%);"></div>
             <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:.8rem;align-items:center;padding:0 1.5rem;">
@@ -241,7 +284,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 02</div>
+            <div class="proj-detail-eyebrow">Projekt 03</div>
             <h2 class="proj-detail-title"><span data-en="Which AI Workplace Tools Create Impact.">Welche AI Workplace Tools Wirkung erzielen.</span></h2>
             <p class="proj-detail-lead" data-en="Five AI productivity tools compared, backed by independent research from Harvard, MIT and McKinsey. The result: it is not the tool that determines the value, but the fit to the task, the person and the governance.">Fünf AI-Produktivitätstools im Vergleich, gestützt auf unabhängige Forschung von Harvard, MIT und McKinsey. Das Ergebnis: Nicht das Tool entscheidet den Nutzen, sondern die Passung zur Aufgabe, zur Person und zur Governance.</p>
             <div class="proj-detail-body is-collapsible" id="projaitools-body">
@@ -296,7 +339,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 03</div>
+            <div class="proj-detail-eyebrow">Projekt 04</div>
             <h2 class="proj-detail-title" data-en="From Augmented AI to Agentic AI.">Von Augmented AI zu Agentic AI.</h2>
             <p class="proj-detail-lead" data-en="An orientation framework for companies that want not just to use AI, but to steer it with intent.">Ein Orientierungsrahmen für Unternehmen, die AI nicht nur einsetzen, sondern gezielt steuern wollen.</p>
             <div class="proj-detail-body is-collapsible" id="projaugmented-body">
@@ -349,7 +392,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 04</div>
+            <div class="proj-detail-eyebrow">Projekt 05</div>
             <h2 class="proj-detail-title" data-en="Why AI Projects Can Fail Before They Arrive.">Warum AI Projekte scheitern können, bevor sie ankommen.</h2>
             <p class="proj-detail-lead" data-en="Eight GenAI initiatives, one recurring insight: technology, business and customer experience must be considered in equal measure. Only when all three work together does AI unfold its full potential.">Acht GenAI-Initiativen, eine wiederkehrende Erkenntnis: Technologie, Business und Customer Experience müssen gleichermassen mitgedacht werden. Erst im Zusammenspiel aller drei entfaltet AI ihr volles Potenzial.</p>
             <div class="proj-detail-body is-collapsible" id="projaitransform-body">
@@ -388,7 +431,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 05</div>
+            <div class="proj-detail-eyebrow">Projekt 06</div>
             <h2 class="proj-detail-title" data-en="2%. What the Data Says About AI Transformation.">2%. Was die Daten über AI Transformation sagen.</h2>
             <p class="proj-detail-lead" data-en="800 executives, one number that says everything: only 2 percent of organisations achieve measurably good results with their AI strategy. The technology is not the bottleneck. The MIT Technology Review and Databricks study from 2025 makes clear where the real challenge lies.">800 Führungskräfte, eine Zahl die alles sagt: Nur 2 Prozent der Organisationen erzielen mit ihrer AI-Strategie messbar gute Ergebnisse. Die Technologie ist nicht der Engpass. Die MIT Technology Review und Databricks Studie von 2025 macht deutlich, wo die eigentliche Herausforderung liegt.</p>
             <div class="proj-detail-body is-collapsible" id="projmittr-body">
@@ -439,7 +482,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 06</div>
+            <div class="proj-detail-eyebrow">Projekt 07</div>
             <h2 class="proj-detail-title" data-en="AI Acts. What Organisations Should Prepare Now.">AI handelt. Was Organisationen jetzt vorbereiten sollten.</h2>
             <p class="proj-detail-lead" data-en="Gartner predicted it for 2026. 40 percent of all enterprise applications will contain AI agents this year. By 2028, AI will make 15 percent of daily business decisions autonomously. We are in the middle of this shift. Organisations that are only just beginning to think about it now have little time to lose.">Gartner hat es für 2026 prognostiziert. 40 Prozent aller Enterprise-Applikationen enthalten noch dieses Jahr AI-Agenten. Bis 2028 trifft AI 15 Prozent der täglichen Business-Entscheidungen autonom. Wir sind mittendrin. Wer jetzt erst beginnt darüber nachzudenken, hat wenig Zeit zu verlieren.</p>
             <div class="proj-detail-body is-collapsible" id="projagenticai-body">
@@ -484,7 +527,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 07</div>
+            <div class="proj-detail-eyebrow">Projekt 08</div>
             <h2 class="proj-detail-title"><span data-en="WIN Framework">WIN Framework</span><br><span data-en="Three Questions. One Decision.">Drei Fragen. Ein Entscheid.</span></h2>
             <p class="proj-detail-lead" data-en="Some AI features don't fail because of the technology, but because value, integration and acceptance weren't validated early enough. WIN gives teams a structured model to work with before they scale.">Einige AI-Features scheitern nicht an der Technologie, sondern daran, dass Nutzen, Einbettung und Akzeptanz nicht früh genug geprüft wurden. WIN gibt Teams ein strukturiertes Modell an die Hand, bevor sie skalieren.</p>
             <div class="proj-detail-body is-collapsible" id="projWIN-body">
@@ -516,7 +559,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-ost/tree.svg" class="proj-detail-img" alt="Opportunity Solution Tree – Struktur" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 08</div>
+            <div class="proj-detail-eyebrow">Projekt 09</div>
             <h2 class="proj-detail-title"><span data-en="Opportunity Solution Tree.">Opportunity Solution Tree.</span><br><span data-en="From Outcome to the Right Solution.">Vom Ziel zur richtigen Lösung.</span></h2>
             <p class="proj-detail-lead" data-en="Many teams build features before it's clear which problem they're actually solving. Teresa Torres' Opportunity Solution Tree makes visible what really needs to happen between business outcome and solution.">Viele Teams bauen Features, bevor klar ist, welches Problem sie eigentlich lösen. Der Opportunity Solution Tree von Teresa Torres macht sichtbar, was zwischen Geschäftsziel und Lösung wirklich passieren muss.</p>
             <div class="proj-detail-body is-collapsible" id="projOST-body">
@@ -549,7 +592,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-axa-ux/slide-01.webp" class="proj-detail-img" alt="AXA Schweiz – Stages of UX Maturity" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 09</div>
+            <div class="proj-detail-eyebrow">Projekt 10</div>
             <h2 class="proj-detail-title"><span data-en="UX Maturity Level 4">UX Reife Level 4</span> – <span data-en="AXA Switzerland.">AXA Schweiz.</span></h2>
             <p class="proj-detail-lead" data-en="Assessment of UX maturity and systematic advancement from level 3 («Emergent») to level 4 («Structured») according to the Nielsen Norman UX maturity model, through eight standards, formal governance and an optimised organisational structure.">Erhebung der UX-Reife und systematische Steigerung von Level 3 auf Level 4 nach dem Nielsen Norman UX-Maturity-Modell, durch acht Standards, eine formale Governance und eine optimierte Organisationsstruktur.</p>
             <div class="proj-detail-body is-collapsible" id="projuxreife-body">
@@ -578,7 +621,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-axa-kpi/slide-01.svg" class="proj-detail-img" alt="AXA Schweiz – UX-KPI Tracking Dashboard" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 10</div>
+            <div class="proj-detail-eyebrow">Projekt 11</div>
             <h2 class="proj-detail-title">UX KPI Tracking – <span data-en="AXA Switzerland.">AXA Schweiz.</span></h2>
             <p class="proj-detail-lead" data-en="Those who only measure conversion at the end of the funnel see the result, not the cause. We looked deeper.">Wer nur die Conversion am Ende des Funnels misst, sieht nur das Ergebnis, nicht die Ursache. Wir haben tiefer geschaut.</p>
             <div class="proj-detail-body is-collapsible" id="proj07-body">
@@ -621,7 +664,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 11</div>
+            <div class="proj-detail-eyebrow">Projekt 12</div>
             <h2 class="proj-detail-title" data-en="Breakdown. Damage. And now an Agent. – AXA Switzerland.">Panne. Schaden. Und jetzt ein Agent. – AXA&nbsp;Schweiz.</h2>
             <p class="proj-detail-lead" data-en="A chat and voice bot for breakdown and damage reporting was developed, tested and continuously optimised together with my team. I accompanied the project and was involved in a user test, with fascinating insights.">Im Claims-Bereich der AXA wurde ein Chat- und Voicebot für die Pannen- und Schadenmeldung zusammen mit meinem Team entwickelt, getestet und kontinuierlich optimiert. Ich habe das Projekt begleitet und war an einem Nutzertest dabei, mit spannenden Erkenntnissen.</p>
             <div class="proj-detail-body is-collapsible" id="proj02-body">
@@ -669,7 +712,7 @@
           </div>
 
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 12</div>
+            <div class="proj-detail-eyebrow">Projekt 13</div>
             <h2 class="proj-detail-title">AI for Designers – <span data-en="AXA Switzerland.">AXA Schweiz.</span></h2>
             <p class="proj-detail-lead" data-en="A workshop for the AXA Switzerland UX team on AI tools, GenAI workflows and how AI is fundamentally changing the design process.">Ein Workshop für das UX-Team der AXA Schweiz zu AI-Tools, GenAI-Workflows und der Frage, wie AI den Designprozess grundlegend verändert.</p>
             <div class="proj-detail-body is-collapsible" id="projaidesign-body">
@@ -715,7 +758,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 13</div>
+            <div class="proj-detail-eyebrow">Projekt 14</div>
             <h2 class="proj-detail-title" data-de="Mentoring &amp; Wissenstransfer – UX Schweiz / AXA Schweiz." data-en="Mentoring &amp; Knowledge Transfer – UX Switzerland / AXA Switzerland.">Mentoring &amp; Wissenstransfer – UX Schweiz / AXA Schweiz.</h2>
             <p class="proj-detail-lead" data-en="Fostering talent, sharing knowledge, strengthening community, as a mentor for young UX professionals in training and as a coach for colleagues at AXA." data-de="Nachwuchs fördern, Wissen teilen, Gemeinschaft stärken, als Mentor für junge UX-Fachleute in der Ausbildung und als Coach für Berufskollegen bei der AXA.">Nachwuchs fördern, Wissen teilen, Gemeinschaft stärken, als Mentor für junge UX-Fachleute in der Ausbildung und als Coach für Berufskollegen bei der AXA.</p>
             <div class="proj-detail-body is-collapsible" id="projmentoring-body">
@@ -761,7 +804,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 14</div>
+            <div class="proj-detail-eyebrow">Projekt 15</div>
             <h2 class="proj-detail-title">Agentic Experience &amp; Trust by Design – <span data-en="AXA Group.">AXA Gruppe.</span></h2>
             <p class="proj-detail-lead" data-en="As participant and active co-creator of the AXA UX Summit 2025 in Brussels, engaging with the paradigm shift from classical UX design towards agentic AI systems, and contributing to the strategic question of how trust becomes a central design dimension.">Als Teilnehmer und aktiver Mitgestalter des AXA UX Summit 2025 in Brüssel, Auseinandersetzung mit dem Paradigmenwechsel von klassischem UX Design hin zu agentischen AI-Systemen sowie Mitarbeit an der strategischen Frage, wie Vertrauen zur zentralen Designgrösse wird.</p>
             <div class="proj-detail-body is-collapsible" id="proj10-body">
@@ -802,7 +845,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-              <div class="proj-detail-eyebrow">Projekt 15</div>
+              <div class="proj-detail-eyebrow">Projekt 16</div>
               <h2 class="proj-detail-title" data-de="Personalisierter AI Assistent." data-en="Personalised AI Assistant.">Personalisierter AI Assistent.</h2>
               <p class="proj-detail-lead" data-en="A personalised AI assistant, built on Claude Code, contextualised to my role, knowledge base and way of working as a CX strategist, leader and organisational developer.">Ein personalisierter AI-Assistent, gebaut auf Claude Code, kontextualisiert auf Rolle, Wissensbasis und Arbeitsweise von mir als CX-Stratege, Führungsperson und Organisationsentwickler.</p>
             <div class="proj-detail-body is-collapsible" id="proj04-body">
@@ -834,7 +877,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-ai-agent/5-layers-branded-ai-assistant.svg" class="proj-detail-img" alt="5 Layers of a Branded AI Assistant" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 16</div>
+            <div class="proj-detail-eyebrow">Projekt 17</div>
             <h2 class="proj-detail-title">5 Layer Framework,<br><span data-en="Foundation of a Branded AI Assistant.">Grundlage eines Branded AI Assistenten.</span></h2>
             <p class="proj-detail-lead" data-en="How do you turn a generic AI assistant into a personal one? The 5-Layer Framework is the answer, and the customized adaptation of my personalised AI Assistant (Project 10).">Wie wird aus einem generischen AI-Assistenten ein persönlicher? Das 5-Layer-Framework ist die Antwort, und die customized Anpassung meines personalisierten AI-Assistenten (Projekt 10).</p>
             <div class="proj-detail-body is-collapsible" id="proj05-body">
@@ -865,7 +908,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-ai-memory/ai-assistent.webp" class="proj-detail-img" alt="Wenn AI Agenten mitdenken – Persistentes Memory System" style="object-position:center center;" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 17</div>
+            <div class="proj-detail-eyebrow">Projekt 18</div>
             <h2 class="proj-detail-title" data-en="When AI Agents Think Along.">Wenn AI Agenten mitdenken.</h2>
             <p class="proj-detail-lead" data-en="I analyse persistent AI memory systems, and build one myself to understand what this truly means for users.">Ich analysiere persistente AI-Memory-Systeme, und baue selbst einen, um zu verstehen, was das für Nutzer wirklich bedeutet.</p>
             <div class="proj-detail-body is-collapsible" id="proj06-body">
@@ -898,7 +941,7 @@
             <iframe src="https://www.youtube-nocookie.com/embed/t_LBECIQQqs?playsinline=1" title="Claude Design & die Zukunft des AI Experience Designers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 18</div>
+            <div class="proj-detail-eyebrow">Projekt 19</div>
             <h2 class="proj-detail-title"><span data-en="The Future of the AI Experience Designer">Die Zukunft des AI Experience Designers</span> <span data-en="with AI tools like Claude Design.">mit AI Tools wie Claude Design.</span></h2>
             <p class="proj-detail-lead" data-en="The launch of Claude Design raises a question I've been thinking about for a while: where does a designer create real value when execution becomes automatable?">Die Lancierung von Claude Design stellt eine Frage, die mich schon länger beschäftigt: Wo leistet ein Designer echten Mehrwert, wenn Execution automatisierbar wird?</p>
             <div class="proj-detail-body is-collapsible" id="projclaudedesign-body">
@@ -920,49 +963,6 @@
               <span class="proj-tag">Thought Leadership</span>
               <span class="proj-tag">2026</span>
             </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="proj-item reveal delay-1" data-filter="insights ai-transformation" style="grid-column:span 6;">
-        <div class="proj-detail-card">
-          <div class="proj-slider">
-            <div id="agxTrack" class="proj-slider-track">
-              <img loading="lazy" src="img/projekt-agent-experience/agent-experience-01.webp" class="proj-slide" alt="Skizze: Ein KI-Agent verbindet Mensch und Unternehmen, als Berater für den Menschen und als Kunde für das Unternehmen (AX), daneben die direkte Beziehung Mensch-Unternehmen (HX)." />
-              <img loading="lazy" src="img/projekt-agent-experience/agent-experience-02.webp" class="proj-slide" alt="Skizze zur Formel CX = HX + AX: Human Experience für Menschen, die entscheiden, Agent Experience für Agenten, die handeln." />
-            </div>
-            <button onclick="agxSlide(-1)" aria-label="Zurück" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
-            <button onclick="agxSlide(1)" aria-label="Weiter" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(19,18,23,.55);border:none;color:#fff;font-size:1.3rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
-            <div style="position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;">
-              <span id="agxDot0" style="width:7px;height:7px;border-radius:50%;background:#737FDF;cursor:pointer;display:inline-block;" onclick="agxSlideTo(0)"></span>
-              <span id="agxDot1" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;display:inline-block;" onclick="agxSlideTo(1)"></span>
-            </div>
-          </div>
-          <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 19</div>
-            <h2 class="proj-detail-title">CX = HX + AX.</h2>
-            <p class="proj-detail-lead" data-en="AI agents like Meta Muse compare, sign and cancel contracts on their own. What this means for tomorrow&#8217;s customer experience.">KI-Agenten wie Meta Muse vergleichen, schliessen ab und kündigen selbst. Was das für die Customer Experience von morgen bedeutet.</p>
-            <div class="proj-detail-body is-collapsible" id="projagx-body">
-              <p data-en="In early September 2026, Meta launched &#171;Muse&#187;, a personal AI agent that acts proactively, remembers goals and can pay directly. According to Axios, one user had Muse review his car insurance: it found equivalent coverage for several thousand dollars less, signed the new policy and cancelled the old one, no phone call, no form. This gives the agent a double role: for the human it acts as advisor, for the company it appears as the customer. The relationship between human and agent is no longer in the company&#8217;s hands, it sits with the agent&#8217;s provider.">Anfang September 2026 lancierte Meta mit «Muse» einen persönlichen KI-Agenten, der proaktiv handelt, sich Ziele merkt und direkt bezahlen kann. Ein Nutzer liess laut Axios seine Autoversicherung prüfen: Muse fand eine gleichwertige Deckung für mehrere tausend Dollar weniger, schloss die neue Police ab und kündigte die alte, ohne Telefonat, ohne Formular. Damit bekommt der Agent eine Doppelrolle: Für den Menschen ist er Berater, für das Unternehmen tritt er als Kunde auf. Die Beziehung zwischen Mensch und Agent liegt dabei nicht mehr in der Hand des Unternehmens, sondern beim Anbieter des Agenten.</p>
-              <p data-en="Customer experience becomes the sum of human experience and agent experience. For companies this means: products must be machine-readable and human-understandable, clarity becomes a competitive advantage. Complicated cancellation processes no longer retain customers, an agent has patience and no inertia. What remains is whoever offers real value. At the same time, human moments such as a claim or an honest advisory conversation matter more than ever, that&#8217;s where trust is built, and no agent can replace it.">Customer Experience wird damit zur Summe aus Human Experience und Agent Experience. Für Unternehmen heisst das: Produkte müssen für Maschinen lesbar und für Menschen verständlich sein, Klarheit wird zum Wettbewerbsvorteil. Komplizierte Kündigungen halten keine Kunden mehr, ein Agent hat Geduld und kennt keine Trägheit. Bleiben wird, wer echten Mehrwert bietet. Gleichzeitig zählen menschliche Momente wie der Schadenfall oder das ehrliche Beratungsgespräch mehr denn je, dort entsteht Vertrauen, das ein Agent nicht ersetzen kann.</p>
-              <p style="font-style:italic" data-en="Key insight: Muse is only available in the US today, but the thinking behind it won&#8217;t stop at the border. The real question is: how are companies preparing for their customers to send agents on their behalf?">Zentrale Erkenntnis: Muse gibt es heute nur in den USA, die Denkweise dahinter macht an der Grenze nicht halt. Die eigentliche Frage lautet: Wie bereiten sich Unternehmen darauf vor, dass ihre Kunden künftig ihre Agenten beauftragen?</p>
-            </div>
-            <div style="margin-top:1.5rem;">
-              <button class="proj-expand-btn" id="projagx-toggle" aria-expanded="false" aria-controls="projagx-body">
-                <span id="projagx-label" data-en="Show more" data-de="Mehr anzeigen">Mehr anzeigen</span>
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,4 6,8 10,4"/></svg>
-              </button>
-              <div class="proj-detail-tags" id="projagx-tags" style="display:none;">
-                <span class="proj-tag">Agent Experience</span>
-                <span class="proj-tag" data-en="Customer Experience">Customer Experience</span>
-                <span class="proj-tag">Agentic AI</span>
-                <span class="proj-tag" data-en="AI Transformation">AI Transformation</span>
-                <span class="proj-tag" data-en="CX Strategy">CX-Strategie</span>
-                <span class="proj-tag" data-en="Insurance">Versicherung</span>
-                <span class="proj-tag">Insights</span>
-                <span class="proj-tag">2026</span>
-              </div>
             </div>
           </div>
         </div>
