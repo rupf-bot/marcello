@@ -145,7 +145,7 @@
     .p3-zoom{position:absolute;right:10px;bottom:10px;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;color:#64748b;background:none;border:none;border-radius:6px;cursor:pointer;z-index:5;}
     .p3-zoom:hover{color:#1f2937;background:rgba(100,116,139,.12)}
     .p3-zoom:focus-visible,.p3-bar button:focus-visible{outline:2px solid #6366f1;outline-offset:2px}
-    .p3-dialog{width:min(96vw,1400px);height:min(92vh,900px);padding:0;border:0;border-radius:12px;background:#fff;color:#1f2937;overflow:hidden}
+    .p3-dialog{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);margin:0;width:min(96vw,1400px);height:min(92vh,900px);padding:0;border:0;border-radius:12px;background:#fff;color:#1f2937;overflow:hidden}
     .p3-dialog[open]{display:flex;flex-direction:column}
     .p3-dialog::backdrop{background:rgba(15,23,42,.65)}
     .p3-bar{display:flex;align-items:center;gap:.5rem;padding:.6rem .8rem;border-bottom:1px solid #e2e8f0;flex:none}
