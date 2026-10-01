@@ -139,8 +139,9 @@
     .kaa .coral rect{fill:#ffe4e6;stroke:#f43f5e}.kaa .coral .th{fill:#9f1239}.kaa .coral .ts{fill:#be123c}
     .kaa .amber rect{fill:#fef3c7;stroke:#f59e0b}.kaa .amber .th{fill:#92400e}.kaa .amber .ts{fill:#b45309}
     .kaa .sky rect{fill:#e0f2fe;stroke:#0ea5e9}.kaa .sky .th{fill:#075985}.kaa .sky .ts{fill:#0369a1}
-    .p3-hero{position:relative;width:100%;aspect-ratio:16/9;background:#fff;overflow:hidden;}
-    .p3-hero>svg{display:block;width:100%;height:100%;}
+    .p3-hero{position:relative;width:100%;aspect-ratio:16/9;background:#f1f5f9;overflow:hidden;box-sizing:border-box;padding:clamp(12px,3.5%,28px);display:flex;align-items:center;justify-content:center;}
+    .p3-canvas{position:relative;width:100%;height:100%;background:#fff;border-radius:10px;box-shadow:0 10px 28px rgba(15,23,42,.14);overflow:hidden;}
+    .p3-canvas>svg{display:block;width:100%;height:100%;}
     .p3-zoom{position:absolute;right:10px;bottom:10px;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;color:#64748b;background:none;border:none;border-radius:6px;cursor:pointer;z-index:5;}
     .p3-zoom:hover{color:#1f2937;background:rgba(100,116,139,.12)}
     .p3-zoom:focus-visible,.p3-bar button:focus-visible{outline:2px solid #6366f1;outline-offset:2px}
@@ -285,6 +286,7 @@
       <div class="proj-item reveal delay-1" data-filter="ai-transformation strategie" style="grid-column:span 6;">
         <div class="proj-detail-card p3">
           <div class="p3-hero">
+            <div class="p3-canvas">
 <svg class="kaa" viewBox="0 0 1280 720" role="img" aria-labelledby="p3-t p3-d"><title id="p3-t">Wie ein Kunden-Agent mit einem Versicherer zusammenarbeitet</title><desc id="p3-d">Der Kunde erteilt seinem Agenten ein Mandat. Der Agent spricht über Protokolle (MCP, A2A, AP2) mit der Schnittstelle des Versicherers. Eine Mandatsprüfung mit festen Regeln entscheidet: Im Rahmen des Mandats geht die Aktion an die Kernsysteme, als Ausnahme an einen Menschen. Alles wird im Audit Trail protokolliert. Legende: MCP steht für Model Context Protocol, A2A für Agent2Agent, AP2 für Agent Payments Protocol.</desc>
 <rect width="1280" height="720" fill="#ffffff"/>
 <g transform="translate(0,24)"><defs><marker id="p3-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
@@ -313,6 +315,7 @@
 </g>
 </svg>
             <button class="p3-zoom" type="button" aria-haspopup="dialog" aria-label="Schema vergrössern"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14M7 5v4M5 7h4"/></svg></button>
+            </div>
           </div>
           <dialog class="p3-dialog" aria-label="Schema Kunden-Agent und Versicherer, vergrössert">
             <div class="p3-bar"><span data-en="Schema: Customer Agent and Insurer">Schema Kunden-Agent und Versicherer</span><button type="button" data-z="out" aria-label="Verkleinern">−</button><button type="button" data-z="reset" aria-label="Zoom zurücksetzen">100%</button><button type="button" data-z="in" aria-label="Vergrössern">+</button><button type="button" data-z="close" data-en="Close">Schliessen</button></div>
