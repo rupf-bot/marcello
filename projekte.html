@@ -152,8 +152,8 @@
     .p3-bar span{flex:1;font-size:.875rem;color:#475569}
     .p3-bar button{min-width:2.5rem;padding:.4rem .7rem;font:inherit;font-size:.9rem;color:#1f2937;background:#fff;border:1px solid #cbd5e1;border-radius:8px;cursor:pointer}
     .p3-bar button:hover{background:#f1f5f9}
-    .p3-stage{flex:1;overflow:auto;background:#fff}
-    .p3-stage>svg{display:block;width:calc(100% * var(--zoom,1));height:auto}
+    .p3-stage{flex:1;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;}
+    .p3-stage>svg{display:block;width:100%;height:100%;}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Marcel Rupf","url":"https://marcelrupf.com"}
@@ -318,8 +318,8 @@
             </div>
           </div>
           <dialog class="p3-dialog" aria-label="Schema Kunden-Agent und Versicherer, vergrössert">
-            <div class="p3-bar"><span data-en="Schema: Customer Agent and Insurer">Schema Kunden-Agent und Versicherer</span><button type="button" data-z="out" aria-label="Verkleinern">−</button><button type="button" data-z="reset" aria-label="Zoom zurücksetzen">100%</button><button type="button" data-z="in" aria-label="Vergrössern">+</button><button type="button" data-z="close" data-en="Close">Schliessen</button></div>
-            <div class="p3-stage" tabindex="0"></div>
+            <div class="p3-bar"><span data-en="Schema: Customer Agent and Insurer">Schema Kunden-Agent und Versicherer</span><button type="button" data-z="close" data-en="Close">Schliessen</button></div>
+            <div class="p3-stage"></div>
           </dialog>
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 03</div>
@@ -1418,11 +1418,8 @@
   (function(){
     document.querySelectorAll('.p3').forEach(function(root){
       var hero=root.querySelector('.p3-hero'), btn=root.querySelector('.p3-zoom'),
-          dlg=root.querySelector('.p3-dialog'), stage=root.querySelector('.p3-stage'),
-          reset=root.querySelector('[data-z="reset"]');
+          dlg=root.querySelector('.p3-dialog'), stage=root.querySelector('.p3-stage');
       if(!hero||!btn||!dlg||!stage||typeof dlg.showModal!=='function'){ if(btn) btn.style.display='none'; return; }
-      var steps=[1,1.5,2,3,4], i=0;
-      function apply(){ stage.style.setProperty('--zoom',steps[i]); reset.textContent=Math.round(steps[i]*100)+'%'; }
       btn.addEventListener('click',function(){
         if(!stage.firstChild){
           var c=hero.querySelector('svg').cloneNode(true);
@@ -1430,17 +1427,13 @@
           c.querySelectorAll('title,desc').forEach(function(n){n.removeAttribute('id');});
           stage.appendChild(c);
         }
-        i=0; apply(); dlg.showModal(); stage.scrollTop=0; stage.scrollLeft=0;
+        dlg.showModal();
       });
       dlg.addEventListener('click',function(e){
         if(e.target===dlg){ dlg.close(); return; }
         var z=e.target.getAttribute&&e.target.getAttribute('data-z');
-        if(z==='in'&&i<steps.length-1){i++;apply();}
-        else if(z==='out'&&i>0){i--;apply();}
-        else if(z==='reset'){i=0;apply();}
-        else if(z==='close'){dlg.close();}
+        if(z==='close'){dlg.close();}
       });
-      stage.addEventListener('dblclick',function(){ i=(i+1)%steps.length; apply(); });
     });
   })();
 </script>
