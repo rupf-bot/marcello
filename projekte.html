@@ -123,6 +123,40 @@
     @media(max-width:700px){.proj-detail-images{grid-template-columns:1fr;}.proj-detail-text{padding:1.5rem;}.proj-detail-card:hover .proj-slider,.proj-detail-card:hover .proj-detail-img{transform:none;}.proj-detail-title{font-size:clamp(1.3rem,5vw,1.8rem);}.win-header-text{padding:1.5rem;}}
     @media(max-width:540px){.proj-grid{grid-template-columns:1fr!important;padding:2rem 1.2rem 4rem;gap:1.2rem;margin-left:0;margin-right:0;}.proj-item{grid-column:span 1!important;min-width:0;}.proj-detail-text{padding:1.5rem 1.2rem;}.proj-slider-btn{width:32px;height:32px;font-size:1rem;}.proj-slider-btn.prev{left:.4rem;}.proj-slider-btn.next{right:.4rem;}.proj-dot{width:8px;height:8px;}.proj-detail-title{font-size:1.6rem;overflow-wrap:break-word;}}
     @media(max-width:430px){.page-hero{padding-left:1.2rem;padding-right:1.2rem;}.divider{margin:0 1.2rem;}.proj-grid{padding:2rem 1.2rem 4rem;gap:1.2rem;margin-left:0;margin-right:0;}}
+    /* ── Projekt 03: Mandat/Schnittstelle/Kontrolle Schema ── */
+    .kaa{--ink:#1f2937;--line:#64748b;--frame:#cbd5e1}
+    .kaa text{font-family:inherit}
+    .kaa .th{font-size:18px;font-weight:600;fill:var(--ink)}
+    .kaa .ts{font-size:14px;font-weight:400}
+    .kaa .lbl{font-size:14px;fill:#475569}
+    .kaa .th.lbl{font-size:16px;fill:var(--ink)}
+    .kaa .arr{stroke:var(--line);stroke-width:2;fill:none}
+    .kaa .frame{fill:#f8fafc;stroke:var(--frame);stroke-width:2;stroke-dasharray:8 6}
+    .kaa rect{stroke-width:2}
+    .kaa .gray rect{fill:#f3f4f6;stroke:#9ca3af}.kaa .gray .th{fill:#374151}.kaa .gray .ts{fill:#6b7280}
+    .kaa .purple rect{fill:#ede9fe;stroke:#8b5cf6}.kaa .purple .th{fill:#4c1d95}.kaa .purple .ts{fill:#6d28d9}
+    .kaa .teal rect{fill:#ccfbf1;stroke:#14b8a6}.kaa .teal .th{fill:#115e59}.kaa .teal .ts{fill:#0f766e}
+    .kaa .coral rect{fill:#ffe4e6;stroke:#f43f5e}.kaa .coral .th{fill:#9f1239}.kaa .coral .ts{fill:#be123c}
+    .kaa .amber rect{fill:#fef3c7;stroke:#f59e0b}.kaa .amber .th{fill:#92400e}.kaa .amber .ts{fill:#b45309}
+    .kaa .sky rect{fill:#e0f2fe;stroke:#0ea5e9}.kaa .sky .th{fill:#075985}.kaa .sky .ts{fill:#0369a1}
+    .p3-hero{position:relative;width:100%;aspect-ratio:16/9;background:#fff;overflow:hidden;}
+    .p3-hero>svg{display:block;width:100%;height:100%;}
+    .p3-zoom{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .8rem;font:inherit;font-size:.875rem;color:#1f2937;background:#fff;border:1px solid #cbd5e1;border-radius:8px;cursor:pointer;z-index:5;}
+    .p3-zoom:hover{background:#f1f5f9}
+    .p3-zoom:focus-visible,.p3-bar button:focus-visible{outline:2px solid #6366f1;outline-offset:2px}
+    .p3-dialog{width:min(96vw,1400px);height:min(92vh,900px);padding:0;border:0;border-radius:12px;background:#fff;color:#1f2937;overflow:hidden}
+    .p3-dialog[open]{display:flex;flex-direction:column}
+    .p3-dialog::backdrop{background:rgba(15,23,42,.65)}
+    .p3-bar{display:flex;align-items:center;gap:.5rem;padding:.6rem .8rem;border-bottom:1px solid #e2e8f0;flex:none}
+    .p3-bar span{flex:1;font-size:.875rem;color:#475569}
+    .p3-bar button{min-width:2.5rem;padding:.4rem .7rem;font:inherit;font-size:.9rem;color:#1f2937;background:#fff;border:1px solid #cbd5e1;border-radius:8px;cursor:pointer}
+    .p3-bar button:hover{background:#f1f5f9}
+    .p3-stage{flex:1;overflow:auto;background:#fff}
+    .p3-stage>svg{display:block;width:calc(100% * var(--zoom,1));height:auto}
+    .proj-detail-body h3{margin:1.3rem 0 .4rem;font-size:.95rem;color:var(--dark);}
+    .proj-detail-body h3:first-child{margin-top:0;}
+    .proj-detail-body ul{margin:.4rem 0 .8rem;padding-left:1.2rem;max-width:640px;}
+    .proj-detail-body ul li{font-size:.88rem;line-height:1.75;color:var(--mid);margin-bottom:.3rem;}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Marcel Rupf","url":"https://marcelrupf.com"}
@@ -252,6 +286,94 @@
         </div>
       </div>
 
+      <div class="proj-item reveal delay-1" data-filter="ai-transformation strategie" style="grid-column:span 6;">
+        <div class="proj-detail-card p3">
+          <div class="p3-hero">
+<svg class="kaa" viewBox="0 0 1280 720" role="img" aria-labelledby="p3-t p3-d"><title id="p3-t">Wie ein Kunden-Agent mit einem Versicherer zusammenarbeitet</title><desc id="p3-d">Der Kunde erteilt seinem Agenten ein Mandat. Der Agent spricht über Protokolle (MCP, A2A, AP2) mit der Schnittstelle des Versicherers. Eine Mandatsprüfung mit festen Regeln entscheidet: Im Rahmen des Mandats geht die Aktion an die Kernsysteme, als Ausnahme an einen Menschen. Alles wird im Audit Trail protokolliert. Legende: MCP steht für Model Context Protocol, A2A für Agent2Agent, AP2 für Agent Payments Protocol.</desc>
+<rect width="1280" height="720" fill="#ffffff"/>
+<g transform="translate(0,24)"><defs><marker id="p3-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect class="frame" x="520" y="70" width="730" height="530" rx="20"/>
+<text class="th" x="548" y="102" dominant-baseline="central">Versicherer</text>
+<text class="th lbl" x="40" y="110" dominant-baseline="central">MCP</text><text class="lbl" x="104" y="110" dominant-baseline="central">Model Context Protocol, Werkzeugzugriff</text>
+<text class="th lbl" x="40" y="140" dominant-baseline="central">A2A</text><text class="lbl" x="104" y="140" dominant-baseline="central">Agent2Agent, Kommunikation unter Agenten</text>
+<text class="th lbl" x="40" y="170" dominant-baseline="central">AP2</text><text class="lbl" x="104" y="170" dominant-baseline="central">Agent Payments Protocol, Zahlungsfreigabe</text>
+<g class="gray"><rect x="40" y="300" width="120" height="80" rx="10"/><text class="th" x="100" y="340" text-anchor="middle" dominant-baseline="central">Kunde</text></g>
+<line x1="160" y1="340" x2="218" y2="340" class="arr" marker-end="url(#p3-arrow)"/>
+<text class="lbl" x="189" y="320" text-anchor="middle" dominant-baseline="central">Mandat</text>
+<g class="purple"><rect x="220" y="300" width="190" height="80" rx="10"/><text class="th" x="315" y="324" text-anchor="middle" dominant-baseline="central">Kunden-Agent</text><text class="ts" x="315" y="354" text-anchor="middle" dominant-baseline="central">z.B. Muse, mit Mandat</text></g>
+<line x1="410" y1="340" x2="558" y2="340" class="arr" marker-end="url(#p3-arrow)"/>
+<text class="lbl" x="418" y="320" dominant-baseline="central">MCP, A2A, AP2</text>
+<g class="teal"><rect x="560" y="300" width="200" height="80" rx="10"/><text class="th" x="660" y="324" text-anchor="middle" dominant-baseline="central">Schnittstelle</text><text class="ts" x="660" y="354" text-anchor="middle" dominant-baseline="central">Identität, Vollmacht</text></g>
+<line x1="760" y1="340" x2="798" y2="340" class="arr" marker-end="url(#p3-arrow)"/>
+<g class="coral"><rect x="800" y="300" width="190" height="80" rx="10"/><text class="th" x="895" y="324" text-anchor="middle" dominant-baseline="central">Mandatsprüfung</text><text class="ts" x="895" y="354" text-anchor="middle" dominant-baseline="central">Regeln ohne Modell</text></g>
+<line x1="990" y1="340" x2="1068" y2="340" class="arr" marker-end="url(#p3-arrow)"/>
+<text class="lbl" x="1029" y="320" text-anchor="middle" dominant-baseline="central">Ausnahme</text>
+<g class="amber"><rect x="1070" y="300" width="160" height="80" rx="10"/><text class="th" x="1150" y="324" text-anchor="middle" dominant-baseline="central">Mensch</text><text class="ts" x="1150" y="354" text-anchor="middle" dominant-baseline="central">Eskalation</text></g>
+<path d="M895 300 L895 185 L1068 185" class="arr" marker-end="url(#p3-arrow)"/>
+<text class="lbl" x="912" y="165" dominant-baseline="central">im Rahmen</text>
+<g class="sky"><rect x="1070" y="145" width="160" height="80" rx="10"/><text class="th" x="1150" y="169" text-anchor="middle" dominant-baseline="central">Kernsysteme</text><text class="ts" x="1150" y="199" text-anchor="middle" dominant-baseline="central">Police, Kündigung</text></g>
+<line x1="895" y1="380" x2="895" y2="468" class="arr" marker-end="url(#p3-arrow)"/>
+<g class="sky"><rect x="800" y="470" width="190" height="80" rx="10"/><text class="th" x="895" y="494" text-anchor="middle" dominant-baseline="central">Audit Trail</text><text class="ts" x="895" y="524" text-anchor="middle" dominant-baseline="central">Protokoll</text></g>
+</g>
+</svg>
+            <button class="p3-zoom" type="button" aria-haspopup="dialog" aria-label="Schema vergrössern"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14M7 5v4M5 7h4"/></svg><span data-en="Enlarge">Vergrössern</span></button>
+          </div>
+          <dialog class="p3-dialog" aria-label="Schema Kunden-Agent und Versicherer, vergrössert">
+            <div class="p3-bar"><span data-en="Schema: Customer Agent and Insurer">Schema Kunden-Agent und Versicherer</span><button type="button" data-z="out" aria-label="Verkleinern">−</button><button type="button" data-z="reset" aria-label="Zoom zurücksetzen">100%</button><button type="button" data-z="in" aria-label="Vergrössern">+</button><button type="button" data-z="close" data-en="Close">Schliessen</button></div>
+            <div class="p3-stage" tabindex="0"></div>
+          </dialog>
+          <div class="proj-detail-text">
+            <div class="proj-detail-eyebrow">Projekt 03</div>
+            <h2 class="proj-detail-title" data-en="AX = Mandate + Interface + Control.">AX = Mandat + Schnittstelle + Kontrolle.</h2>
+            <p class="proj-detail-lead" data-en="When customers give their agents power of attorney: how we design the Agent Experience so that people keep control.">Wenn Kunden ihren Agenten Vollmacht geben: Wie wir die Agent Experience gestalten, damit Menschen die Kontrolle behalten.</p>
+            <div class="proj-detail-body is-collapsible" id="projmandat-body">
+              <h3 data-en="Starting Point">Ausgangslage</h3>
+              <p data-en="Project 02 asked whom we will be designing Customer Experience for in the future. This concept goes one level deeper: what does it actually take for a customer agent to work with an insurer on a person&#8217;s behalf, and who decides what it is allowed to do?">Projekt 02 hat die Frage gestellt, für wen wir Customer Experience künftig gestalten. Dieses Konzept geht eine Stufe tiefer: Was braucht es konkret, damit ein Kunden-Agent im Namen eines Menschen mit einem Versicherer arbeiten kann, und wer entscheidet, was er darf?</p>
+              <h3 data-en="Guiding Question">Leitfrage</h3>
+              <p data-en="How can mandate, interface and escalation be designed so that the customer understands what their agent is allowed to do, and the insurer can review every action?">Wie lassen sich Mandat, Schnittstelle und Eskalation so gestalten, dass der Kunde versteht, was sein Agent darf, und der Versicherer jede Aktion prüfen kann?</p>
+              <h3 data-en="The Schema">Das Schema</h3>
+              <p data-en="The customer gives their agent a mandate. The agent talks to the insurer via protocols such as MCP, A2A and AP2. There, a layer with fixed rules checks whether the action falls within the mandate. It then goes to the core systems or, as an exception, to a human, and is logged.">Der Kunde erteilt seinem Agenten ein Mandat. Der Agent spricht über Protokolle wie MCP, A2A und AP2 mit dem Versicherer. Dort prüft eine Schicht mit festen Regeln, ob die Aktion im Rahmen des Mandats liegt. Sie geht dann an die Kernsysteme oder als Ausnahme an einen Menschen und wird protokolliert.</p>
+              <h3 data-en="Four Design Fields">Vier Gestaltungsfelder</h3>
+              <ul>
+                <li data-en="Mandate: a few understandable guardrails instead of 15 parameters. The test: can the customer still explain after three months what their agent is allowed to do?"><strong>Mandat:</strong> wenige, verständliche Leitplanken statt 15 Parametern. Der Test: Kann der Kunde nach drei Monaten erklären, was sein Agent darf?</li>
+                <li data-en="Interface: structured product data, identity and power of attorney instead of marketing copy and forms."><strong>Schnittstelle:</strong> strukturierte Produktdaten, Identität und Vollmacht statt Marketingtexte und Formulare.</li>
+                <li data-en="Mandate check: deterministic rules outside the language model, so the agent can&#8217;t &#171;talk its way around&#187; them."><strong>Mandatsprüfung:</strong> deterministische Regeln ausserhalb des Sprachmodells, damit der Agent sie nicht «überreden» kann.</li>
+                <li data-en="Escalation: the moment a human takes over again, and a &#171;confirm&#187; that is real control, not just clicking through."><strong>Eskalation:</strong> der Moment, in dem wieder ein Mensch übernimmt, und ein «Bestätigen», das echte Kontrolle ist und kein blosses Durchtippen.</li>
+              </ul>
+              <h3 data-en="Approach">Ansatz</h3>
+              <p data-en="The plan is to work with agents as test users (Agentic Mystery Shopping): how does an agent experience an offer, where does it fall out of the comparison, where does it fail at the interface? Building on this, mandate and escalation would be designed and tested for comprehensibility with real customers.">Vorgesehen ist, mit Agenten als Testnutzern zu arbeiten (Agentic Mystery Shopping): Wie erlebt ein Agent ein Angebot, wo fällt es aus dem Vergleich, wo scheitert er an der Schnittstelle? Darauf aufbauend würden Mandat und Eskalation entworfen und mit echten Kunden auf Verständlichkeit geprüft.</p>
+              <h3 data-en="Goal">Ziel</h3>
+              <p data-en="A design approach for the Agent Experience that connects the customer&#8217;s perspective with technical governance.">Ein Gestaltungsansatz für die Agent Experience, der Kundensicht und technische Governance verbindet.</p>
+              <p style="font-style:italic" data-en="Central insight: Agent Experience is not solved by technology alone, but by a mandate the customer understands, an interface the insurer can check, and an escalation moment where a human keeps real control.">Zentrale Erkenntnis: Agent Experience entsteht nicht durch Technologie allein, sondern durch ein Mandat, das der Kunde versteht, eine Schnittstelle, die der Versicherer prüfen kann, und einen Eskalationsmoment, in dem der Mensch echte Kontrolle behält.</p>
+              <h3 data-en="Further Reading">Weiterlesen</h3>
+              <ul>
+                <li data-en="Mathias Biilmann (Netlify): &#171;Introducing AX: Why Agent Experience Matters&#187; (2025). Coined the term Agent Experience as a complement to UX and DX.">Mathias Biilmann (Netlify): «Introducing AX: Why Agent Experience Matters» (2025). Prägte den Begriff Agent Experience als Ergänzung zu UX und DX.</li>
+                <li data-en="Google: Agent Payments Protocol (AP2), specification. Open standard for signed mandates. &lt;a href='https://ap2-protocol.org' target='_blank' rel='noopener'&gt;ap2-protocol.org&lt;/a&gt;, &lt;a href='https://github.com/google-agentic-commerce/AP2' target='_blank' rel='noopener'&gt;GitHub&lt;/a&gt;">Google: Agent Payments Protocol (AP2), Spezifikation. Offener Standard für signierte Mandate. <a href="https://ap2-protocol.org" target="_blank" rel="noopener">ap2-protocol.org</a>, <a href="https://github.com/google-agentic-commerce/AP2" target="_blank" rel="noopener">GitHub</a></li>
+                <li data-en="Don Scheibenreif and Mark Raskino (Gartner): When Machines Become Customers (2023). Describes the path from bound to autonomous machine customers.">Don Scheibenreif und Mark Raskino (Gartner): <em>When Machines Become Customers</em> (2023). Beschreibt den Weg vom gebundenen zum autonomen Maschinenkunden.</li>
+                <li data-en="Lisanne Bainbridge: &#171;Ironies of Automation&#187; (1983). Why automation makes human oversight more difficult.">Lisanne Bainbridge: «Ironies of Automation» (1983). Warum Automatisierung die menschliche Aufsicht schwieriger macht.</li>
+                <li data-en="Raja Parasuraman and Victor Riley: &#171;Humans and Automation: Use, Misuse, Disuse, Abuse&#187; (1997). On trust in automation.">Raja Parasuraman und Victor Riley: «Humans and Automation: Use, Misuse, Disuse, Abuse» (1997). Zum Vertrauen in Automatisierung.</li>
+                <li data-en="Saleema Amershi et al.: &#171;Guidelines for Human-AI Interaction&#187; (Microsoft Research, 2019). Design guidelines for human-AI interaction.">Saleema Amershi et al.: «Guidelines for Human-AI Interaction» (Microsoft Research, 2019). Gestaltungsrichtlinien für Mensch und KI.</li>
+              </ul>
+            </div>
+            <div style="margin-top:1.5rem;">
+              <button class="proj-expand-btn" id="projmandat-toggle" aria-expanded="false" aria-controls="projmandat-body">
+                <span id="projmandat-label" data-en="Show more" data-de="Mehr anzeigen">Mehr anzeigen</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,4 6,8 10,4"/></svg>
+              </button>
+              <div class="proj-detail-tags" id="projmandat-tags" style="display:none;">
+                <span class="proj-tag">AX</span>
+                <span class="proj-tag">Agent Experience</span>
+                <span class="proj-tag" data-en="Mandate">Mandat</span>
+                <span class="proj-tag">AP2</span>
+                <span class="proj-tag">Governance</span>
+                <span class="proj-tag" data-en="Insurance">Versicherung</span>
+                <span class="proj-tag">2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="proj-item reveal delay-1" data-filter="insights ai-transformation" style="grid-column:span 6;">
         <div class="proj-detail-card">
           <div style="position:relative;overflow:hidden;width:100%;aspect-ratio:16/9;background:#0d1117;display:flex;align-items:center;justify-content:center;">
@@ -284,7 +406,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 03</div>
+            <div class="proj-detail-eyebrow">Projekt 04</div>
             <h2 class="proj-detail-title"><span data-en="Which AI Workplace Tools Create Impact.">Welche AI Workplace Tools Wirkung erzielen.</span></h2>
             <p class="proj-detail-lead" data-en="Five AI productivity tools compared, backed by independent research from Harvard, MIT and McKinsey. The result: it is not the tool that determines the value, but the fit to the task, the person and the governance.">Fünf AI-Produktivitätstools im Vergleich, gestützt auf unabhängige Forschung von Harvard, MIT und McKinsey. Das Ergebnis: Nicht das Tool entscheidet den Nutzen, sondern die Passung zur Aufgabe, zur Person und zur Governance.</p>
             <div class="proj-detail-body is-collapsible" id="projaitools-body">
@@ -339,7 +461,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 04</div>
+            <div class="proj-detail-eyebrow">Projekt 05</div>
             <h2 class="proj-detail-title" data-en="From Augmented AI to Agentic AI.">Von Augmented AI zu Agentic AI.</h2>
             <p class="proj-detail-lead" data-en="An orientation framework for companies that want not just to use AI, but to steer it with intent.">Ein Orientierungsrahmen für Unternehmen, die AI nicht nur einsetzen, sondern gezielt steuern wollen.</p>
             <div class="proj-detail-body is-collapsible" id="projaugmented-body">
@@ -392,14 +514,14 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 05</div>
+            <div class="proj-detail-eyebrow">Projekt 06</div>
             <h2 class="proj-detail-title" data-en="Why AI Projects Can Fail Before They Arrive.">Warum AI Projekte scheitern können, bevor sie ankommen.</h2>
             <p class="proj-detail-lead" data-en="Eight GenAI initiatives, one recurring insight: technology, business and customer experience must be considered in equal measure. Only when all three work together does AI unfold its full potential.">Acht GenAI-Initiativen, eine wiederkehrende Erkenntnis: Technologie, Business und Customer Experience müssen gleichermassen mitgedacht werden. Erst im Zusammenspiel aller drei entfaltet AI ihr volles Potenzial.</p>
             <div class="proj-detail-body is-collapsible" id="projaitransform-body">
               <p data-en="When organisations start AI projects, the conversation usually begins with technology: which model, which platform, which vendor. That is an important, but only one aspect. In my work accompanying eight GenAI initiatives at AXA Switzerland, it became clear: technological decisions only unfold their impact when responsibilities are clear, data is properly prepared, and the people who are meant to use the system are considered from the very beginning.">Wenn Organisationen AI-Projekte starten, beginnt das Gespräch meistens bei der Technologie: welches Modell, welche Plattform, welcher Anbieter. Das ist ein wichtiger, aber nur ein Teilaspekt. In meiner Arbeit mit acht GenAI-Initiativen bei AXA Schweiz hat sich gezeigt: Technologische Entscheidungen entfalten ihre Wirkung erst, wenn Verantwortlichkeiten klar sind, Daten sauber aufbereitet sind, und die Menschen die das System nutzen sollen, von Anfang an mitgedacht werden.</p>
               <p data-en="Four dimensions shape project success. First: clear ownership. AI initiatives need a responsible person who keeps technology, business and user perspective equally in view. Second: data strategy. The quality of data often determines project success more than the choice of model. Third: early involvement of users. Those who understand early how the system fits into everyday work can shape it so that it is actually used. Fourth: adoption as a success criterion. Go-live is the beginning, not the goal.">Vier Dimensionen prägen den Projekterfolg. Erstens: Klare Ownership. AI-Initiativen brauchen eine verantwortliche Person die Technologie, Business und Nutzerperspektive gleichermassen im Blick hat. Zweitens: Datenstrategie. Die Qualität der Daten entscheidet oft mehr über den Projekterfolg als die Wahl des Modells. Drittens: Frühe Einbindung der Nutzenden. Wer früh versteht wie das System in den Arbeitsalltag passt, kann es so gestalten dass es auch wirklich genutzt wird. Viertens: Adoption als Erfolgskriterium. Go-live ist der Anfang, nicht das Ziel.</p>
               <p data-en="What makes the difference: thinking about adoption not at the end, but as a design parameter from the start. Who needs to adjust their working routine? What does that person need to do so? These questions belong in the project brief, not in a change plan six months later.">Was den Unterschied macht: Adoption nicht am Ende, sondern von Anfang an als Gestaltungsparameter mitdenken. Wer muss seine Arbeitsroutine anpassen? Was braucht diese Person dafür? Diese Fragen gehören ins Projektbriefing, nicht in einen Change-Plan sechs Monate später.</p>
-              <p data-en="As a direct response to these insights, I developed the WIN Framework — a structured model that helps teams validate value, integration and acceptance before they scale. More on that in Project 06.">Als direkte Antwort auf diese Erkenntnisse habe ich das WIN Framework entwickelt, ein strukturiertes Modell, das Teams hilft, Nutzen, Einbettung und Akzeptanz zu prüfen, bevor sie skalieren. Mehr dazu in Projekt 07.</p>
+              <p data-en="As a direct response to these insights, I developed the WIN Framework — a structured model that helps teams validate value, integration and acceptance before they scale. More on that in Project 09.">Als direkte Antwort auf diese Erkenntnisse habe ich das WIN Framework entwickelt, ein strukturiertes Modell, das Teams hilft, Nutzen, Einbettung und Akzeptanz zu prüfen, bevor sie skalieren. Mehr dazu in Projekt 09.</p>
               <p style="font-style:italic" data-en="Central insight: successful AI projects emerge where technology, business and customer experience are advanced simultaneously and in balance.">Zentrale Erkenntnis: Erfolgreiche AI-Projekte entstehen dort, wo Technologie, Business und Customer Experience gleichzeitig und im Gleichgewicht vorangebracht werden.</p>
             </div>
             <div style="margin-top:1.5rem;">
@@ -431,13 +553,13 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 06</div>
+            <div class="proj-detail-eyebrow">Projekt 07</div>
             <h2 class="proj-detail-title" data-en="2%. What the Data Says About AI Transformation.">2%. Was die Daten über AI Transformation sagen.</h2>
             <p class="proj-detail-lead" data-en="800 executives, one number that says everything: only 2 percent of organisations achieve measurably good results with their AI strategy. The technology is not the bottleneck. The MIT Technology Review and Databricks study from 2025 makes clear where the real challenge lies.">800 Führungskräfte, eine Zahl die alles sagt: Nur 2 Prozent der Organisationen erzielen mit ihrer AI-Strategie messbar gute Ergebnisse. Die Technologie ist nicht der Engpass. Die MIT Technology Review und Databricks Studie von 2025 macht deutlich, wo die eigentliche Herausforderung liegt.</p>
             <div class="proj-detail-body is-collapsible" id="projmittr-body">
               <p data-en="65 percent of the organisations surveyed use generative AI. Only 7 percent do so broadly. The gap between experimentation and real organisational impact is enormous — and has barely moved since 2021, before GenAI even existed. The proportion of data high-performers has remained almost unchanged at 12 percent (2021: 13 percent). More technology has not automatically led to better results.">65 Prozent der befragten Organisationen nutzen generative AI. Nur 7 Prozent tun dies breitflächig. Die Lücke zwischen Experimentieren und echter organisationaler Wirkung ist enorm, und hat sich seit 2021, also noch vor GenAI, kaum verändert. Der Anteil der Daten-Überflieger blieb bei 12 Prozent nahezu unverändert (2021: 13 Prozent). Mehr Technologie hat nicht automatisch zu besseren Ergebnissen geführt.</p>
-              <p data-en="The study names the three biggest obstacles to scaling AI: skill gaps (45 percent), fragmented infrastructure (41 percent) and regulatory uncertainty (35 percent). What unites all three: they are not technology problems. They are organisational ones. Separate governance models for data and AI, missing unified platforms, different ways of measuring ROI — these are the real blockers. What Projekt 03 describes from practical experience, this study confirms with data from across industries.">Die Studie nennt die drei grössten Hindernisse bei der AI-Skalierung: Qualifikationslücken (45 Prozent), fragmentierte Infrastruktur (41 Prozent) und regulatorische Unsicherheit (35 Prozent). Was alle drei eint: Es sind keine Technologieprobleme. Es sind organisatorische. Getrennte Governance-Modelle für Daten und AI, fehlende einheitliche Plattformen, unterschiedliche ROI-Messung, das sind die eigentlichen Blocker. Was Projekt 03 aus der Praxiserfahrung beschreibt, bestätigt diese Studie mit Zahlen aus allen Branchen.</p>
-              <p data-en="Agentic AI adds a new dimension to this: 19 percent of companies are already using it, 68 percent plan investments within two years. The leading organisations — those already far ahead on data maturity — are at 46 percent. The gap between leaders and the rest is widening. What Projekt 05 describes as the next wave is already the reality for the most capable organisations. The challenge is not waiting for the technology. It is building the organisational capacity to use it.">Agentic AI fügt dieser Situation eine neue Dimension hinzu: 19 Prozent der Unternehmen setzen sie bereits ein, 68 Prozent planen Investitionen innert zwei Jahren. Die führenden Organisationen, jene mit hoher Datenkompetenz, liegen schon bei 46 Prozent. Der Abstand zwischen Vorreitern und dem Rest wächst. Was Projekt 05 als nächste Welle beschreibt, ist für die fähigsten Organisationen bereits Realität. Die Herausforderung besteht nicht darin, auf die Technologie zu warten. Sie besteht darin, die organisatorische Fähigkeit aufzubauen, sie zu nutzen.</p>
+              <p data-en="The study names the three biggest obstacles to scaling AI: skill gaps (45 percent), fragmented infrastructure (41 percent) and regulatory uncertainty (35 percent). What unites all three: they are not technology problems. They are organisational ones. Separate governance models for data and AI, missing unified platforms, different ways of measuring ROI — these are the real blockers. What Projekt 04 describes from practical experience, this study confirms with data from across industries.">Die Studie nennt die drei grössten Hindernisse bei der AI-Skalierung: Qualifikationslücken (45 Prozent), fragmentierte Infrastruktur (41 Prozent) und regulatorische Unsicherheit (35 Prozent). Was alle drei eint: Es sind keine Technologieprobleme. Es sind organisatorische. Getrennte Governance-Modelle für Daten und AI, fehlende einheitliche Plattformen, unterschiedliche ROI-Messung, das sind die eigentlichen Blocker. Was Projekt 04 aus der Praxiserfahrung beschreibt, bestätigt diese Studie mit Zahlen aus allen Branchen.</p>
+              <p data-en="Agentic AI adds a new dimension to this: 19 percent of companies are already using it, 68 percent plan investments within two years. The leading organisations — those already far ahead on data maturity — are at 46 percent. The gap between leaders and the rest is widening. What Projekt 06 describes as the next wave is already the reality for the most capable organisations. The challenge is not waiting for the technology. It is building the organisational capacity to use it.">Agentic AI fügt dieser Situation eine neue Dimension hinzu: 19 Prozent der Unternehmen setzen sie bereits ein, 68 Prozent planen Investitionen innert zwei Jahren. Die führenden Organisationen, jene mit hoher Datenkompetenz, liegen schon bei 46 Prozent. Der Abstand zwischen Vorreitern und dem Rest wächst. Was Projekt 06 als nächste Welle beschreibt, ist für die fähigsten Organisationen bereits Realität. Die Herausforderung besteht nicht darin, auf die Technologie zu warten. Sie besteht darin, die organisatorische Fähigkeit aufzubauen, sie zu nutzen.</p>
               <p style="font-style:italic" data-en="Central insight: the bottleneck in AI transformation is not technology. It is governance, ownership and adoption — exactly where my work as an AI Transformation Leader begins.">Zentrale Erkenntnis: Der Engpass in der AI Transformation ist nicht die Technologie. Es ist Governance, Ownership und Adoption, genau da, wo meine Arbeit als AI Transformation Leader beginnt.</p>
               <p data-en="Those who want to read the full study: the MIT Technology Review and Databricks report is available for download here.">Wer die vollständige Studie lesen möchte: Der MIT Technology Review und Databricks Bericht steht hier zum Download bereit. <a href="/MITTR-databricks2025.pdf" download style="color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;">Studie herunterladen</a></p>
             </div>
@@ -482,7 +604,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 07</div>
+            <div class="proj-detail-eyebrow">Projekt 08</div>
             <h2 class="proj-detail-title" data-en="AI Acts. What Organisations Should Prepare Now.">AI handelt. Was Organisationen jetzt vorbereiten sollten.</h2>
             <p class="proj-detail-lead" data-en="Gartner predicted it for 2026. 40 percent of all enterprise applications will contain AI agents this year. By 2028, AI will make 15 percent of daily business decisions autonomously. We are in the middle of this shift. Organisations that are only just beginning to think about it now have little time to lose.">Gartner hat es für 2026 prognostiziert. 40 Prozent aller Enterprise-Applikationen enthalten noch dieses Jahr AI-Agenten. Bis 2028 trifft AI 15 Prozent der täglichen Business-Entscheidungen autonom. Wir sind mittendrin. Wer jetzt erst beginnt darüber nachzudenken, hat wenig Zeit zu verlieren.</p>
             <div class="proj-detail-body is-collapsible" id="projagenticai-body">
@@ -527,7 +649,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 08</div>
+            <div class="proj-detail-eyebrow">Projekt 09</div>
             <h2 class="proj-detail-title"><span data-en="WIN Framework">WIN Framework</span><br><span data-en="Three Questions. One Decision.">Drei Fragen. Ein Entscheid.</span></h2>
             <p class="proj-detail-lead" data-en="Some AI features don't fail because of the technology, but because value, integration and acceptance weren't validated early enough. WIN gives teams a structured model to work with before they scale.">Einige AI-Features scheitern nicht an der Technologie, sondern daran, dass Nutzen, Einbettung und Akzeptanz nicht früh genug geprüft wurden. WIN gibt Teams ein strukturiertes Modell an die Hand, bevor sie skalieren.</p>
             <div class="proj-detail-body is-collapsible" id="projWIN-body">
@@ -559,7 +681,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-ost/tree.svg" class="proj-detail-img" alt="Opportunity Solution Tree – Struktur" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 09</div>
+            <div class="proj-detail-eyebrow">Projekt 10</div>
             <h2 class="proj-detail-title"><span data-en="Opportunity Solution Tree.">Opportunity Solution Tree.</span><br><span data-en="From Outcome to the Right Solution.">Vom Ziel zur richtigen Lösung.</span></h2>
             <p class="proj-detail-lead" data-en="Many teams build features before it's clear which problem they're actually solving. Teresa Torres' Opportunity Solution Tree makes visible what really needs to happen between business outcome and solution.">Viele Teams bauen Features, bevor klar ist, welches Problem sie eigentlich lösen. Der Opportunity Solution Tree von Teresa Torres macht sichtbar, was zwischen Geschäftsziel und Lösung wirklich passieren muss.</p>
             <div class="proj-detail-body is-collapsible" id="projOST-body">
@@ -592,7 +714,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-axa-ux/slide-01.webp" class="proj-detail-img" alt="AXA Schweiz – Stages of UX Maturity" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 10</div>
+            <div class="proj-detail-eyebrow">Projekt 11</div>
             <h2 class="proj-detail-title"><span data-en="UX Maturity Level 4">UX Reife Level 4</span> – <span data-en="AXA Switzerland.">AXA Schweiz.</span></h2>
             <p class="proj-detail-lead" data-en="Assessment of UX maturity and systematic advancement from level 3 («Emergent») to level 4 («Structured») according to the Nielsen Norman UX maturity model, through eight standards, formal governance and an optimised organisational structure.">Erhebung der UX-Reife und systematische Steigerung von Level 3 auf Level 4 nach dem Nielsen Norman UX-Maturity-Modell, durch acht Standards, eine formale Governance und eine optimierte Organisationsstruktur.</p>
             <div class="proj-detail-body is-collapsible" id="projuxreife-body">
@@ -621,7 +743,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-axa-kpi/slide-01.svg" class="proj-detail-img" alt="AXA Schweiz – UX-KPI Tracking Dashboard" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 11</div>
+            <div class="proj-detail-eyebrow">Projekt 12</div>
             <h2 class="proj-detail-title">UX KPI Tracking – <span data-en="AXA Switzerland.">AXA Schweiz.</span></h2>
             <p class="proj-detail-lead" data-en="Those who only measure conversion at the end of the funnel see the result, not the cause. We looked deeper.">Wer nur die Conversion am Ende des Funnels misst, sieht nur das Ergebnis, nicht die Ursache. Wir haben tiefer geschaut.</p>
             <div class="proj-detail-body is-collapsible" id="proj07-body">
@@ -664,7 +786,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 12</div>
+            <div class="proj-detail-eyebrow">Projekt 13</div>
             <h2 class="proj-detail-title" data-en="Breakdown. Damage. And now an Agent. – AXA Switzerland.">Panne. Schaden. Und jetzt ein Agent. – AXA&nbsp;Schweiz.</h2>
             <p class="proj-detail-lead" data-en="A chat and voice bot for breakdown and damage reporting was developed, tested and continuously optimised together with my team. I accompanied the project and was involved in a user test, with fascinating insights.">Im Claims-Bereich der AXA wurde ein Chat- und Voicebot für die Pannen- und Schadenmeldung zusammen mit meinem Team entwickelt, getestet und kontinuierlich optimiert. Ich habe das Projekt begleitet und war an einem Nutzertest dabei, mit spannenden Erkenntnissen.</p>
             <div class="proj-detail-body is-collapsible" id="proj02-body">
@@ -712,7 +834,7 @@
           </div>
 
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 13</div>
+            <div class="proj-detail-eyebrow">Projekt 14</div>
             <h2 class="proj-detail-title">AI for Designers – <span data-en="AXA Switzerland.">AXA Schweiz.</span></h2>
             <p class="proj-detail-lead" data-en="A workshop for the AXA Switzerland UX team on AI tools, GenAI workflows and how AI is fundamentally changing the design process.">Ein Workshop für das UX-Team der AXA Schweiz zu AI-Tools, GenAI-Workflows und der Frage, wie AI den Designprozess grundlegend verändert.</p>
             <div class="proj-detail-body is-collapsible" id="projaidesign-body">
@@ -758,7 +880,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 14</div>
+            <div class="proj-detail-eyebrow">Projekt 15</div>
             <h2 class="proj-detail-title" data-de="Mentoring &amp; Wissenstransfer – UX Schweiz / AXA Schweiz." data-en="Mentoring &amp; Knowledge Transfer – UX Switzerland / AXA Switzerland.">Mentoring &amp; Wissenstransfer – UX Schweiz / AXA Schweiz.</h2>
             <p class="proj-detail-lead" data-en="Fostering talent, sharing knowledge, strengthening community, as a mentor for young UX professionals in training and as a coach for colleagues at AXA." data-de="Nachwuchs fördern, Wissen teilen, Gemeinschaft stärken, als Mentor für junge UX-Fachleute in der Ausbildung und als Coach für Berufskollegen bei der AXA.">Nachwuchs fördern, Wissen teilen, Gemeinschaft stärken, als Mentor für junge UX-Fachleute in der Ausbildung und als Coach für Berufskollegen bei der AXA.</p>
             <div class="proj-detail-body is-collapsible" id="projmentoring-body">
@@ -804,7 +926,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 15</div>
+            <div class="proj-detail-eyebrow">Projekt 16</div>
             <h2 class="proj-detail-title">Agentic Experience &amp; Trust by Design – <span data-en="AXA Group.">AXA Gruppe.</span></h2>
             <p class="proj-detail-lead" data-en="As participant and active co-creator of the AXA UX Summit 2025 in Brussels, engaging with the paradigm shift from classical UX design towards agentic AI systems, and contributing to the strategic question of how trust becomes a central design dimension.">Als Teilnehmer und aktiver Mitgestalter des AXA UX Summit 2025 in Brüssel, Auseinandersetzung mit dem Paradigmenwechsel von klassischem UX Design hin zu agentischen AI-Systemen sowie Mitarbeit an der strategischen Frage, wie Vertrauen zur zentralen Designgrösse wird.</p>
             <div class="proj-detail-body is-collapsible" id="proj10-body">
@@ -845,7 +967,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-              <div class="proj-detail-eyebrow">Projekt 16</div>
+              <div class="proj-detail-eyebrow">Projekt 17</div>
               <h2 class="proj-detail-title" data-de="Personalisierter AI Assistent." data-en="Personalised AI Assistant.">Personalisierter AI Assistent.</h2>
               <p class="proj-detail-lead" data-en="A personalised AI assistant, built on Claude Code, contextualised to my role, knowledge base and way of working as a CX strategist, leader and organisational developer.">Ein personalisierter AI-Assistent, gebaut auf Claude Code, kontextualisiert auf Rolle, Wissensbasis und Arbeitsweise von mir als CX-Stratege, Führungsperson und Organisationsentwickler.</p>
             <div class="proj-detail-body is-collapsible" id="proj04-body">
@@ -877,9 +999,9 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-ai-agent/5-layers-branded-ai-assistant.svg" class="proj-detail-img" alt="5 Layers of a Branded AI Assistant" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 17</div>
+            <div class="proj-detail-eyebrow">Projekt 18</div>
             <h2 class="proj-detail-title">5 Layer Framework,<br><span data-en="Foundation of a Branded AI Assistant.">Grundlage eines Branded AI Assistenten.</span></h2>
-            <p class="proj-detail-lead" data-en="How do you turn a generic AI assistant into a personal one? The 5-Layer Framework is the answer, and the customized adaptation of my personalised AI Assistant (Project 10).">Wie wird aus einem generischen AI-Assistenten ein persönlicher? Das 5-Layer-Framework ist die Antwort, und die customized Anpassung meines personalisierten AI-Assistenten (Projekt 10).</p>
+            <p class="proj-detail-lead" data-en="How do you turn a generic AI assistant into a personal one? The 5-Layer Framework is the answer, and the customized adaptation of my personalised AI Assistant (Project 17).">Wie wird aus einem generischen AI-Assistenten ein persönlicher? Das 5-Layer-Framework ist die Antwort, und die customized Anpassung meines personalisierten AI-Assistenten (Projekt 17).</p>
             <div class="proj-detail-body is-collapsible" id="proj05-body">
               <p data-en="Many AI assistants are implemented as a technical tool, without conscious decisions about how they sound, respond and set limits. The result is assistants that work, but have no personality. And convey no brand.">Viele AI-Assistenten werden als technisches Tool implementiert, ohne bewusste Entscheidung darüber, wie sie klingen, reagieren und Grenzen setzen. Das Ergebnis sind Assistenten, die funktionieren, aber keine Persönlichkeit haben. Und keine Marke transportieren.</p>
               <p><span data-en="I built my personal assistant using a 5-layer framework:">Ich habe meinen persönlichen Assistenten nach einem 5-Layer-Framework aufgebaut:</span> <strong>Brand Voice, Conversational UX, Personality, Governance and Interaction Principles.</strong> <span data-en="Together they define not only what the assistant does, but how it thinks, speaks and handles uncertainty. These are the layers that turn a generic tool into a coherent instrument.">Zusammen definieren sie nicht nur, was der Assistent tut, sondern wie er denkt, spricht und mit Unsicherheit umgeht. Das sind die Schichten, die aus einem generischen Tool ein kohärentes Werkzeug machen.</span></p>
@@ -908,7 +1030,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-ai-memory/ai-assistent.webp" class="proj-detail-img" alt="Wenn AI Agenten mitdenken – Persistentes Memory System" style="object-position:center center;" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 18</div>
+            <div class="proj-detail-eyebrow">Projekt 19</div>
             <h2 class="proj-detail-title" data-en="When AI Agents Think Along.">Wenn AI Agenten mitdenken.</h2>
             <p class="proj-detail-lead" data-en="I analyse persistent AI memory systems, and build one myself to understand what this truly means for users.">Ich analysiere persistente AI-Memory-Systeme, und baue selbst einen, um zu verstehen, was das für Nutzer wirklich bedeutet.</p>
             <div class="proj-detail-body is-collapsible" id="proj06-body">
@@ -941,7 +1063,7 @@
             <iframe src="https://www.youtube-nocookie.com/embed/t_LBECIQQqs?playsinline=1" title="Claude Design & die Zukunft des AI Experience Designers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 19</div>
+            <div class="proj-detail-eyebrow">Projekt 20</div>
             <h2 class="proj-detail-title"><span data-en="The Future of the AI Experience Designer">Die Zukunft des AI Experience Designers</span> <span data-en="with AI tools like Claude Design.">mit AI Tools wie Claude Design.</span></h2>
             <p class="proj-detail-lead" data-en="The launch of Claude Design raises a question I've been thinking about for a while: where does a designer create real value when execution becomes automatable?">Die Lancierung von Claude Design stellt eine Frage, die mich schon länger beschäftigt: Wo leistet ein Designer echten Mehrwert, wenn Execution automatisierbar wird?</p>
             <div class="proj-detail-body is-collapsible" id="projclaudedesign-body">
@@ -972,7 +1094,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-girls-app/slide-01.webp" class="proj-detail-img" alt="Team-App SV Höngg – Eltern-/Spielerinnen-Ansicht und Coach-Umgebung" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 20</div>
+            <div class="proj-detail-eyebrow">Projekt 21</div>
             <h2 class="proj-detail-title"><span data-en="Custom Team App Instead of a Paywall">Eigene Team-App statt Paywall</span> – <span style="white-space:nowrap">SV Höngg.</span></h2>
             <p class="proj-detail-lead" data-en="Why I built a custom app for my girls&#8217; team after a year with SpielerPlus, tailored exactly to coaches, players and parents.">Warum ich nach einem Jahr SpielerPlus eine eigene App für mein Mädchenteam gebaut habe, exakt zugeschnitten auf Trainer, Spielerinnen und Eltern.</p>
             <div class="proj-detail-body is-collapsible" id="projgirlsapp-body">
@@ -1016,7 +1138,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 21</div>
+            <div class="proj-detail-eyebrow">Projekt 22</div>
             <h2 class="proj-detail-title" data-de="Redesign B2B Website – Swisscom." data-en="B2B Website Redesign – Swisscom.">Redesign B2B<br>Website – Swisscom.</h2>
             <p class="proj-detail-lead" data-en="As a key CX/UX driver in Swisscom's B2B area, conception and implementation of a comprehensive redesign, introduction of agile SAFe methods, and active involvement in merging two project teams.">Als massgeblicher CX/UX-Treiber im B2B-Bereich der Swisscom, Konzeption und Umsetzung eines umfassenden Redesigns, Einführung agiler SAFe-Methoden sowie aktive Mitgestaltung der Zusammenführung zweier Projektteams.</p>
             <div class="proj-detail-body is-collapsible" id="projswisscom-body">
@@ -1058,7 +1180,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 22</div>
+            <div class="proj-detail-eyebrow">Projekt 23</div>
             <h2 class="proj-detail-title"><span data-en="Corporate Journey">Konzernjourney</span> &amp;<br>Mystery Shopping – Post CH.</h2>
             <p class="proj-detail-lead" data-en="Visualisation of design thinking results and prototyping in the corporate journey workshop, plus planning and conducting mystery shopping for the digital shipping assistant.">Visualisierung von Design-Thinking-Ergebnissen und Prototyping im Konzernjourney-Workshop, sowie Planung und Durchführung von Mystery Shopping für den digitalen Versandassistenten.</p>
             <div class="proj-detail-body is-collapsible" id="projpost-body">
@@ -1104,7 +1226,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 23</div>
+            <div class="proj-detail-eyebrow">Projekt 24</div>
             <h2 class="proj-detail-title" data-en="Digital Advisory Platform for Sales – STIEBEL ELTRON.">Digitale Beratungsplattform im Vertrieb <span style="white-space:nowrap;">– STIEBEL ELTRON.</span></h2>
             <p class="proj-detail-lead" data-en="For the international heat pump manufacturer Stiebel Eltron, I designed a digital platform that makes sales processes more efficient and customer-oriented.">Für den internationalen Wärmepumpenhersteller Stiebel Eltron habe ich eine digitale Plattform konzipiert, die Vertriebsprozesse effizienter und kundenorientierter gestaltet.</p>
             <div class="proj-detail-body is-collapsible" id="projstiebel-body">
@@ -1146,7 +1268,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 24</div>
+            <div class="proj-detail-eyebrow">Projekt 25</div>
             <h2 class="proj-detail-title"><span data-en="Digital Advisory Tool">Digitales Beratungstool</span><br><span style="white-space:nowrap;">– St. Galler Kantonalbank.</span></h2>
             <p class="proj-detail-lead" data-en="Vision development and regular usability testing for an interactive advisory tool, from individual use to cooperative use in client consultations.">Visionsentwicklung und regelmässiges Usability Testing für ein interaktives Beratungstool, von der Einzelnutzung zur kooperativen Nutzung im Kundengespräch.</p>
             <div class="proj-detail-body is-collapsible" id="projsgkb-body">
@@ -1173,7 +1295,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-03/slide-01.webp" class="proj-detail-img" alt="myclimate – Usability Testing" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 25</div>
+            <div class="proj-detail-eyebrow">Projekt 26</div>
             <h2 class="proj-detail-title">Usability Testing – <span data-en="myclimate Foundation.">Stiftung myclimate.</span></h2>
             <p class="proj-detail-lead" data-en="Overall professional responsibility for usability testing of the website, from conception to recommended actions.">Fachliche Gesamtverantwortung für das Usability-Testing der Website, von der Konzeption bis zur Massnahmenempfehlung.</p>
             <div class="proj-detail-body is-collapsible" id="projmyclimate-body">
@@ -1211,7 +1333,7 @@
             </div>
           </div>
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 26</div>
+            <div class="proj-detail-eyebrow">Projekt 27</div>
             <h2 class="proj-detail-title"><span data-en="Digital Realignment">Digitale Neuausrichtung</span> – SVGW.</h2>
             <p class="proj-detail-lead" data-en="Complete rebuild of the digital world of the Swiss Gas and Water Industry Association.">Vollständiger Neuaufbau der digitalen Welt des Schweizerischen Verbands der Gas- und Wasserwirtschaft.</p>
             <div class="proj-detail-body is-collapsible" id="projsvgw-body">
@@ -1238,7 +1360,7 @@
         <div class="proj-detail-card">
           <img loading="lazy" src="img/projekt-04/slide-01.webp" class="proj-detail-img" alt="DKSH – Globaler Header & Newsportal" />
           <div class="proj-detail-text">
-            <div class="proj-detail-eyebrow">Projekt 27</div>
+            <div class="proj-detail-eyebrow">Projekt 28</div>
             <h2 class="proj-detail-title"><span data-en="Global Header &amp; News Portal">Globaler Header &amp; <br>Newsportal</span> – <span data-en="DKSH Switzerland.">DKSH Schweiz.</span></h2>
             <p class="proj-detail-lead" data-en="User-centred consulting for the global website renewal, navigating fundamentally different user interests.">Nutzerzentrierte Beratung für die globale Website-Erneuerung, im Spannungsfeld fundamental unterschiedlicher Nutzerinteressen.</p>
             <div class="proj-detail-body is-collapsible" id="projdksh-body">
@@ -1318,6 +1440,34 @@
   (function(){var cur=0,tot=5;function upd(){var t=document.getElementById('stTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('stDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.stSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.stSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('svgwTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('svgwDot'+j);if(d)d.style.background=j===cur?'#737FDF':'rgba(255,255,255,.45)';}}window.svgwSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.svgwSlideTo=function(i){cur=i;upd();};})();
   (function(){var cur=0,tot=2;function upd(){var t=document.getElementById('panneTrack');if(!t)return;t.style.transform='translateX(-'+(cur*100)+'%)';for(var j=0;j<tot;j++){var d=document.getElementById('panneDot'+j);if(d)d.style.background=j===cur?'#B78AFF':'rgba(255,255,255,.45)';}}window.panneSlide=function(d){cur=(cur+d+tot)%tot;upd();};window.panneSlideTo=function(i){cur=i;upd();};})();
+  (function(){
+    document.querySelectorAll('.p3').forEach(function(root){
+      var hero=root.querySelector('.p3-hero'), btn=root.querySelector('.p3-zoom'),
+          dlg=root.querySelector('.p3-dialog'), stage=root.querySelector('.p3-stage'),
+          reset=root.querySelector('[data-z="reset"]');
+      if(!hero||!btn||!dlg||!stage||typeof dlg.showModal!=='function'){ if(btn) btn.style.display='none'; return; }
+      var steps=[1,1.5,2,3,4], i=0;
+      function apply(){ stage.style.setProperty('--zoom',steps[i]); reset.textContent=Math.round(steps[i]*100)+'%'; }
+      btn.addEventListener('click',function(){
+        if(!stage.firstChild){
+          var c=hero.querySelector('svg').cloneNode(true);
+          c.removeAttribute('aria-labelledby'); c.setAttribute('aria-label','Wie ein Kunden-Agent mit einem Versicherer zusammenarbeitet');
+          c.querySelectorAll('title,desc').forEach(function(n){n.removeAttribute('id');});
+          stage.appendChild(c);
+        }
+        i=0; apply(); dlg.showModal(); stage.scrollTop=0; stage.scrollLeft=0;
+      });
+      dlg.addEventListener('click',function(e){
+        if(e.target===dlg){ dlg.close(); return; }
+        var z=e.target.getAttribute&&e.target.getAttribute('data-z');
+        if(z==='in'&&i<steps.length-1){i++;apply();}
+        else if(z==='out'&&i>0){i--;apply();}
+        else if(z==='reset'){i=0;apply();}
+        else if(z==='close'){dlg.close();}
+      });
+      stage.addEventListener('dblclick',function(){ i=(i+1)%steps.length; apply(); });
+    });
+  })();
 </script>
   <script>
 (function(){
