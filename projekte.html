@@ -141,8 +141,8 @@
     .kaa .sky rect{fill:#e0f2fe;stroke:#0ea5e9}.kaa .sky .th{fill:#075985}.kaa .sky .ts{fill:#0369a1}
     .p3-hero{position:relative;width:100%;aspect-ratio:16/9;background:#fff;overflow:hidden;}
     .p3-hero>svg{display:block;width:100%;height:100%;}
-    .p3-zoom{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .8rem;font:inherit;font-size:.875rem;color:#1f2937;background:#fff;border:1px solid #cbd5e1;border-radius:8px;cursor:pointer;z-index:5;}
-    .p3-zoom:hover{background:#f1f5f9}
+    .p3-zoom{position:absolute;right:10px;bottom:10px;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;color:#64748b;background:none;border:none;border-radius:6px;cursor:pointer;z-index:5;}
+    .p3-zoom:hover{color:#1f2937;background:rgba(100,116,139,.12)}
     .p3-zoom:focus-visible,.p3-bar button:focus-visible{outline:2px solid #6366f1;outline-offset:2px}
     .p3-dialog{width:min(96vw,1400px);height:min(92vh,900px);padding:0;border:0;border-radius:12px;background:#fff;color:#1f2937;overflow:hidden}
     .p3-dialog[open]{display:flex;flex-direction:column}
@@ -316,7 +316,7 @@
 <g class="sky"><rect x="800" y="470" width="190" height="80" rx="10"/><text class="th" x="895" y="494" text-anchor="middle" dominant-baseline="central">Audit Trail</text><text class="ts" x="895" y="524" text-anchor="middle" dominant-baseline="central">Protokoll</text></g>
 </g>
 </svg>
-            <button class="p3-zoom" type="button" aria-haspopup="dialog" aria-label="Schema vergrössern"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14M7 5v4M5 7h4"/></svg><span data-en="Enlarge">Vergrössern</span></button>
+            <button class="p3-zoom" type="button" aria-haspopup="dialog" aria-label="Schema vergrössern"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14M7 5v4M5 7h4"/></svg></button>
           </div>
           <dialog class="p3-dialog" aria-label="Schema Kunden-Agent und Versicherer, vergrössert">
             <div class="p3-bar"><span data-en="Schema: Customer Agent and Insurer">Schema Kunden-Agent und Versicherer</span><button type="button" data-z="out" aria-label="Verkleinern">−</button><button type="button" data-z="reset" aria-label="Zoom zurücksetzen">100%</button><button type="button" data-z="in" aria-label="Vergrössern">+</button><button type="button" data-z="close" data-en="Close">Schliessen</button></div>
