@@ -75,6 +75,18 @@ h1 {
 }
 .back-link:hover { color: var(--fg); }
 .back-link svg { flex: none; }
+.header-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.lang-toggle {
+  background: none; border: none; cursor: pointer; font-family: var(--font-m);
+  font-size: 11px; letter-spacing: .07em; text-transform: uppercase;
+  padding: 4px 8px; color: var(--muted); display: flex; align-items: center; gap: 5px;
+  white-space: nowrap; transition: color .2s;
+}
+.lang-toggle:hover { color: var(--fg); }
+.lang-de-lbl, .lang-en-lbl { opacity: .45; transition: opacity .2s; }
+.lang-sep-lbl { opacity: .3; }
+body.lang-en .lang-en-lbl { opacity: 1; }
+body:not(.lang-en) .lang-de-lbl { opacity: 1; }
 
 .grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
 @media (min-width: 860px) {
@@ -183,20 +195,23 @@ footer p { margin: 0; color: rgba(255,255,255,.75); }
 </div>
 <div class="wrap">
   <header>
-    <a class="back-link" href="../projekte.html#projekt-ringe">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 6H2.5M2.5 6L5.5 3M2.5 6L5.5 9"/></svg>
-      <span data-en="Back to project">Zurück zum Projekt</span>
-    </a>
-    <span class="eyebrow">Modell · KI-Erfahrung</span>
-    <h1>Was eine KI-Erfahrung wirklich ausmacht</h1>
-    <p class="subtitle">Vertrauen entsteht in sechs Schichten</p>
-    <p class="intro">Eine KI-Erfahrung ist mehr als das Fenster, in das man tippt. Jeder Ring prägt, was Menschen erleben. Je weiter aussen, desto weniger sehen sie davon. Tippe einen Ring an oder den Menschen in der Mitte.</p>
+    <div class="header-top">
+      <a class="back-link" href="../projekte.html#projekt-ringe">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 6H2.5M2.5 6L5.5 3M2.5 6L5.5 9"/></svg>
+        <span data-en="Back to project">Zurück zum Projekt</span>
+      </a>
+      <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln / Switch language"><span class="lang-de-lbl">DE</span><span class="lang-sep-lbl"> · </span><span class="lang-en-lbl">EN</span></button>
+    </div>
+    <span class="eyebrow" data-en="Model · AI Experience">Modell · KI-Erfahrung</span>
+    <h1 data-en="What an AI Experience Is Really Made Of">Was eine KI-Erfahrung wirklich ausmacht</h1>
+    <p class="subtitle" data-en="Trust is built in six layers">Vertrauen entsteht in sechs Schichten</p>
+    <p class="intro" data-en="An AI experience is more than the box you type into. Every ring shapes what people experience. The further out it sits, the less of it they see. Tap a ring or the human at the centre.">Eine KI-Erfahrung ist mehr als das Fenster, in das man tippt. Jeder Ring prägt, was Menschen erleben. Je weiter aussen, desto weniger sehen sie davon. Tippe einen Ring an oder den Menschen in der Mitte.</p>
   </header>
 
   <div class="controls">
     <div class="seg" role="group" aria-label="Ansicht">
-      <button type="button" data-mode="base" aria-pressed="true">Aufbau</button>
-      <button type="button" data-mode="win" aria-pressed="false">WIN-Prüfung</button>
+      <button type="button" data-mode="base" aria-pressed="true" data-en="Structure">Aufbau</button>
+      <button type="button" data-mode="win" aria-pressed="false" data-en="WIN Check">WIN-Prüfung</button>
     </div>
     <p class="hint mono" id="hint">Woraus besteht die Erfahrung?</p>
   </div>
@@ -204,16 +219,16 @@ footer p { margin: 0; color: rgba(255,255,255,.75); }
   <div class="grid">
     <div class="left">
       <svg class="rings" id="svg" viewBox="0 0 440 440" role="img" aria-label="Sechs konzentrische Ringe um den Menschen: Begegnung, Kontext, Handlungsspielraum, Modell, Leitplanken, Überraschung"></svg>
-      <div class="scale mono"><span>innen · sichtbar</span><i></i><span>aussen · verborgen</span></div>
+      <div class="scale mono"><span data-en="inside · visible">innen · sichtbar</span><i></i><span data-en="outside · hidden">aussen · verborgen</span></div>
       <div class="chips" id="chips"></div>
     </div>
     <article class="detail" id="detail" aria-live="polite"></article>
   </div>
 
   <footer>
-    <p>Eigenes Modell von Marcel Rupf, angeregt durch die Fachdiskussion um die Schichten der KI-Erfahrung, unter anderem von Emily Campbell.</p>
-    <p>WIN steht für Wirkung, Integration und Nutzerakzeptanz. Die Ringe zeigen den Aufbau einer KI-Erfahrung, WIN prüft ihn.</p>
-    <p>Die Beispiele sind bewusst allgemein gehalten und zeigen Situationen aus dem Alltag von Versicherung und Kundenservice.</p>
+    <p data-en="Original model by Marcel Rupf, inspired by the ongoing discussion around the layers of AI experience, among others by Emily Campbell.">Eigenes Modell von Marcel Rupf, angeregt durch die Fachdiskussion um die Schichten der KI-Erfahrung, unter anderem von Emily Campbell.</p>
+    <p data-en="WIN stands for Impact, Integration and User Acceptance. The rings show the structure of an AI experience, WIN tests it.">WIN steht für Wirkung, Integration und Nutzerakzeptanz. Die Ringe zeigen den Aufbau einer KI-Erfahrung, WIN prüft ihn.</p>
+    <p data-en="The examples are deliberately kept general and show everyday situations from insurance and customer service.">Die Beispiele sind bewusst allgemein gehalten und zeigen Situationen aus dem Alltag von Versicherung und Kundenservice.</p>
   </footer>
 </div>
 
@@ -224,49 +239,80 @@ footer p { margin: 0; color: rgba(255,255,255,.75); }
       lead: 'Hier trifft ein Mensch auf die KI: Eingabe, Anzeige, Rückmeldung und Eingriff. Je selbständiger die KI arbeitet, desto mehr wird aus dem Eingabefeld eine Kommandozentrale. Dazu gehört mehr als das Chatfeld: Auswahl, Filter und Schalter sind oft der schnellere Einstieg.',
       q: 'Sehe ich, was die KI tut, und kann ich eingreifen?',
       ex: 'Bei einer Schadenmeldung zeigt die KI, welche Angaben sie aus dem Foto gelesen hat, und lässt jede einzeln korrigieren.',
-      risk: 'Ein leeres Chatfeld setzt voraus, dass Menschen schon wissen, was sie fragen müssen. Viele fragen dann gar nicht.' },
+      risk: 'Ein leeres Chatfeld setzt voraus, dass Menschen schon wissen, was sie fragen müssen. Viele fragen dann gar nicht.',
+      en: { name: 'Encounter', chip: 'Encounter',
+        lead: 'This is where a human meets the AI: input, display, feedback and intervention. The more autonomously the AI works, the more the input field becomes a command centre. This is more than just the chat field: selection, filters and toggles are often the faster way in.',
+        q: 'Can I see what the AI is doing, and can I intervene?',
+        ex: 'When reporting a claim, the AI shows which details it read from the photo and lets each one be corrected individually.',
+        risk: 'An empty chat field assumes people already know what to ask. Many then don\u2019t ask at all.' } },
     { name: 'Kontext', chip: 'Kontext',
       lead: 'Alles, was die KI über Person und Situation weiss. Ausdrücklich gegeben sind Eingaben, Uploads und Einstellungen. Abgeleitet wird aus Verhalten, Verlauf und angebundenen Systemen. Hilfreich ist eine Dreiteilung: dauerhafter Kontext wie Präferenzen, Kontext der aktuellen Aufgabe und der Strom aus Mails und Chats.',
       q: 'Weiss ich, was die KI über mich weiss?',
       ex: 'Der Assistent schlägt eine Deckung vor, weil er die bestehende Police kennt, und zeigt dazu an, woher er das weiss.',
-      risk: 'Abgeleitetes Wissen wirkt schnell unheimlich, wenn es nicht benannt wird. Dann sinkt das Vertrauen, auch bei richtigen Vorschlägen.' },
+      risk: 'Abgeleitetes Wissen wirkt schnell unheimlich, wenn es nicht benannt wird. Dann sinkt das Vertrauen, auch bei richtigen Vorschlägen.',
+      en: { name: 'Context', chip: 'Context',
+        lead: 'Everything the AI knows about the person and the situation. Explicitly given context comes from inputs, uploads and settings. Inferred context comes from behaviour, history and connected systems. A useful split: lasting context such as preferences, context of the current task, and the stream of emails and chats.',
+        q: 'Do I know what the AI knows about me?',
+        ex: 'The assistant suggests a coverage because it knows the existing policy, and shows where that knowledge comes from.',
+        risk: 'Inferred knowledge quickly feels unsettling if it isn\u2019t named. Trust then drops, even when the suggestions are correct.' } },
     { name: 'Handlungsspielraum', chip: 'Handlungs&shy;spielraum',
       lead: 'Was die KI selbst tun kann: auf Systeme zugreifen, Werkzeuge nutzen, Abläufe anstossen, Schritte allein ausführen. Hier entscheidet sich, wie viel Autonomie sie bekommt.',
       q: 'Was darf sie ohne Rückfrage tun?',
       ex: 'Ein Agent darf Offerten vergleichen. Vor dem Abschluss oder einer Kündigung fragt er nach.',
-      risk: 'Zu viel Spielraum erzeugt Fehler mit Folgen. Zu wenig lässt Menschen die Arbeit von Hand erledigen oder hinter der KI aufräumen.' },
+      risk: 'Zu viel Spielraum erzeugt Fehler mit Folgen. Zu wenig lässt Menschen die Arbeit von Hand erledigen oder hinter der KI aufräumen.',
+      en: { name: 'Agency', chip: 'Agency',
+        lead: 'What the AI can do on its own: access systems, use tools, trigger processes, carry out steps unaided. This is where its level of autonomy is decided.',
+        q: 'What is it allowed to do without asking first?',
+        ex: 'An agent may compare quotes. Before signing or cancelling, it asks first.',
+        risk: 'Too much room for action creates errors with real consequences. Too little leaves people doing the work by hand or cleaning up after the AI.' } },
     { name: 'Modell', chip: 'Modell',
       lead: 'Training, Fähigkeiten und Verhalten des Sprachmodells. Es bestimmt, wofür die KI gut ist, wo sie unsicher wird und wie sie klingt.',
       q: 'Wofür ist das Modell tatsächlich geeignet?',
       ex: 'Zusammenfassen und Formulieren passen gut. Exakte Beträge berechnet besser ein gewöhnliches Programm mit festen Regeln.',
-      risk: 'Wer das Modell für alles einsetzt, bekommt Fehler, die überzeugend klingen und deshalb schwer zu erkennen sind.' },
+      risk: 'Wer das Modell für alles einsetzt, bekommt Fehler, die überzeugend klingen und deshalb schwer zu erkennen sind.',
+      en: { name: 'Model', chip: 'Model',
+        lead: 'The training, capabilities and behaviour of the language model. It determines what the AI is good at, where it becomes unreliable, and how it sounds.',
+        q: 'What is the model actually suited for?',
+        ex: 'Summarising and drafting text are a good fit. Exact amounts are better calculated by an ordinary rules-based program.',
+        risk: 'Using the model for everything produces errors that sound convincing and are therefore hard to spot.' } },
     { name: 'Leitplanken', chip: 'Leitplanken',
       lead: 'Regeln, Standards und Präferenzen: auf welche Daten die KI zugreifen darf, was sie tun darf, was sie ablehnen oder erklären muss und wo ein Mensch entscheidet. Dazu gehört die Datenfreigabe: Die KI teilt nur, was der aktuelle Schritt braucht.',
       q: 'Wer entscheidet, wenn es heikel wird?',
       ex: 'Bei Gesundheitsdaten gibt immer ein Mensch frei. Die KI erklärt, warum sie nicht weitermacht.',
-      risk: 'Leitplanken, die erst nach dem Start entstehen, kosten Vertrauen. Recht und Datenschutz gehören an den Anfang des Projekts.' },
+      risk: 'Leitplanken, die erst nach dem Start entstehen, kosten Vertrauen. Recht und Datenschutz gehören an den Anfang des Projekts.',
+      en: { name: 'Guardrails', chip: 'Guardrails',
+        lead: 'Rules, standards and preferences: which data the AI may access, what it is allowed to do, what it must refuse or explain, and where a human decides. This includes data sharing: the AI only shares what the current step needs.',
+        q: 'Who decides when things get sensitive?',
+        ex: 'For health data, a human always gives approval. The AI explains why it doesn\u2019t proceed on its own.',
+        risk: 'Guardrails added only after launch cost trust. Legal and data protection belong at the start of the project.' } },
     { name: 'Überraschung', chip: 'Überraschung',
       lead: 'Das Unvorhergesehene, das im echten Betrieb auftaucht, weil KI-Systeme mit Wahrscheinlichkeiten arbeiten. Man kann es nicht abschaffen, aber man kann es früh sichtbar und korrigierbar machen.',
       q: 'Merken wir es rechtzeitig, wenn etwas Unerwartetes passiert?',
       ex: 'Ein Rückmeldeknopf an jeder Antwort, nachvollziehbare Protokolle und regelmässige Stichproben echter Gespräche.',
-      risk: 'Was niemand beobachtet, korrigiert auch niemand. Fehler zeigen sich dann erst bei den Kundinnen und Kunden.' }
+      risk: 'Was niemand beobachtet, korrigiert auch niemand. Fehler zeigen sich dann erst bei den Kundinnen und Kunden.',
+      en: { name: 'Surprise', chip: 'Surprise',
+        lead: 'The unexpected, which shows up in real operation because AI systems work with probabilities. It can\u2019t be eliminated, but it can be made visible and correctable early.',
+        q: 'Do we notice in time when something unexpected happens?',
+        ex: 'A feedback button on every answer, traceable logs, and regular spot checks of real conversations.',
+        risk: 'What nobody observes, nobody corrects. Errors then only show up with customers.' } }
   ];
 
   // WIN-Prüfung: eine Frage pro Ring, in der Dimension, die dort am meisten zählt.
   var DIM = {
-    W: { name: 'Wirkung', def: 'Bringt es den Menschen messbar etwas?' },
-    I: { name: 'Integration', def: 'Passt es in bestehende Abläufe und Systeme?' },
-    N: { name: 'Nutzerakzeptanz', def: 'Verstehen und akzeptieren Menschen es? Ein Tor, keine Kennzahl.' }
+    W: { name: 'Wirkung', def: 'Bringt es den Menschen messbar etwas?', en: { name: 'Impact', def: 'Does it bring people measurable value?' } },
+    I: { name: 'Integration', def: 'Passt es in bestehende Abläufe und Systeme?', en: { name: 'Integration', def: 'Does it fit into existing workflows and systems?' } },
+    N: { name: 'Nutzerakzeptanz', def: 'Verstehen und akzeptieren Menschen es? Ein Tor, keine Kennzahl.', en: { name: 'User Acceptance', def: 'Do people understand and accept it? A gate, not a metric.' } }
   };
   var W = [
-    { dim: 'N', q: 'Versteht jemand auf einen Blick, was die KI getan hat, und traut sich einzugreifen?' },
-    { dim: 'I', q: 'Holt sich die KI den Kontext dort, wo die Arbeit schon liegt, statt ihn neu abzufragen?' },
-    { dim: 'W', q: 'Spart der Spielraum am Ende Arbeit, oder entsteht Aufräumen?' },
-    { dim: 'W', q: 'Löst das Modell die Aufgabe messbar besser als der bisherige Weg?' },
-    { dim: 'I', q: 'Greifen die Leitplanken in den bestehenden Freigabe- und Rechtsprozessen, oder entsteht ein Parallelprozess?' },
-    { dim: 'N', q: 'Bleibt das Vertrauen, wenn die KI sich irrt?' }
+    { dim: 'N', q: 'Versteht jemand auf einen Blick, was die KI getan hat, und traut sich einzugreifen?', en: { q: 'Can someone tell at a glance what the AI has done, and do they feel confident intervening?' } },
+    { dim: 'I', q: 'Holt sich die KI den Kontext dort, wo die Arbeit schon liegt, statt ihn neu abzufragen?', en: { q: 'Does the AI pull context from where the work already lives, instead of asking for it again?' } },
+    { dim: 'W', q: 'Spart der Spielraum am Ende Arbeit, oder entsteht Aufräumen?', en: { q: 'Does the room for action save work in the end, or does it create clean-up?' } },
+    { dim: 'W', q: 'Löst das Modell die Aufgabe messbar besser als der bisherige Weg?', en: { q: 'Does the model solve the task measurably better than the previous way?' } },
+    { dim: 'I', q: 'Greifen die Leitplanken in den bestehenden Freigabe- und Rechtsprozessen, oder entsteht ein Parallelprozess?', en: { q: 'Do the guardrails connect to the existing approval and legal processes, or does a parallel process emerge?' } },
+    { dim: 'N', q: 'Bleibt das Vertrauen, wenn die KI sich irrt?', en: { q: 'Does trust hold up when the AI gets it wrong?' } }
   ];
   var mode = 'base';
+  var lang = 'de';
 
   // Das Zentrum ist ebenfalls antippbar (Index 6).
   var Z = {
@@ -274,40 +320,54 @@ footer p { margin: 0; color: rgba(255,255,255,.75); }
     lead: 'Um wen es geht: Menschen mit eigenen Zielen, Gewohnheiten, Vorwissen und begrenzter Aufmerksamkeit. Alle sechs Ringe wirken auf sie. Ob die KI angenommen wird, entscheiden sie, nicht die Technik.',
     q: 'Hilft das einem echten Menschen bei etwas, das er ohnehin tun will?',
     ex: 'Eine Kundin meldet einen Schaden. Sie will keine Unterhaltung mit einer KI führen, sondern schnell wissen, was als Nächstes passiert und wann das Geld kommt.',
-    risk: 'Dann wird gebaut, was technisch möglich ist, statt was gebraucht wird. Das Ergebnis sind KI-Funktionen, die niemand vermisst.'
+    risk: 'Dann wird gebaut, was technisch möglich ist, statt was gebraucht wird. Das Ergebnis sind KI-Funktionen, die niemand vermisst.',
+    en: { name: 'Human', chip: 'Human at the centre', riskLabel: 'If the human is missing',
+      lead: 'Who it\u2019s all about: people with their own goals, habits, prior knowledge and limited attention. All six rings act on them. Whether the AI gets adopted is their decision, not the technology\u2019s.',
+      q: 'Does this help a real person with something they already want to do?',
+      ex: 'A customer reports a claim. She doesn\u2019t want a conversation with an AI, she wants to know quickly what happens next and when the money arrives.',
+      risk: 'Then what gets built is what\u2019s technically possible, not what\u2019s needed. The result is AI features nobody misses.' }
   };
-  var ZW = { dim: 'N', q: 'Würde jemand die KI freiwillig wieder nutzen, nachdem er sie einmal erlebt hat?' };
-  function getL(n) { return n === 6 ? Z : L[n]; }
-  function getW(n) { return n === 6 ? ZW : W[n]; }
+  var ZW = { dim: 'N', q: 'Würde jemand die KI freiwillig wieder nutzen, nachdem er sie einmal erlebt hat?', en: { q: 'Would someone choose to use the AI again, voluntarily, after experiencing it once?' } };
+  function raw(n) { return n === 6 ? Z : L[n]; }
+  function rawW(n) { return n === 6 ? ZW : W[n]; }
+  function getL(n) { var r = raw(n); return lang === 'en' ? Object.assign({}, r, r.en) : r; }
+  function getW(n) { var r = rawW(n); return lang === 'en' ? Object.assign({}, r, r.en) : r; }
+  function dimOf(k) { var d = DIM[k]; return lang === 'en' ? Object.assign({}, d, d.en) : d; }
   function cvar(n) { return n === 6 ? 'var(--fg)' : 'var(--r' + (n + 1) + ')'; }
   function eyebrow(n, tail) {
-    return '<span class="eyebrow">' + (n === 6 ? 'Im Zentrum' : 'Ring ' + (n + 1) + ' von 6') + (tail || '') + '</span>';
+    var txt = lang === 'en'
+      ? (n === 6 ? 'At the centre' : 'Ring ' + (n + 1) + ' of 6')
+      : (n === 6 ? 'Im Zentrum' : 'Ring ' + (n + 1) + ' von 6');
+    return '<span class="eyebrow">' + txt + (tail || '') + '</span>';
   }
 
   function baseHtml(d, n) {
+    var kq = lang === 'en' ? 'Key question' : 'Leitfrage';
+    var ex = lang === 'en' ? 'Example' : 'Beispiel';
+    var riskLabel = d.riskLabel || (lang === 'en' ? 'If this ring is missing' : 'Wenn der Ring fehlt');
     return eyebrow(n, '') +
       '<h2>' + d.name + '</h2>' +
       '<p class="lead">' + d.lead + '</p>' +
-      '<div class="block"><span class="mono">Leitfrage</span><p class="q">' + d.q + '</p></div>' +
-      '<div class="block"><span class="mono">Beispiel</span><p>' + d.ex + '</p></div>' +
-      '<div class="block"><span class="mono">' + (d.riskLabel || 'Wenn der Ring fehlt') + '</span><p>' + d.risk + '</p></div>';
+      '<div class="block"><span class="mono">' + kq + '</span><p class="q">' + d.q + '</p></div>' +
+      '<div class="block"><span class="mono">' + ex + '</span><p>' + d.ex + '</p></div>' +
+      '<div class="block"><span class="mono">' + riskLabel + '</span><p>' + d.risk + '</p></div>';
   }
 
   function winHtml(n) {
-    var w = getW(n), dim = DIM[w.dim];
+    var w = getW(n), dim = dimOf(w.dim);
     var rows = ['W', 'I', 'N'].map(function (k) {
       var btns = '';
       for (var i = 0; i < 7; i++) {
         if (getW(i).dim !== k) continue;
         btns += '<button type="button" class="chip sm' + (i === 6 ? ' ctr' : '') + '" data-go="' + i + '" style="--c:' + cvar(i) + '" aria-pressed="' + (i === n ? 'true' : 'false') + '">' + (i === 6 ? '' : '<b>' + (i + 1) + '</b>') + '<span>' + getL(i).chip + '</span></button>';
       }
-      return '<div class="maprow"><span class="tag">' + DIM[k].name + '</span><div class="btns">' + btns + '</div></div>';
+      return '<div class="maprow"><span class="tag">' + dimOf(k).name + '</span><div class="btns">' + btns + '</div></div>';
     }).join('');
-    return eyebrow(n, ' · WIN-Prüfung') +
+    return eyebrow(n, lang === 'en' ? ' · WIN Check' : ' · WIN-Prüfung') +
       '<h2>' + getL(n).name + '</h2>' +
       '<div class="dim"><span class="tag">' + dim.name + '</span><span>' + dim.def + '</span></div>' +
       '<p class="q lg">' + w.q + '</p>' +
-      '<div class="block"><span class="mono">Alle Ringe nach Dimension</span><div class="map">' + rows + '</div></div>';
+      '<div class="block"><span class="mono">' + (lang === 'en' ? 'All rings by dimension' : 'Alle Ringe nach Dimension') + '</span><div class="map">' + rows + '</div></div>';
   }
 
   var NS = 'http://www.w3.org/2000/svg';
@@ -345,6 +405,7 @@ footer p { margin: 0; color: rgba(255,255,255,.75); }
   centre.addEventListener('click', function () { select(6, true); });
 
   // Beschriftung entlang des oberen Bogens jedes Rings.
+  var labelPaths = [];
   for (var j = 0; j < L.length; j++) {
     var mid = core + band * j + band / 2;
     var r = mid - 3.6;
@@ -356,6 +417,7 @@ footer p { margin: 0; color: rgba(255,255,255,.75); }
     tx.appendChild(tp);
     svg.appendChild(tx);
     labels[j] = tx;
+    labelPaths[j] = tp;
   }
 
   // Auswahl als echte Schaltflächen (Tastatur und Screenreader).
@@ -395,14 +457,21 @@ footer p { margin: 0; color: rgba(255,255,255,.75); }
     }
   }
 
-  var hints = { base: 'Woraus besteht die Erfahrung?', win: 'Funktioniert jeder Ring? Eine Frage pro Ring.' };
+  var hints = {
+    base: { de: 'Woraus besteht die Erfahrung?', en: 'What makes up the experience?' },
+    win: { de: 'Funktioniert jeder Ring? Eine Frage pro Ring.', en: 'Does every ring work? One question per ring.' }
+  };
+  var ariaLabel = {
+    de: 'Sechs konzentrische Ringe um den Menschen: Begegnung, Kontext, Handlungsspielraum, Modell, Leitplanken, Überraschung',
+    en: 'Six concentric rings around the human: Encounter, Context, Agency, Model, Guardrails, Surprise'
+  };
   var seg = document.querySelectorAll('.seg button');
   var hint = document.getElementById('hint');
   seg.forEach(function (b) {
     b.addEventListener('click', function () {
       mode = b.getAttribute('data-mode');
       seg.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      hint.textContent = hints[mode];
+      hint.textContent = hints[mode][lang];
       select(sel, false, true);
     });
   });
@@ -411,7 +480,44 @@ footer p { margin: 0; color: rgba(255,255,255,.75); }
     if (g) select(parseInt(g.getAttribute('data-go'), 10), false, true);
   });
 
+  // Aktualisiert alle dynamisch erzeugten Texte bei Sprachwechsel.
+  window.__ringeSetLang = function (l) {
+    lang = l;
+    svg.setAttribute('aria-label', ariaLabel[lang]);
+    t1.textContent = lang === 'en' ? 'Human' : 'Mensch';
+    t2.textContent = lang === 'en' ? 'at the centre' : 'im Zentrum';
+    for (var k = 0; k < L.length; k++) labelPaths[k].textContent = getL(k).name;
+    chips.forEach(function (b, n) {
+      var span = b.querySelector('span');
+      if (span) span.innerHTML = getL(n).chip;
+    });
+    hint.textContent = hints[mode][lang];
+    select(sel, false, true);
+  };
+
   select(0, false);
+})();
+</script>
+
+<script>
+// ── Language Toggle (DE/EN), wie auf marcelrupf.com ──
+(function () {
+  var KEY = 'mr-lang', l = localStorage.getItem(KEY) || 'de';
+  function apply(lang) {
+    document.querySelectorAll('[data-en]').forEach(function (el) {
+      if (!el.getAttribute('data-de')) el.setAttribute('data-de', el.innerHTML);
+      el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
+    });
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.documentElement.lang = lang;
+    if (window.__ringeSetLang) window.__ringeSetLang(lang);
+    localStorage.setItem(KEY, lang); l = lang;
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    apply(l);
+    var btn = document.getElementById('langToggle');
+    if (btn) btn.addEventListener('click', function () { apply(l === 'de' ? 'en' : 'de'); });
+  });
 })();
 </script>
 
