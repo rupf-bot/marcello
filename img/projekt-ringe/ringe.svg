@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="'Instrument Sans',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17161c"/>
+      <stop offset="1" stop-color="#0f0e12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- heading -->
+  <text x="60" y="110" fill="#737FDF" font-family="'Space Mono',monospace" font-size="20" letter-spacing="2">MODELL · KI-ERFAHRUNG</text>
+  <text x="58" y="180" fill="#fff" font-size="54" font-weight="700" letter-spacing="-.5">Was eine KI-Erfahrung</text>
+  <text x="58" y="240" fill="#fff" font-size="54" font-weight="700" letter-spacing="-.5">wirklich ausmacht</text>
+  <text x="60" y="300" fill="rgba(255,255,255,.55)" font-size="22">Sechs Ringe um den Menschen</text>
+
+  <!-- legend -->
+  <g font-family="'Space Mono',monospace" font-size="17" fill="rgba(255,255,255,.75)">
+    <circle cx="70" cy="400" r="7" fill="#1FADA4"/>
+    <text x="90" y="406">Begegnung</text>
+    <circle cx="70" cy="440" r="7" fill="#2E8FC9"/>
+    <text x="90" y="446">Kontext</text>
+    <circle cx="70" cy="480" r="7" fill="#5E72C7"/>
+    <text x="90" y="486">Handlungsspielraum</text>
+    <circle cx="70" cy="520" r="7" fill="#8A62C9"/>
+    <text x="90" y="526">Modell</text>
+    <circle cx="70" cy="560" r="7" fill="#A7549E"/>
+    <text x="90" y="566">Leitplanken</text>
+    <circle cx="70" cy="600" r="7" fill="#C85E86"/>
+    <text x="90" y="606">Überraschung</text>
+  </g>
+
+  <text x="60" y="700" fill="rgba(255,255,255,.4)" font-size="16" letter-spacing="1">Innen sichtbar, aussen verborgen</text>
+
+  <!-- rings, centered right -->
+  <g transform="translate(1080,460)">
+    <circle r="380" fill="none" stroke="#C85E86" stroke-width="54" stroke-opacity=".85" stroke-dasharray="4 10"/>
+    <circle r="320" fill="none" stroke="#A7549E" stroke-width="54" stroke-opacity=".85"/>
+    <circle r="260" fill="none" stroke="#8A62C9" stroke-width="54" stroke-opacity=".85"/>
+    <circle r="200" fill="none" stroke="#5E72C7" stroke-width="54" stroke-opacity=".85"/>
+    <circle r="140" fill="none" stroke="#2E8FC9" stroke-width="54" stroke-opacity=".85"/>
+    <circle r="80"  fill="none" stroke="#1FADA4" stroke-width="54" stroke-opacity=".85"/>
+    <circle r="46" fill="#17161c" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/>
+    <text x="0" y="-2" fill="#fff" font-size="19" font-weight="700" text-anchor="middle">Mensch</text>
+    <text x="0" y="16" fill="rgba(255,255,255,.55)" font-family="'Space Mono',monospace" font-size="10" letter-spacing="1" text-anchor="middle">IM ZENTRUM</text>
+  </g>
+</svg>
