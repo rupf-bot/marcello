@@ -158,8 +158,11 @@ svg.rings { width: 100%; max-width: 460px; height: auto; display: block; margin:
 .maprow .btns { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip.sm { min-height: 38px; padding: 6px 10px; font-size: 12.5px; }
 
-footer { color: var(--muted); font-size: 13px; max-width: 70ch; display: flex; flex-direction: column; gap: 6px; }
-footer p { margin: 0; }
+footer {
+  color: #fff; font-size: 13px; max-width: 70ch; display: flex; flex-direction: column; gap: 10px;
+  background: #000; border-radius: 16px; padding: 22px 24px;
+}
+footer p { margin: 0; color: rgba(255,255,255,.75); }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
