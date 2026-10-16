@@ -81,9 +81,6 @@
     .proj-detail-card:hover{box-shadow:0 12px 48px rgba(19,18,23,0.13);}
     .proj-detail-card .proj-slider,.proj-detail-card .proj-detail-img{transition:transform .6s var(--ease-out);}
     .proj-detail-card:hover .proj-slider,.proj-detail-card:hover .proj-detail-img{transform:scale(1.03);}
-    .proj-ringe-embed{width:100%;background:#EEF1F4;}
-    .proj-ringe-iframe{display:block;width:100%;border:0;height:560px;}
-    @media(max-width:700px){.proj-ringe-iframe{height:980px;}}
     .proj-detail-img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center top;display:block;}
     .proj-detail-text{flex:1;padding:2.5rem 3rem;}
     .proj-detail-eyebrow{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem;}
@@ -649,9 +646,7 @@
 
       <div class="proj-item reveal delay-1" id="projekt-ringe" data-filter="ai-transformation strategie insights" style="grid-column:span 6;">
         <div class="proj-detail-card">
-          <div class="proj-ringe-embed">
-            <iframe id="projringe-iframe" class="proj-ringe-iframe" src="interactive/ki-ringe.html" title="Sechs Ringe um den Menschen – interaktives Modell" loading="lazy" scrolling="no"></iframe>
-          </div>
+          <img loading="lazy" src="img/projekt-ringe/ringe-preview.jpg" class="proj-detail-img" alt="Sechs Ringe um den Menschen – interaktives Modell" />
           <div class="proj-detail-text">
             <div class="proj-detail-eyebrow">Projekt 11</div>
             <h2 class="proj-detail-title"><span data-en="What an AI Experience Is Really Made Of.">Was eine KI-Erfahrung wirklich ausmacht.</span><br><span data-en="Six Rings Around the Human.">Sechs Ringe um den Menschen.</span></h2>
@@ -676,6 +671,10 @@
                 <span class="proj-tag" data-en="UX Strategy">UX Strategie</span>
                 <span class="proj-tag">2026</span>
               </div>
+              <a href="interactive/ki-ringe.html" target="_blank" rel="noopener" class="proj-expand-btn" style="margin-left:.6rem;text-decoration:none;">
+                <span data-en="Open interactive model">Interaktives Modell öffnen</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9L9 3M4 3h5v5"/></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -1429,19 +1428,6 @@
       });
     });
   })();
-</script>
-  <script>
-(function(){
-  var ringeFrame = document.getElementById('projringe-iframe');
-  if (ringeFrame) {
-    window.addEventListener('message', function(e){
-      if (e.source !== ringeFrame.contentWindow) return;
-      if (!e.data || e.data.type !== 'ki-ringe-height') return;
-      var h = parseInt(e.data.height, 10);
-      if (h > 0) ringeFrame.style.height = h + 'px';
-    });
-  }
-})();
 </script>
   <script>
 (function(){
