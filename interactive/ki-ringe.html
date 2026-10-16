@@ -30,7 +30,7 @@
 
 * { box-sizing: border-box; }
 body {
-  background: var(--bg);
+  background: transparent;
   color: var(--fg);
   font: 500 16px/1.55 var(--font-b);
   padding-block: 28px 44px;
@@ -38,6 +38,20 @@ body {
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
 .wrap { max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+
+/* ── Gradient Background (wie marcelrupf.com Startseite) ── */
+.gradient-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:linear-gradient(40deg,rgb(8,10,15),rgb(0,17,32));}
+.gradient-noise{position:absolute;inset:0;width:100%;height:100%;opacity:0.35;mix-blend-mode:soft-light;pointer-events:none;}
+.gradients-container{position:absolute;inset:0;filter:blur(40px);contain:layout style paint;}
+.g1,.g2,.g3,.g4,.g5{position:absolute;mix-blend-mode:hard-light;width:80%;height:80%;top:10%;left:10%;border-radius:50%;opacity:0.8;}
+.g1{background:radial-gradient(circle at center,rgba(18,113,255,0.8) 0,rgba(18,113,255,0) 50%) no-repeat;animation:gradMoveV 30s ease infinite;transform-origin:center center;}
+.g2{background:radial-gradient(circle at center,rgba(107,74,255,0.8) 0,rgba(107,74,255,0) 50%) no-repeat;animation:gradMoveC 20s reverse infinite;transform-origin:calc(50% - 400px);}
+.g3{background:radial-gradient(circle at center,rgba(100,100,255,0.8) 0,rgba(100,100,255,0) 50%) no-repeat;animation:gradMoveC 40s linear infinite;transform-origin:calc(50% + 400px);}
+.g4{background:radial-gradient(circle at center,rgba(50,160,220,0.8) 0,rgba(50,160,220,0) 50%) no-repeat;animation:gradMoveH 40s ease infinite;transform-origin:calc(50% - 200px);opacity:0.7;}
+.g5{background:radial-gradient(circle at center,rgba(80,47,122,0.8) 0,rgba(80,47,122,0) 50%) no-repeat;animation:gradMoveC 20s ease infinite;transform-origin:calc(50% - 800px) calc(50% + 200px);opacity:0.9;}
+@keyframes gradMoveC{0%{transform:rotate(0deg);}50%{transform:rotate(180deg);}100%{transform:rotate(360deg);}}
+@keyframes gradMoveV{0%{transform:translateY(-50%);}50%{transform:translateY(50%);}100%{transform:translateY(-50%);}}
+@keyframes gradMoveH{0%{transform:translateX(-50%) translateY(-10%);}50%{transform:translateX(50%) translateY(10%);}100%{transform:translateX(-50%) translateY(-10%);}}
 
 header { display: flex; flex-direction: column; gap: 12px; }
 .eyebrow, .mono {
@@ -147,6 +161,16 @@ footer p { margin: 0; }
 
 </head>
 <body>
+<div class="gradient-bg" aria-hidden="true">
+  <svg class="gradient-noise" xmlns="http://www.w3.org/2000/svg"><filter id="gNoiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="6" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#gNoiseFilter)"/></svg>
+  <div class="gradients-container">
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3"></div>
+    <div class="g4"></div>
+    <div class="g5"></div>
+  </div>
+</div>
 <div class="wrap">
   <header>
     <span class="eyebrow">Modell · KI-Erfahrung</span>
