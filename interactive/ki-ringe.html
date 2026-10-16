@@ -7,44 +7,32 @@
 <title>Sechs Ringe um den Menschen</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=JetBrains+Mono:wght@500&family=Public+Sans:wght@400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 /* Layout: Diagramm links (Ringe + Auswahl), Detailkarte rechts; auf dem Telefon untereinander.
-   Tokens: kühles Grau-Papier, Tinte, sechs Ringfarben von Türkis (sichtbar) bis Rosenrot (verborgen). */
+   Tokens: Website-Palette von marcelrupf.com, Ringfarben als ein Farbverlauf des Akzenttons. */
 :root {
-  --bg: #EEF1F4;
+  --bg: #F3F3F3;
   --surface: #FFFFFF;
-  --fg: #121C26;
-  --muted: #54616E;
-  --line: #CBD3DB;
-  --r1: #0B7A75; --t1: #CFEAE7;
-  --r2: #1B6BA8; --t2: #D3E4F3;
-  --r3: #3F58B5; --t3: #D9DEF3;
-  --r4: #6A4BB0; --t4: #E3DCF2;
-  --r5: #9A3F98; --t5: #EFD9EE;
-  --r6: #B5415F; --t6: #F5D9DF;
-  --font-d: 'Bricolage Grotesque', 'Trebuchet MS', system-ui, sans-serif;
-  --font-b: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-m: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0E151C; --surface: #16202A; --fg: #E6ECF1; --muted: #9BA8B4; --line: #2B3945;
-    --t1: #12302F; --t2: #15283A; --t3: #1B2240; --t4: #261F3F; --t5: #36203A; --t6: #3A1F2A;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0E151C; --surface: #16202A; --fg: #E6ECF1; --muted: #9BA8B4; --line: #2B3945;
-  --t1: #12302F; --t2: #15283A; --t3: #1B2240; --t4: #261F3F; --t5: #36203A; --t6: #3A1F2A;
-  color-scheme: dark;
+  --fg: #131217;
+  --muted: #5B5B5B;
+  --line: rgba(19,18,23,.14);
+  --r1: #DADDF7; --t1: #F1F2FC;
+  --r2: #C1C6F1; --t2: #E8EAFA;
+  --r3: #A8AFEB; --t3: #DEE1F8;
+  --r4: #8F98E5; --t4: #D3D7F5;
+  --r5: #737FDF; --t5: #C8CDF2;
+  --r6: #5B6CD1; --t6: #BCC3EF;
+  --font-d: 'Instrument Sans', sans-serif;
+  --font-b: 'Instrument Sans', sans-serif;
+  --font-m: 'Space Mono', monospace;
 }
 
 * { box-sizing: border-box; }
 body {
   background: var(--bg);
   color: var(--fg);
-  font: 400 16px/1.55 var(--font-b);
+  font: 500 16px/1.55 var(--font-b);
   padding-block: 28px 44px;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
@@ -59,7 +47,7 @@ header { display: flex; flex-direction: column; gap: 12px; }
   color: var(--muted);
 }
 h1 {
-  font: 700 clamp(32px, 7vw, 54px)/1.04 var(--font-d);
+  font: 400 clamp(32px, 7vw, 54px)/1.04 var(--font-d);
   letter-spacing: -.02em;
   text-wrap: balance;
   margin: 0;
@@ -119,7 +107,7 @@ svg.rings { width: 100%; max-width: 460px; height: auto; display: block; margin:
 .detail.swap { animation: in .28s ease-out; }
 @keyframes in { from { opacity: .0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 .detail .eyebrow { color: var(--c); }
-.detail h2 { font: 700 clamp(28px, 5vw, 36px)/1.08 var(--font-d); letter-spacing: -.015em; margin: 0; text-wrap: balance; }
+.detail h2 { font: 400 clamp(28px, 5vw, 36px)/1.08 var(--font-d); letter-spacing: -.015em; margin: 0; text-wrap: balance; }
 .lead { margin: 0; font-size: 17px; max-width: 58ch; }
 .block { display: flex; flex-direction: column; gap: 6px; padding-top: 16px; border-top: 1px solid var(--line); }
 .block p { margin: 0; max-width: 58ch; }
