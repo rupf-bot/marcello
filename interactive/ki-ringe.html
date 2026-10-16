@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>:root{color-scheme:light}body{margin:0}[hidden]{display:none!important}</style>
+<title>Sechs Ringe um den Menschen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=JetBrains+Mono:wght@500&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: Diagramm links (Ringe + Auswahl), Detailkarte rechts; auf dem Telefon untereinander.
+   Tokens: kühles Grau-Papier, Tinte, sechs Ringfarben von Türkis (sichtbar) bis Rosenrot (verborgen). */
+:root {
+  --bg: #EEF1F4;
+  --surface: #FFFFFF;
+  --fg: #121C26;
+  --muted: #54616E;
+  --line: #CBD3DB;
+  --r1: #0B7A75; --t1: #CFEAE7;
+  --r2: #1B6BA8; --t2: #D3E4F3;
+  --r3: #3F58B5; --t3: #D9DEF3;
+  --r4: #6A4BB0; --t4: #E3DCF2;
+  --r5: #9A3F98; --t5: #EFD9EE;
+  --r6: #B5415F; --t6: #F5D9DF;
+  --font-d: 'Bricolage Grotesque', 'Trebuchet MS', system-ui, sans-serif;
+  --font-b: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-m: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E151C; --surface: #16202A; --fg: #E6ECF1; --muted: #9BA8B4; --line: #2B3945;
+    --t1: #12302F; --t2: #15283A; --t3: #1B2240; --t4: #261F3F; --t5: #36203A; --t6: #3A1F2A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E151C; --surface: #16202A; --fg: #E6ECF1; --muted: #9BA8B4; --line: #2B3945;
+  --t1: #12302F; --t2: #15283A; --t3: #1B2240; --t4: #261F3F; --t5: #36203A; --t6: #3A1F2A;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 16px/1.55 var(--font-b);
+  padding-block: 28px 44px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+
+header { display: flex; flex-direction: column; gap: 12px; }
+.eyebrow, .mono {
+  font: 500 11.5px/1.3 var(--font-m);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+h1 {
+  font: 700 clamp(32px, 7vw, 54px)/1.04 var(--font-d);
+  letter-spacing: -.02em;
+  text-wrap: balance;
+  margin: 0;
+}
+.intro { margin: 0; max-width: 60ch; color: var(--muted); font-size: 17px; }
+
+.grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+@media (min-width: 860px) {
+  .grid { grid-template-columns: minmax(0, 460px) minmax(0, 1fr); align-items: start; gap: 44px; }
+}
+
+.left { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+svg.rings { width: 100%; max-width: 460px; height: auto; display: block; margin: 0 auto; }
+.ring { fill: var(--t); stroke: var(--bg); stroke-width: 2; cursor: pointer; transition: fill .2s, stroke .2s; }
+.ring:hover { stroke: var(--c); }
+.ring.on { fill: var(--c); }
+.ring.wild { stroke: var(--c); stroke-dasharray: 2 5; stroke-linecap: round; }
+.lbl { fill: var(--fg); font: 600 10.5px var(--font-b); letter-spacing: .02em; pointer-events: none; transition: fill .2s; }
+.lbl.on { fill: #fff; }
+.core { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; cursor: pointer; transition: fill .2s, stroke .2s; }
+.core:hover { stroke: var(--fg); }
+.core.on { fill: var(--fg); }
+.core-t { fill: var(--fg); font: 700 15px var(--font-d); text-anchor: middle; pointer-events: none; transition: fill .2s; }
+.core-s { fill: var(--muted); font: 500 8.5px var(--font-m); letter-spacing: .1em; text-anchor: middle; text-transform: uppercase; pointer-events: none; transition: fill .2s; }
+.core-t.on, .core-s.on { fill: var(--bg); }
+.chip.wide { grid-column: 1 / -1; }
+.chip.ctr[aria-pressed="true"] { color: var(--bg); }
+
+.scale { display: flex; align-items: center; gap: 10px; }
+.scale i { flex: 1; height: 1px; background: var(--line); min-width: 12px; }
+
+.chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.chip {
+  display: flex; align-items: center; gap: 8px;
+  min-height: 46px; padding: 8px 10px;
+  background: var(--surface); color: var(--fg);
+  border: 1px solid var(--line); border-radius: 10px;
+  font: 500 13px/1.2 var(--font-b);
+  text-align: left; cursor: pointer; overflow-wrap: anywhere;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.chip b { font: 500 11px var(--font-m); color: var(--c); flex: none; }
+.chip:hover { border-color: var(--c); }
+.chip[aria-pressed="true"] { background: var(--c); border-color: var(--c); color: #fff; }
+.chip[aria-pressed="true"] b { color: #fff; }
+.chip:focus-visible, .ring:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px; }
+
+.detail {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--c);
+  border-radius: 16px;
+  padding: 24px 22px 26px;
+  display: flex; flex-direction: column; gap: 18px;
+  min-width: 0;
+}
+.detail.swap { animation: in .28s ease-out; }
+@keyframes in { from { opacity: .0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.detail .eyebrow { color: var(--c); }
+.detail h2 { font: 700 clamp(28px, 5vw, 36px)/1.08 var(--font-d); letter-spacing: -.015em; margin: 0; text-wrap: balance; }
+.lead { margin: 0; font-size: 17px; max-width: 58ch; }
+.block { display: flex; flex-direction: column; gap: 6px; padding-top: 16px; border-top: 1px solid var(--line); }
+.block p { margin: 0; max-width: 58ch; }
+.q { font: 600 clamp(19px, 3.6vw, 23px)/1.25 var(--font-d); color: var(--c); text-wrap: balance; }
+
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
+.seg button {
+  min-height: 40px; padding: 8px 18px; border: 0; border-radius: 999px;
+  background: transparent; color: var(--fg); font: 500 14px/1 var(--font-b); cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.seg button:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px; }
+.hint { margin: 0; }
+
+.q.lg { font-size: clamp(22px, 4.6vw, 28px); }
+.dim { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; color: var(--muted); font-size: 14.5px; }
+.tag {
+  display: inline-block; align-self: flex-start;
+  font: 500 11px/1 var(--font-m); letter-spacing: .1em; text-transform: uppercase;
+  padding: 6px 10px; border: 1px solid var(--c); color: var(--c); border-radius: 999px;
+}
+.map { display: flex; flex-direction: column; gap: 14px; }
+.maprow { display: flex; flex-direction: column; gap: 6px; }
+.maprow .tag { --c: var(--muted); border-color: var(--line); }
+.maprow .btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip.sm { min-height: 38px; padding: 6px 10px; font-size: 12.5px; }
+
+footer { color: var(--muted); font-size: 13px; max-width: 70ch; display: flex; flex-direction: column; gap: 6px; }
+footer p { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Modell · KI-Erfahrung</span>
+    <h1>Sechs Ringe um den Menschen</h1>
+    <p class="intro">Eine KI-Erfahrung ist mehr als das Fenster, in das man tippt. Jeder Ring prägt, was Menschen erleben. Je weiter aussen, desto weniger sehen sie davon. Tippe einen Ring an oder den Menschen in der Mitte.</p>
+  </header>
+
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Ansicht">
+      <button type="button" data-mode="base" aria-pressed="true">Aufbau</button>
+      <button type="button" data-mode="win" aria-pressed="false">WIN-Prüfung</button>
+    </div>
+    <p class="hint mono" id="hint">Woraus besteht die Erfahrung?</p>
+  </div>
+
+  <div class="grid">
+    <div class="left">
+      <svg class="rings" id="svg" viewBox="0 0 440 440" role="img" aria-label="Sechs konzentrische Ringe um den Menschen: Begegnung, Kontext, Handlungsspielraum, Modell, Leitplanken, Überraschung"></svg>
+      <div class="scale mono"><span>innen · sichtbar</span><i></i><span>aussen · verborgen</span></div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <article class="detail" id="detail" aria-live="polite"></article>
+  </div>
+
+  <footer>
+    <p>Eigenes Modell von Marcel Rupf, angeregt durch die Fachdiskussion um die Schichten der KI-Erfahrung, unter anderem von Emily Campbell.</p>
+    <p>WIN steht für Wirkung, Integration und Nutzerakzeptanz. Die Ringe zeigen den Aufbau einer KI-Erfahrung, WIN prüft ihn.</p>
+    <p>Die Beispiele sind bewusst allgemein gehalten und zeigen Situationen aus dem Alltag von Versicherung und Kundenservice.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var L = [
+    { name: 'Begegnung', chip: 'Begegnung',
+      lead: 'Hier trifft ein Mensch auf die KI: Eingabe, Anzeige, Rückmeldung und Eingriff. Je selbständiger die KI arbeitet, desto mehr wird aus dem Eingabefeld eine Kommandozentrale. Dazu gehört mehr als das Chatfeld: Auswahl, Filter und Schalter sind oft der schnellere Einstieg.',
+      q: 'Sehe ich, was die KI tut, und kann ich eingreifen?',
+      ex: 'Bei einer Schadenmeldung zeigt die KI, welche Angaben sie aus dem Foto gelesen hat, und lässt jede einzeln korrigieren.',
+      risk: 'Ein leeres Chatfeld setzt voraus, dass Menschen schon wissen, was sie fragen müssen. Viele fragen dann gar nicht.' },
+    { name: 'Kontext', chip: 'Kontext',
+      lead: 'Alles, was die KI über Person und Situation weiss. Ausdrücklich gegeben sind Eingaben, Uploads und Einstellungen. Abgeleitet wird aus Verhalten, Verlauf und angebundenen Systemen. Hilfreich ist eine Dreiteilung: dauerhafter Kontext wie Präferenzen, Kontext der aktuellen Aufgabe und der Strom aus Mails und Chats.',
+      q: 'Weiss ich, was die KI über mich weiss?',
+      ex: 'Der Assistent schlägt eine Deckung vor, weil er die bestehende Police kennt, und zeigt dazu an, woher er das weiss.',
+      risk: 'Abgeleitetes Wissen wirkt schnell unheimlich, wenn es nicht benannt wird. Dann sinkt das Vertrauen, auch bei richtigen Vorschlägen.' },
+    { name: 'Handlungsspielraum', chip: 'Handlungs&shy;spielraum',
+      lead: 'Was die KI selbst tun kann: auf Systeme zugreifen, Werkzeuge nutzen, Abläufe anstossen, Schritte allein ausführen. Hier entscheidet sich, wie viel Autonomie sie bekommt.',
+      q: 'Was darf sie ohne Rückfrage tun?',
+      ex: 'Ein Agent darf Offerten vergleichen. Vor dem Abschluss oder einer Kündigung fragt er nach.',
+      risk: 'Zu viel Spielraum erzeugt Fehler mit Folgen. Zu wenig lässt Menschen die Arbeit von Hand erledigen oder hinter der KI aufräumen.' },
+    { name: 'Modell', chip: 'Modell',
+      lead: 'Training, Fähigkeiten und Verhalten des Sprachmodells. Es bestimmt, wofür die KI gut ist, wo sie unsicher wird und wie sie klingt.',
+      q: 'Wofür ist das Modell tatsächlich geeignet?',
+      ex: 'Zusammenfassen und Formulieren passen gut. Exakte Beträge berechnet besser ein gewöhnliches Programm mit festen Regeln.',
+      risk: 'Wer das Modell für alles einsetzt, bekommt Fehler, die überzeugend klingen und deshalb schwer zu erkennen sind.' },
+    { name: 'Leitplanken', chip: 'Leitplanken',
+      lead: 'Regeln, Standards und Präferenzen: auf welche Daten die KI zugreifen darf, was sie tun darf, was sie ablehnen oder erklären muss und wo ein Mensch entscheidet. Dazu gehört die Datenfreigabe: Die KI teilt nur, was der aktuelle Schritt braucht.',
+      q: 'Wer entscheidet, wenn es heikel wird?',
+      ex: 'Bei Gesundheitsdaten gibt immer ein Mensch frei. Die KI erklärt, warum sie nicht weitermacht.',
+      risk: 'Leitplanken, die erst nach dem Start entstehen, kosten Vertrauen. Recht und Datenschutz gehören an den Anfang des Projekts.' },
+    { name: 'Überraschung', chip: 'Überraschung',
+      lead: 'Das Unvorhergesehene, das im echten Betrieb auftaucht, weil KI-Systeme mit Wahrscheinlichkeiten arbeiten. Man kann es nicht abschaffen, aber man kann es früh sichtbar und korrigierbar machen.',
+      q: 'Merken wir es rechtzeitig, wenn etwas Unerwartetes passiert?',
+      ex: 'Ein Rückmeldeknopf an jeder Antwort, nachvollziehbare Protokolle und regelmässige Stichproben echter Gespräche.',
+      risk: 'Was niemand beobachtet, korrigiert auch niemand. Fehler zeigen sich dann erst bei den Kundinnen und Kunden.' }
+  ];
+
+  // WIN-Prüfung: eine Frage pro Ring, in der Dimension, die dort am meisten zählt.
+  var DIM = {
+    W: { name: 'Wirkung', def: 'Bringt es den Menschen messbar etwas?' },
+    I: { name: 'Integration', def: 'Passt es in bestehende Abläufe und Systeme?' },
+    N: { name: 'Nutzerakzeptanz', def: 'Verstehen und akzeptieren Menschen es? Ein Tor, keine Kennzahl.' }
+  };
+  var W = [
+    { dim: 'N', q: 'Versteht jemand auf einen Blick, was die KI getan hat, und traut sich einzugreifen?' },
+    { dim: 'I', q: 'Holt sich die KI den Kontext dort, wo die Arbeit schon liegt, statt ihn neu abzufragen?' },
+    { dim: 'W', q: 'Spart der Spielraum am Ende Arbeit, oder entsteht Aufräumen?' },
+    { dim: 'W', q: 'Löst das Modell die Aufgabe messbar besser als der bisherige Weg?' },
+    { dim: 'I', q: 'Greifen die Leitplanken in den bestehenden Freigabe- und Rechtsprozessen, oder entsteht ein Parallelprozess?' },
+    { dim: 'N', q: 'Bleibt das Vertrauen, wenn die KI sich irrt?' }
+  ];
+  var mode = 'base';
+
+  // Das Zentrum ist ebenfalls antippbar (Index 6).
+  var Z = {
+    name: 'Mensch', chip: 'Mensch im Zentrum', riskLabel: 'Wenn der Mensch fehlt',
+    lead: 'Um wen es geht: Menschen mit eigenen Zielen, Gewohnheiten, Vorwissen und begrenzter Aufmerksamkeit. Alle sechs Ringe wirken auf sie. Ob die KI angenommen wird, entscheiden sie, nicht die Technik.',
+    q: 'Hilft das einem echten Menschen bei etwas, das er ohnehin tun will?',
+    ex: 'Eine Kundin meldet einen Schaden. Sie will keine Unterhaltung mit einer KI führen, sondern schnell wissen, was als Nächstes passiert und wann das Geld kommt.',
+    risk: 'Dann wird gebaut, was technisch möglich ist, statt was gebraucht wird. Das Ergebnis sind KI-Funktionen, die niemand vermisst.'
+  };
+  var ZW = { dim: 'N', q: 'Würde jemand die KI freiwillig wieder nutzen, nachdem er sie einmal erlebt hat?' };
+  function getL(n) { return n === 6 ? Z : L[n]; }
+  function getW(n) { return n === 6 ? ZW : W[n]; }
+  function cvar(n) { return n === 6 ? 'var(--fg)' : 'var(--r' + (n + 1) + ')'; }
+  function eyebrow(n, tail) {
+    return '<span class="eyebrow">' + (n === 6 ? 'Im Zentrum' : 'Ring ' + (n + 1) + ' von 6') + (tail || '') + '</span>';
+  }
+
+  function baseHtml(d, n) {
+    return eyebrow(n, '') +
+      '<h2>' + d.name + '</h2>' +
+      '<p class="lead">' + d.lead + '</p>' +
+      '<div class="block"><span class="mono">Leitfrage</span><p class="q">' + d.q + '</p></div>' +
+      '<div class="block"><span class="mono">Beispiel</span><p>' + d.ex + '</p></div>' +
+      '<div class="block"><span class="mono">' + (d.riskLabel || 'Wenn der Ring fehlt') + '</span><p>' + d.risk + '</p></div>';
+  }
+
+  function winHtml(n) {
+    var w = getW(n), dim = DIM[w.dim];
+    var rows = ['W', 'I', 'N'].map(function (k) {
+      var btns = '';
+      for (var i = 0; i < 7; i++) {
+        if (getW(i).dim !== k) continue;
+        btns += '<button type="button" class="chip sm' + (i === 6 ? ' ctr' : '') + '" data-go="' + i + '" style="--c:' + cvar(i) + '" aria-pressed="' + (i === n ? 'true' : 'false') + '">' + (i === 6 ? '' : '<b>' + (i + 1) + '</b>') + '<span>' + getL(i).chip + '</span></button>';
+      }
+      return '<div class="maprow"><span class="tag">' + DIM[k].name + '</span><div class="btns">' + btns + '</div></div>';
+    }).join('');
+    return eyebrow(n, ' · WIN-Prüfung') +
+      '<h2>' + getL(n).name + '</h2>' +
+      '<div class="dim"><span class="tag">' + dim.name + '</span><span>' + dim.def + '</span></div>' +
+      '<p class="q lg">' + w.q + '</p>' +
+      '<div class="block"><span class="mono">Alle Ringe nach Dimension</span><div class="map">' + rows + '</div></div>';
+  }
+
+  var NS = 'http://www.w3.org/2000/svg';
+  var cx = 220, cy = 220, core = 46, band = 28;
+  var svg = document.getElementById('svg');
+  var chipsEl = document.getElementById('chips');
+  var detail = document.getElementById('detail');
+  var rings = [], labels = [], chips = [];
+  var sel = -1;
+
+  function el(tag, attrs) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  var defs = el('defs', {});
+  svg.appendChild(defs);
+
+  // Äusserster Ring zuerst, damit innere Ringe darüberliegen.
+  for (var i = L.length - 1; i >= 0; i--) {
+    var outer = core + band * (i + 1);
+    var c = el('circle', { cx: cx, cy: cy, r: outer, 'class': 'ring' + (i === 5 ? ' wild' : ''), 'data-i': i, 'aria-hidden': 'true' });
+    c.style.setProperty('--c', 'var(--r' + (i + 1) + ')');
+    c.style.setProperty('--t', 'var(--t' + (i + 1) + ')');
+    svg.appendChild(c);
+    rings[i] = c;
+    c.addEventListener('click', (function (n) { return function () { select(n, true); }; })(i));
+  }
+  var centre = el('circle', { cx: cx, cy: cy, r: core, 'class': 'core' });
+  svg.appendChild(centre);
+  var t1 = el('text', { x: cx, y: cy - 1, 'class': 'core-t' }); t1.textContent = 'Mensch';
+  var t2 = el('text', { x: cx, y: cy + 14, 'class': 'core-s' }); t2.textContent = 'im Zentrum';
+  svg.appendChild(t1); svg.appendChild(t2);
+  centre.addEventListener('click', function () { select(6, true); });
+
+  // Beschriftung entlang des oberen Bogens jedes Rings.
+  for (var j = 0; j < L.length; j++) {
+    var mid = core + band * j + band / 2;
+    var r = mid - 3.6;
+    var p = el('path', { id: 'arc' + j, d: 'M ' + (cx - r) + ' ' + cy + ' A ' + r + ' ' + r + ' 0 0 1 ' + (cx + r) + ' ' + cy, fill: 'none' });
+    defs.appendChild(p);
+    var tx = el('text', { 'class': 'lbl' });
+    var tp = el('textPath', { href: '#arc' + j, startOffset: '50%', 'text-anchor': 'middle' });
+    tp.textContent = L[j].name;
+    tx.appendChild(tp);
+    svg.appendChild(tx);
+    labels[j] = tx;
+  }
+
+  // Auswahl als echte Schaltflächen (Tastatur und Screenreader).
+  L.concat([Z]).forEach(function (d, n) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip' + (n === 6 ? ' wide ctr' : '');
+    b.style.setProperty('--c', cvar(n));
+    b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = (n === 6 ? '' : '<b>' + (n + 1) + '</b>') + '<span>' + d.chip + '</span>';
+    b.addEventListener('click', function () { select(n, false); });
+    chipsEl.appendChild(b);
+    chips[n] = b;
+  });
+
+  function select(n, fromRing, force) {
+    if (n === sel && !force) return;
+    sel = n;
+    var d = getL(n);
+    rings.forEach(function (c, k) { c.classList.toggle('on', k === n); });
+    centre.classList.toggle('on', n === 6);
+    t1.classList.toggle('on', n === 6);
+    t2.classList.toggle('on', n === 6);
+    labels.forEach(function (t, k) { t.classList.toggle('on', k === n); });
+    chips.forEach(function (b, k) { b.setAttribute('aria-pressed', k === n ? 'true' : 'false'); });
+    detail.style.setProperty('--c', cvar(n));
+    detail.innerHTML = mode === 'win' ? winHtml(n) : baseHtml(d, n);
+    detail.classList.remove('swap');
+    void detail.offsetWidth;
+    detail.classList.add('swap');
+    if (fromRing && window.matchMedia('(max-width: 859px)').matches) {
+      var top = detail.getBoundingClientRect().top;
+      if (top > window.innerHeight * 0.8) {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        detail.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' });
+      }
+    }
+  }
+
+  var hints = { base: 'Woraus besteht die Erfahrung?', win: 'Funktioniert jeder Ring? Eine Frage pro Ring.' };
+  var seg = document.querySelectorAll('.seg button');
+  var hint = document.getElementById('hint');
+  seg.forEach(function (b) {
+    b.addEventListener('click', function () {
+      mode = b.getAttribute('data-mode');
+      seg.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      hint.textContent = hints[mode];
+      select(sel, false, true);
+    });
+  });
+  detail.addEventListener('click', function (e) {
+    var g = e.target.closest ? e.target.closest('[data-go]') : null;
+    if (g) select(parseInt(g.getAttribute('data-go'), 10), false, true);
+  });
+
+  select(0, false);
+})();
+</script>
+
+<script>
+/* Meldet die Höhe an die einbettende Seite, damit der iframe nicht scrollt. */
+(function () {
+  function send() {
+    try { parent.postMessage({ type: 'ki-ringe-height', height: document.body.offsetHeight }, '*'); } catch (e) {}
+  }
+  window.addEventListener('load', send);
+  window.addEventListener('resize', send);
+  if (window.ResizeObserver) new ResizeObserver(send).observe(document.body);
+})();
+</script>
+</body>
+</html>
