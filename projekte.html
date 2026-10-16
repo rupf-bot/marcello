@@ -96,6 +96,8 @@
     .proj-expand-btn:hover{border-color:var(--accent);color:var(--accent);}
     .proj-expand-btn svg{transition:transform .3s;}
     .proj-expand-btn.is-expanded svg{transform:rotate(180deg);}
+    .proj-expand-btn.proj-expand-btn-primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;transition:background .2s,border-color .2s,transform .2s;}
+    .proj-expand-btn.proj-expand-btn-primary:hover{background:color-mix(in srgb,var(--accent) 85%,#000);border-color:color-mix(in srgb,var(--accent) 85%,#000);color:#fff;transform:translateY(-1px);}
     .proj-detail-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
     .proj-tag{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .7rem;border:1px solid rgba(19,18,23,0.15);border-radius:100px;color:var(--mid);}
     /* ── Slider ── */
@@ -252,7 +254,7 @@
                 <span class="proj-tag" data-en="UX Strategy">UX Strategie</span>
                 <span class="proj-tag">2026</span>
               </div>
-              <a href="interactive/ki-ringe.html" target="_blank" rel="noopener" class="proj-expand-btn" style="margin-top:1rem;text-decoration:none;">
+              <a href="interactive/ki-ringe.html" target="_blank" rel="noopener" class="proj-expand-btn proj-expand-btn-primary" style="margin-top:1rem;text-decoration:none;">
                 <span data-en="Open interactive model">Interaktives Modell öffnen</span>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9L9 3M4 3h5v5"/></svg>
               </a>
